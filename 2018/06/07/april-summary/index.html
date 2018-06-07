@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/steakxiaoxin/steakxiaoxin.github.io">
-  <title>Archives | 小新的演唱会</title>
+  <title>April Summary | 小新的演唱会</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="小新的演唱会">
-<meta property="og:url" content="https://github.com/steakxiaoxin/steakxiaoxin.github.io/archives/index.html">
+  <meta name="description" content="react tips1. react 中引入图片12本地：&amp;lt;img src=&amp;#123;require(&apos;xxx.jpg&apos;)&amp;#125; /&amp;gt;外链：&amp;lt;img src=&amp;#123;&apos;imgurl&apos;&amp;#125; /&amp;gt; 2. 关于_.throttle 与 setState 冲突失效问题原因：因为每当 setState 时会重新 render 一次，每次都会重新执行 throttl">
+<meta name="keywords" content="月度总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="April Summary">
+<meta property="og:url" content="https://github.com/steakxiaoxin/steakxiaoxin.github.io/2018/06/07/april-summary/index.html">
 <meta property="og:site_name" content="小新的演唱会">
+<meta property="og:description" content="react tips1. react 中引入图片12本地：&amp;lt;img src=&amp;#123;require(&apos;xxx.jpg&apos;)&amp;#125; /&amp;gt;外链：&amp;lt;img src=&amp;#123;&apos;imgurl&apos;&amp;#125; /&amp;gt; 2. 关于_.throttle 与 setState 冲突失效问题原因：因为每当 setState 时会重新 render 一次，每次都会重新执行 throttl">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-06-07T12:25:04.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小新的演唱会">
+<meta name="twitter:title" content="April Summary">
+<meta name="twitter:description" content="react tips1. react 中引入图片12本地：&amp;lt;img src=&amp;#123;require(&apos;xxx.jpg&apos;)&amp;#125; /&amp;gt;外链：&amp;lt;img src=&amp;#123;&apos;imgurl&apos;&amp;#125; /&amp;gt; 2. 关于_.throttle 与 setState 冲突失效问题原因：因为每当 setState 时会重新 render 一次，每次都会重新执行 throttl">
   
   
     <link rel="icon" href="/assets/imgs/favicon.ico">
@@ -130,36 +135,89 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-april-summary" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/07/april-summary/" class="archive-article-date">
-  	<time datetime="2018-06-07T11:33:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-07</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/07/april-summary/">April Summary</a>
+    <h1 class="article-title" itemprop="name">
+      April Summary
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/06/07/april-summary/" class="archive-article-date">
+  	<time datetime="2018-06-07T11:33:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="react-tips"><a href="#react-tips" class="headerlink" title="react tips"></a>react tips</h2><p><strong>1. react 中引入图片</strong><br><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">本地：&lt;img src=&#123;<span class="built_in">require</span>(<span class="string">'xxx.jpg'</span>)&#125; /&gt;</span><br><span class="line">外链：&lt;img src=&#123;<span class="string">'imgurl'</span>&#125; /&gt;</span><br></pre></td></tr></table></figure></p>
+<p><strong>2. 关于_.throttle 与 setState 冲突失效问题</strong><br>原因：因为每当 setState 时会重新 render 一次，每次都会重新执行 throttle 函数<br>解决：将节流放到 constructor 里，因为在 constructor 中只会执行一次<br><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.throttleSearch = _.throttle( <span class="keyword">this</span>.Search, <span class="number">800</span> );</span><br></pre></td></tr></table></figure></p>
+<p><strong>3. react 获取路由参数</strong><br>通过 this.props.params.id 获取路由中 /:id<br>新版 this.props.match.params.id 获取路由中 /:id</p>
+<p><strong>4. browserHistory</strong></p>
+<ul>
+<li>browserHistory.goBack() 返回上一页</li>
+<li>browserHistory.push时如何优雅地传参<ul>
+<li>传参方式1：将参数直接写在路径中，前提是router定义时，需要指定参数的名字，这里假定为:value;<br><code>browserHistory.push(pathname: &#39;/routerName/123&#39;);</code><br>通过<code>this.props.params.value</code>即可获取</li>
+<li>传参方式2：通过state传参，可以在页面跳转时，url中不显示参数；<br><code>browserHistory.push(pathname: &#39;/routerName&#39;,state: { key: value });</code><br>通过<code>this.props.location.state.key</code>便可以获得state中的key的value;</li>
+</ul>
+</li>
+<li>路由跳转问题<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//老写法会产生更新警告warning</span></span><br><span class="line"><span class="keyword">this</span>.props.history.push(<span class="string">`<span class="subst">$&#123;MOTHER_PAGE_URL&#125;</span>`</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//用 browserHistory 代替 history</span></span><br><span class="line"><span class="keyword">import</span> &#123; browserHistory &#125; <span class="keyword">from</span> <span class="string">'react-router'</span>;</span><br><span class="line">browserHistory.push(<span class="string">`<span class="subst">$&#123;MOTHER_PAGE_URL&#125;</span>`</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//或者 必须验证router的类型，否则会报错</span></span><br><span class="line"><span class="keyword">static</span> contextTypes = &#123;    </span><br><span class="line">	router: React.PropTypes.object.isRequired</span><br><span class="line">&#125;;</span><br><span class="line">componentDidMount() &#123;    </span><br><span class="line">	<span class="comment">//原来的写法    </span></span><br><span class="line">	<span class="keyword">this</span>.props.history.push(<span class="string">`/`</span>)    </span><br><span class="line">	<span class="comment">//现在的写法    </span></span><br><span class="line">	<span class="keyword">this</span>.context.router.push(<span class="string">`/`</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong>5. <a href="https://doc.react-china.org/docs/events.html" target="_blank" rel="noopener">react 的 event.persist()</a></strong><br>异步事件队列合并 就是让你在异步中能拿到事件对象</p>
+<h2 id="js-tips"><a href="#js-tips" class="headerlink" title="js tips"></a>js tips</h2><p><strong>4. <a href="https://blog.coding.net/blog/the-difference-between-throttle-and-debounce-in-underscorejs" target="_blank" rel="noopener">_.throttle 和 _.debounce 的差异</a></strong></p>
+<hr>
+<!-- ![小新](/assets/blogImgs/5.jpeg) -->
+<h2 id="underscore-tips"><a href="#underscore-tips" class="headerlink" title="underscore tips"></a>underscore tips</h2><p><strong>1. _.union(*arrays)</strong><br>返回传入的 arrays(数组)并集：按顺序返回，返回数组的元素是唯一的，可以传入一个或多个 arrays (数组)。<br><code>_.union([1, 2, 3], [101, 2, 1, 10], [2, 1]); =&gt; [1, 2, 3, 101, 10]</code></p>
+<p><strong>2. _.difference(array, *others)</strong><br>返回的值来自array参数数组，并且不存在于other 数组。<br><code>_.difference([1, 2, 3, 4, 5], [5, 2, 10]); =&gt; [1, 3, 4]</code></p>
+<p><strong>3. _.findWhere(list, properties)</strong><br>遍历整个list，返回匹配 properties参数所列出的所有 键 - 值 对的第一个值。如果没有找到匹配的属性，或者list是空的，那么将返回undefined。<br><code>let roleName = _.findWhere(roleList, {id: roleId}).roleName;</code><br>==&gt; 找 roleList 中 id 为 roleId 的那个对象并返回该对象，并获取该对象的 roleName</p>
+<p><strong>4. <a href="https://blog.coding.net/blog/the-difference-between-throttle-and-debounce-in-underscorejs" target="_blank" rel="noopener">_.throttle 和 _.debounce 的差异</a></strong></p>
+<ul>
+<li>throttle 策略的电梯。保证如果电梯第一个人进来后，15秒后准时运送一次，不等待。如果没有人，则待机。</li>
+<li>debounce 策略的电梯。如果电梯里有人进来，等待15秒。如果又人进来，15秒等待重新计时，直到15秒超时，开始运送。</li>
+</ul>
+<p><strong>5. _.difference(array, *others)</strong><br>返回的值来自array参数数组，并且不存在于other 数组。<br><code>_.difference([1, 2, 3, 4, 5], [5, 2, 10]); =&gt; [1, 3, 4]</code></p>
+<hr>
+<h2 id="moment-tips"><a href="#moment-tips" class="headerlink" title="moment tips"></a>moment tips</h2><p><strong>1. Unix偏移量毫秒</strong><br>moment().valueOf();  或 +moment();</p>
+<hr>
+<h2 id="命令行-及-键盘操作-tips"><a href="#命令行-及-键盘操作-tips" class="headerlink" title="命令行 及 键盘操作 tips"></a>命令行 及 键盘操作 tips</h2><p><strong>1. 查看全局安装的npm</strong><br><code>npm list -g --depth 0</code></p>
+<p><strong>2. mac自带截图</strong><br><code>cmd+shift+4</code></p>
+<p><strong>3. 查看eslint的配置</strong><br><code>vi ~/.eslintrc.json</code></p>
+<p><strong>4. 清空储存</strong><br><code>git stash clear</code></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -171,57 +229,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://github.com/steakxiaoxin/steakxiaoxin.github.io/2018/06/07/april-summary/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/05/hello-world/" class="archive-article-date">
-  	<time datetime="2018-06-05T02:39:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-05</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/06/05/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello-World</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/05/hello-world/">Hello-World</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">我是标签</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -244,8 +351,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
