@@ -132,6 +132,108 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-hexo-setup" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/06/09/hexo-setup/">hexo博客框架搭建</a>
+    </h1>
+  
+
+        
+        <a href="/2018/06/09/hexo-setup/" class="archive-article-date">
+  	<time datetime="2018-06-09T08:47:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="搭建步骤说明"><a href="#搭建步骤说明" class="headerlink" title="搭建步骤说明"></a>搭建步骤说明</h2><ul>
+<li><p>第一步：创建仓库 <code>username.github.io</code></p>
+</li>
+<li><p>第二步：安装脚手架 <code>sudo npm install hexo-cli -g</code></p>
+</li>
+<li><p>第三步：创建博客 <code>hexo init username.github.io</code></p>
+</li>
+<li><p>第四步：更改配置 <code>cd username.github.io</code></p>
+<ul>
+<li><p>主题安装 <code>git clone https://github.com/iissnan/hexo-theme-next themes/next</code></p>
+</li>
+<li><p>基础配置(键值之间一定要有空格)</p>
+<blockquote>
+<p>title: 博客的名字<br>author: 作者名字<br>language: zh-Hans    //语言 中文<br>theme: next   //刚刚安装的主题名称<br>deploy:<br>type: git    //使用Git 发布<br>repo: <a href="https://github.com/username/username.github.io.git">https://github.com/username/username.github.io.git</a>    // 刚创建的Github仓库</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>第五步：写文章 在 <code>username.github.io/source/_posts</code> 中添加 md 文件</p>
+</li>
+<li><p>第六步：启动测试服务   hexo s ；在 localhost:4000 中访问</p>
+</li>
+<li><p>第七步：安装hexo-deployer-git自动部署发布工具   npm install hexo-deployer-git –save</p>
+</li>
+<li><p>第八步：发布  hexo clean &amp;&amp; hexo g &amp;&amp; hexo d  (第一次输入Github 的邮箱和密码)</p>
+</li>
+</ul>
+<hr>
+<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><a href="https://www.jianshu.com/p/4eaddcbe4d12" target="_blank" rel="noopener">5分钟 搭建免费个人博客</a><br><a href="http://activeblog.xin/page/2/" target="_blank" rel="noopener">入门学习</a><br><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo中文文档</a><br><a href="https://blog.csdn.net/android_msk/article/details/75040730" target="_blank" rel="noopener">域名代替</a><br><a href="https://github.com/litten/BlogBackup">yilia模板主题仓库</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/06/09/hexo-setup/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-april-summary" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -154,10 +256,6 @@
       
         <h2 id="react-tips"><a href="#react-tips" class="headerlink" title="react tips"></a>react tips</h2><p><strong>1. react 中引入图片</strong><br><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">本地：&lt;img src=&#123;<span class="built_in">require</span>(<span class="string">'xxx.jpg'</span>)&#125; /&gt;</span><br><span class="line">外链：&lt;img src=&#123;<span class="string">'imgurl'</span>&#125; /&gt;</span><br></pre></td></tr></table></figure></p>
 <p><strong>2. 关于_.throttle 与 setState 冲突失效问题</strong><br>原因：因为每当 setState 时会重新 render 一次，每次都会重新执行 throttle 函数<br>解决：将节流放到 constructor 里，因为在 constructor 中只会执行一次<br><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.throttleSearch = _.throttle( <span class="keyword">this</span>.Search, <span class="number">800</span> );</span><br></pre></td></tr></table></figure></p>
-<p><strong>3. <a href="http://www.ruanyifeng.com/blog/2016/05/react_router.html?utm_source=tool.lu" target="_blank" rel="noopener">react-router</a></strong></p>
-<ul>
-<li>react 获取路由参数<br>  通过 this.props.params.id 获取路由中 /:id<br>  新版 this.props.match.params.id 获取路由中 /:id</li>
-</ul>
         
           <a class="article-more-a" href="/2018/06/07/april-summary/#more">more >></a>
         
@@ -380,6 +478,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">我是标签</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
             
             <div class="clearfix"></div>
