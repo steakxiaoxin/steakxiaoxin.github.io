@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/steakxiaoxin/steakxiaoxin.github.io">
-  <title>April Summary | 小新的演唱会</title>
+  <title>April &amp;&amp; May Summary | 小新的演唱会</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="react tips1. react 中引入图片12本地：&amp;lt;img src=&amp;#123;require(&apos;xxx.jpg&apos;)&amp;#125; /&amp;gt;外链：&amp;lt;img src=&amp;#123;&apos;imgurl&apos;&amp;#125; /&amp;gt; 2. 关于_.throttle 与 setState 冲突失效问题原因：因为每当 setState 时会重新 render 一次，每次都会重新执行 throttl">
 <meta name="keywords" content="月度总结">
 <meta property="og:type" content="article">
-<meta property="og:title" content="April Summary">
+<meta property="og:title" content="April &amp;&amp; May Summary">
 <meta property="og:url" content="https://github.com/steakxiaoxin/steakxiaoxin.github.io/2018/06/07/april-summary/index.html">
 <meta property="og:site_name" content="小新的演唱会">
 <meta property="og:description" content="react tips1. react 中引入图片12本地：&amp;lt;img src=&amp;#123;require(&apos;xxx.jpg&apos;)&amp;#125; /&amp;gt;外链：&amp;lt;img src=&amp;#123;&apos;imgurl&apos;&amp;#125; /&amp;gt; 2. 关于_.throttle 与 setState 冲突失效问题原因：因为每当 setState 时会重新 render 一次，每次都会重新执行 throttl">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-07T12:32:34.000Z">
+<meta property="og:updated_time" content="2018-06-09T04:30:16.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="April Summary">
+<meta name="twitter:title" content="April &amp;&amp; May Summary">
 <meta name="twitter:description" content="react tips1. react 中引入图片12本地：&amp;lt;img src=&amp;#123;require(&apos;xxx.jpg&apos;)&amp;#125; /&amp;gt;外链：&amp;lt;img src=&amp;#123;&apos;imgurl&apos;&amp;#125; /&amp;gt; 2. 关于_.throttle 与 setState 冲突失效问题原因：因为每当 setState 时会重新 render 一次，每次都会重新执行 throttl">
   
   
@@ -142,7 +142,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      April Summary
+      April &amp;&amp; May Summary
     </h1>
   
 
@@ -157,7 +157,10 @@
       
         <h2 id="react-tips"><a href="#react-tips" class="headerlink" title="react tips"></a>react tips</h2><p><strong>1. react 中引入图片</strong><br><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">本地：&lt;img src=&#123;<span class="built_in">require</span>(<span class="string">'xxx.jpg'</span>)&#125; /&gt;</span><br><span class="line">外链：&lt;img src=&#123;<span class="string">'imgurl'</span>&#125; /&gt;</span><br></pre></td></tr></table></figure></p>
 <p><strong>2. 关于_.throttle 与 setState 冲突失效问题</strong><br>原因：因为每当 setState 时会重新 render 一次，每次都会重新执行 throttle 函数<br>解决：将节流放到 constructor 里，因为在 constructor 中只会执行一次<br><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.throttleSearch = _.throttle( <span class="keyword">this</span>.Search, <span class="number">800</span> );</span><br></pre></td></tr></table></figure></p>
-<p><strong>3. react 获取路由参数</strong><br>通过 this.props.params.id 获取路由中 /:id<br>新版 this.props.match.params.id 获取路由中 /:id</p>
+<p><strong>3. <a href="http://www.ruanyifeng.com/blog/2016/05/react_router.html?utm_source=tool.lu" target="_blank" rel="noopener">react-router</a></strong></p>
+<ul>
+<li>react 获取路由参数<br>  通过 this.props.params.id 获取路由中 /:id<br>  新版 this.props.match.params.id 获取路由中 /:id</li>
+</ul>
 <a id="more"></a>
 <p><strong>4. browserHistory</strong></p>
 <ul>
@@ -170,8 +173,31 @@
 <li>路由跳转问题<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//老写法会产生更新警告warning</span></span><br><span class="line"><span class="keyword">this</span>.props.history.push(<span class="string">`<span class="subst">$&#123;MOTHER_PAGE_URL&#125;</span>`</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//用 browserHistory 代替 history</span></span><br><span class="line"><span class="keyword">import</span> &#123; browserHistory &#125; <span class="keyword">from</span> <span class="string">'react-router'</span>;</span><br><span class="line">browserHistory.push(<span class="string">`<span class="subst">$&#123;MOTHER_PAGE_URL&#125;</span>`</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//或者 必须验证router的类型，否则会报错</span></span><br><span class="line"><span class="keyword">static</span> contextTypes = &#123;    </span><br><span class="line">	router: React.PropTypes.object.isRequired</span><br><span class="line">&#125;;</span><br><span class="line">componentDidMount() &#123;    </span><br><span class="line">	<span class="comment">//原来的写法    </span></span><br><span class="line">	<span class="keyword">this</span>.props.history.push(<span class="string">`/`</span>)    </span><br><span class="line">	<span class="comment">//现在的写法    </span></span><br><span class="line">	<span class="keyword">this</span>.context.router.push(<span class="string">`/`</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p><strong>5. <a href="https://doc.react-china.org/docs/events.html" target="_blank" rel="noopener">react 的 event.persist()</a></strong><br>异步事件队列合并 就是让你在异步中能拿到事件对象</p>
-<h2 id="js-tips"><a href="#js-tips" class="headerlink" title="js tips"></a>js tips</h2><p><strong>4. <a href="https://blog.coding.net/blog/the-difference-between-throttle-and-debounce-in-underscorejs" target="_blank" rel="noopener">_.throttle 和 _.debounce 的差异</a></strong></p>
+<p><strong>5. <a href="https://www.cnblogs.com/wgl1995/p/6489038.html" target="_blank" rel="noopener">react 中使用echarts</a></strong><br>react 中使用echarts</p>
+<p><strong>6. <a href="https://doc.react-china.org/docs/events.html" target="_blank" rel="noopener">react 的 event.persist()</a></strong><br>异步事件队列合并 就是让你在异步中能拿到事件对象</p>
+<p><strong>7. react-datetime 中将语言设置为中文</strong></p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">'moment/locale/zh-cn'</span>;</span><br><span class="line">&lt;Datetime locale=<span class="string">"zh-cn"</span> /&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>8. h5自定义属性data-* 及react 的 innerHTML</strong></p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;li</span><br><span class="line">	key=&#123;item.code&#125;</span><br><span class="line">	data-value=&#123;item.code&#125;</span><br><span class="line">	data-name=&#123;item.name&#125;</span><br><span class="line">	dangerouslySetInnerHTML=&#123;&#123;<span class="attr">__html</span>: item._name_&#125;&#125;</span><br><span class="line">	onClick=&#123;e =&gt; &#123;</span><br><span class="line">			<span class="keyword">const</span> $curTar = $(e.currentTarget);</span><br><span class="line">			<span class="keyword">const</span> value = $curTar.data(<span class="string">'value'</span>);</span><br><span class="line">			<span class="keyword">const</span> name = $curTar.data(<span class="string">'name'</span>);</span><br><span class="line">			<span class="keyword">this</span>.setState(&#123;</span><br><span class="line">					accountBank: value,</span><br><span class="line">					accountBankName: name</span><br><span class="line">				&#125;)</span><br><span class="line">		&#125;&#125;</span><br><span class="line">&gt;&lt;/li&gt;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="js-tips"><a href="#js-tips" class="headerlink" title="js tips"></a>js tips</h2><p><strong>1. Element.scrollIntoView()</strong><br>让当前的元素滚动到浏览器窗口的可视区域内。<br><code>element.scrollIntoView({block: &quot;end&quot;, behavior: &quot;smooth&quot;});</code></p>
+<p><strong>2. Set()</strong></p>
+<ul>
+<li><strong>size</strong>：size属性将会返回Set对象中元素的个数。</li>
+<li><strong>add(value)</strong>：添加某个值，返回 Set 结构本身。</li>
+<li>delete(value)：删除某个值，返回一个布尔值，表示删除是否成功。</li>
+<li>has(value)：返回一个布尔值，表示该值是否为Set的成员。</li>
+<li>clear()：清除所有成员，没有返回值。</li>
+<li>keys()：返回键名的遍历器</li>
+<li>values()：返回键值的遍历器</li>
+<li>entries()：返回键值对的遍历器</li>
+<li>forEach()：使用回调函数遍历每个成员</li>
+</ul>
+<p><strong>3. <a href="http://www.lrxin.com/archives-527.html" target="_blank" rel="noopener">tabindex</a></strong><br>tabindex解决div获得焦点focus()和失去焦点blur()的问题</p>
+<p><strong>4. replac(function)</strong><br>ECMAScript规定，replac()方法的参数replacement可以是函数而不是字符串。在这种情况下，每个匹配都调用该函数，它返回的字符串将替换文本使用。第一个参数表示匹配到的字符，第二个参数表示匹配到的字符最小索引位置（RegExp.index），第三个参数表示被匹配的字符串（RegExp.input）。</p>
+<p><strong>5. 测试代码消耗时间</strong><br><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.time(<span class="string">'timer'</span>)</span><br><span class="line"><span class="comment">// code</span></span><br><span class="line"><span class="built_in">console</span>.timeEnd(<span class="string">'timer'</span>)</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h2 id="webpack-tips"><a href="#webpack-tips" class="headerlink" title="webpack tips"></a>webpack tips</h2><p><strong>1. Element.scrollIntoView()</strong></p>
 <hr>
 <!-- ![小新](/assets/blogImgs/5.jpeg) -->
 <h2 id="underscore-tips"><a href="#underscore-tips" class="headerlink" title="underscore tips"></a>underscore tips</h2><p><strong>1. _.union(*arrays)</strong><br>返回传入的 arrays(数组)并集：按顺序返回，返回数组的元素是唯一的，可以传入一个或多个 arrays (数组)。<br><code>_.union([1, 2, 3], [101, 2, 1, 10], [2, 1]); =&gt; [1, 2, 3, 101, 10]</code></p>
@@ -183,13 +209,18 @@
 <li>debounce 策略的电梯。如果电梯里有人进来，等待15秒。如果又人进来，15秒等待重新计时，直到15秒超时，开始运送。</li>
 </ul>
 <p><strong>5. _.difference(array, *others)</strong><br>返回的值来自array参数数组，并且不存在于other 数组。<br><code>_.difference([1, 2, 3, 4, 5], [5, 2, 10]); =&gt; [1, 3, 4]</code></p>
+<p><strong>6. _.clone(obj)浅拷贝</strong><br>npm 拓展包 underscore.deepclone</p>
 <hr>
 <h2 id="moment-tips"><a href="#moment-tips" class="headerlink" title="moment tips"></a>moment tips</h2><p><strong>1. Unix偏移量毫秒</strong><br>moment().valueOf();  或 +moment();</p>
+<hr>
+<h2 id="npm-plugin-tips"><a href="#npm-plugin-tips" class="headerlink" title="npm plugin tips"></a>npm plugin tips</h2><p><strong>1. 可视化webpack资源</strong><br>webpack-bundle-analyzer</p>
 <hr>
 <h2 id="命令行-及-键盘操作-tips"><a href="#命令行-及-键盘操作-tips" class="headerlink" title="命令行 及 键盘操作 tips"></a>命令行 及 键盘操作 tips</h2><p><strong>1. 查看全局安装的npm</strong><br><code>npm list -g --depth 0</code></p>
 <p><strong>2. mac自带截图</strong><br><code>cmd+shift+4</code></p>
 <p><strong>3. 查看eslint的配置</strong><br><code>vi ~/.eslintrc.json</code></p>
 <p><strong>4. 清空储存</strong><br><code>git stash clear</code></p>
+<hr>
+<h2 id="术语-tips"><a href="#术语-tips" class="headerlink" title="术语 tips"></a>术语 tips</h2><p><strong>1. GUID</strong><br>Globally Unique Identifier 全球唯一标识符</p>
 
       
 
