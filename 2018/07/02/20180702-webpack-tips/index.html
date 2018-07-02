@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/steakxiaoxin/steakxiaoxin.github.io">
-  <title>Tag: 我是标签 | 小新的演唱会</title>
+  <title>Webpack-Tips Summary | 小新的演唱会</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="小新的演唱会">
-<meta property="og:url" content="https://github.com/steakxiaoxin/steakxiaoxin.github.io/tags/我是标签/index.html">
+  <meta name="description" content="1. webpack plugins  webpack-parallel-uglify-plugin可以并行运行 UglifyJS 插件，更加充分而合理的使用 CPU 资源，这可以大大减少的构建时间123456789101112var ParallelUglifyPlugin = require(&apos;webpack-parallel-uglify-plugin&apos;);new ParallelUglif">
+<meta name="keywords" content="tips,webpack">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Webpack-Tips Summary">
+<meta property="og:url" content="https://github.com/steakxiaoxin/steakxiaoxin.github.io/2018/07/02/20180702-webpack-tips/index.html">
 <meta property="og:site_name" content="小新的演唱会">
+<meta property="og:description" content="1. webpack plugins  webpack-parallel-uglify-plugin可以并行运行 UglifyJS 插件，更加充分而合理的使用 CPU 资源，这可以大大减少的构建时间123456789101112var ParallelUglifyPlugin = require(&apos;webpack-parallel-uglify-plugin&apos;);new ParallelUglif">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-07-02T12:09:25.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小新的演唱会">
+<meta name="twitter:title" content="Webpack-Tips Summary">
+<meta name="twitter:description" content="1. webpack plugins  webpack-parallel-uglify-plugin可以并行运行 UglifyJS 插件，更加充分而合理的使用 CPU 资源，这可以大大减少的构建时间123456789101112var ParallelUglifyPlugin = require(&apos;webpack-parallel-uglify-plugin&apos;);new ParallelUglif">
   
   
     <link rel="icon" href="/assets/imgs/favicon.ico">
@@ -134,60 +139,220 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-20180702-webpack-tips" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/05/20180605-hello-world/" class="archive-article-date">
-  	<time datetime="2018-06-05T02:39:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-05</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/05/20180605-hello-world/">Hello-World</a>
+    <h1 class="article-title" itemprop="name">
+      Webpack-Tips Summary
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/07/02/20180702-webpack-tips/" class="archive-article-date">
+  	<time datetime="2018-07-02T12:03:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-02</time>
+</a>
+        
+      </header>
+      
+		<span class="archive-article-date">
+			阅读量 <span id="busuanzi_value_page_pv"></span>
+		</span>
+      
+    
+    <!-- 目录内容 -->
+    
+    <!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>1. webpack plugins</strong></p>
+<ul>
+<li>webpack-parallel-uglify-plugin<br>可以并行运行 UglifyJS 插件，更加充分而合理的使用 CPU 资源，这可以大大减少的构建时间<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ParallelUglifyPlugin = <span class="built_in">require</span>(<span class="string">'webpack-parallel-uglify-plugin'</span>);</span><br><span class="line"><span class="keyword">new</span> ParallelUglifyPlugin(&#123;</span><br><span class="line">  cacheDir: <span class="string">'.cache/'</span>,</span><br><span class="line">  uglifyJS:&#123;</span><br><span class="line">    output: &#123;</span><br><span class="line">      comments: <span class="literal">false</span></span><br><span class="line">    &#125;,</span><br><span class="line">    compress: &#123;</span><br><span class="line">      warnings: <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<a id="more"></a>
+<ul>
+<li><p><a href="https://blog.csdn.net/qq_34301371/article/details/80253226" target="_blank" rel="noopener">extract-text-webpack-plugin</a><br>(抽离单独的样式文件，在启用热更新之后无效，关闭即可)<br>使用 <code>npm install extract-text-webpack-plugin@next</code> 在webpack^4 以上版本中</p>
+</li>
+<li><p>webpack-bundle-analyzer: 可视化webpack资源</p>
+</li>
+<li><p><a href="https://blog.csdn.net/huangpb123/article/details/78556652" target="_blank" rel="noopener">react-hot-loader</a><br>热加载局部更新：<br>webpack-dev-server 的热加载是开发人员修改了代码，代码经过打包，重新刷新了整个页面。而 react-hot-loader 不会刷新整个页面，它只替换了修改的代码，做到了页面的局部刷新。但它需要依赖 webpack 的 HotModuleReplacement 热加载插件。</p>
+</li>
+</ul>
+<p><strong>2. webpack loader</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//每一个 Loader 都可以通过 URL querystring 的方式传入参数，例如</span></span><br><span class="line"><span class="comment">//css-loader?minimize 中的 minimize 告诉 css-loader 要开启 CSS 压缩。</span></span><br><span class="line">use: [<span class="string">'style-loader'</span>, <span class="string">'css-loader?minimize'</span>],</span><br><span class="line"></span><br><span class="line"><span class="comment">//给 Loader 传入属性的方式除了有 querystring 外，还可以通过 Object 传入</span></span><br><span class="line">use: [</span><br><span class="line">  <span class="string">'style-loader'</span>,</span><br><span class="line">  &#123;</span><br><span class="line">    loader:<span class="string">'css-loader'</span>,</span><br><span class="line">    options:&#123;</span><br><span class="line">      minimize:<span class="literal">true</span>,</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure></p>
+<p><strong>3. webpack operation</strong></p>
+<ul>
+<li><code>–-history-api-fallback</code>  在package.json 的start”后添加-–history-api-fallback参数<br>对于单页面程序，浏览器的brower histroy可以设置成html5 history api或者hash，而设置为html5 api的，如果刷新浏览器会出现404 not found，原因是它通过这个路径（比如： /activities/2/ques/2）来访问后台，所以会出现404，而把historyApiFallback设置为true那么所有的路径都执行index.html。<br>解决用 react-router 的 link 能切换路由，而刷新或直接URL输入路由地址出现Cannot GET /about<br>出现这个问题的原因在于：无论你传递了什么 URL，服务器都需要传递给你的 app，因为你的应用直在操纵浏览器中的 URL，但是当前的服务器却不知道如何处理这些 URL。</li>
+</ul>
+<p><strong>4. webpack article</strong></p>
+<ul>
+<li><p><a href="https://blog.csdn.net/itkingone/article/details/70331783" target="_blank" rel="noopener">webpack开发和生产两个环境的配置详解</a></p>
+</li>
+<li><p><a href="https://jeffjade.com/2017/08/12/125-webpack-package-optimization-for-speed/" target="_blank" rel="noopener">webpack 打包优化速度篇</a></p>
+</li>
+<li><p><a href="http://webpack.wuhaolin.cn/" target="_blank" rel="noopener">深入浅出webpack：http</a></p>
+</li>
+<li><p><a href="http://webpack.wuhaolin.cn/3%E5%AE%9E%E6%88%98/3-16%E6%A3%80%E6%9F%A5%E4%BB%A3%E7%A0%81.html" target="_blank" rel="noopener">代码检查</a></p>
+</li>
+</ul>
+<ul>
+<li>为什么我们用webpack生成的文件名后面要带上一串哈希码？<br>在打包出来的文件名上加上文件内容的hash是目前最常见的有效使用浏览器长缓存的方法，js文件如果有内容更新，hash就会更新，浏览器请求路径变化所以更新缓存，如果js内容不变，hash不变，直接用缓存</li>
+</ul>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">我是标签</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">tips</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://github.com/steakxiaoxin/steakxiaoxin.github.io/2018/07/02/20180702-webpack-tips/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2018/07/02/20180702-react-router/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          react-router
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2018/07/02/20180702-js-tips/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaScrip-tips Summary</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
   
 
-    
+  
+
+  
+
+  
+
+  
 
 
           </div>
@@ -218,9 +383,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,

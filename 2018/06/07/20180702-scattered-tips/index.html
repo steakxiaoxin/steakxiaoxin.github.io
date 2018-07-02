@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/steakxiaoxin/steakxiaoxin.github.io">
-  <title>Tag: 月度总结 | 小新的演唱会</title>
+  <title>Scattered-Tips Summary | 小新的演唱会</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="小新的演唱会">
-<meta property="og:url" content="https://github.com/steakxiaoxin/steakxiaoxin.github.io/tags/月度总结/index.html">
+  <meta name="description" content="underscore tips1. _.union(*arrays)返回传入的 arrays(数组)并集：按顺序返回，返回数组的元素是唯一的，可以传入一个或多个 arrays (数组)。_.union([1, 2, 3], [101, 2, 1, 10], [2, 1]); =&amp;gt; [1, 2, 3, 101, 10] 2. _.difference(array, *others)返回的值">
+<meta name="keywords" content="tips">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Scattered-Tips Summary">
+<meta property="og:url" content="https://github.com/steakxiaoxin/steakxiaoxin.github.io/2018/06/07/20180702-scattered-tips/index.html">
 <meta property="og:site_name" content="小新的演唱会">
+<meta property="og:description" content="underscore tips1. _.union(*arrays)返回传入的 arrays(数组)并集：按顺序返回，返回数组的元素是唯一的，可以传入一个或多个 arrays (数组)。_.union([1, 2, 3], [101, 2, 1, 10], [2, 1]); =&amp;gt; [1, 2, 3, 101, 10] 2. _.difference(array, *others)返回的值">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-07-02T12:13:09.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小新的演唱会">
+<meta name="twitter:title" content="Scattered-Tips Summary">
+<meta name="twitter:description" content="underscore tips1. _.union(*arrays)返回传入的 arrays(数组)并集：按顺序返回，返回数组的元素是唯一的，可以传入一个或多个 arrays (数组)。_.union([1, 2, 3], [101, 2, 1, 10], [2, 1]); =&amp;gt; [1, 2, 3, 101, 10] 2. _.difference(array, *others)返回的值">
   
   
     <link rel="icon" href="/assets/imgs/favicon.ico">
@@ -134,60 +139,235 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-20180702-scattered-tips" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/07/april-summary/" class="archive-article-date">
-  	<time datetime="2018-06-07T11:33:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-07</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/07/april-summary/">April &amp;&amp; May Summary</a>
+    <h1 class="article-title" itemprop="name">
+      Scattered-Tips Summary
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/06/07/20180702-scattered-tips/" class="archive-article-date">
+  	<time datetime="2018-06-07T11:33:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-07</time>
+</a>
+        
+      </header>
+      
+		<span class="archive-article-date">
+			阅读量 <span id="busuanzi_value_page_pv"></span>
+		</span>
+      
+    
+    <!-- 目录内容 -->
+    
+    <!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<!-- ![小新](/assets/blogImgs/5.jpeg) -->
+<h2 id="underscore-tips"><a href="#underscore-tips" class="headerlink" title="underscore tips"></a>underscore tips</h2><p><strong>1. _.union(*arrays)</strong><br>返回传入的 arrays(数组)并集：按顺序返回，返回数组的元素是唯一的，可以传入一个或多个 arrays (数组)。<br><code>_.union([1, 2, 3], [101, 2, 1, 10], [2, 1]); =&gt; [1, 2, 3, 101, 10]</code></p>
+<p><strong>2. _.difference(array, *others)</strong><br>返回的值来自array参数数组，并且不存在于other 数组。<br><code>_.difference([1, 2, 3, 4, 5], [5, 2, 10]); =&gt; [1, 3, 4]</code></p>
+<a id="more"></a>
+<p><strong>3. _.findWhere(list, properties)</strong><br>遍历整个list，返回匹配 properties参数所列出的所有 键 - 值 对的第一个值。如果没有找到匹配的属性，或者list是空的，那么将返回undefined。<br><code>let roleName = _.findWhere(roleList, {id: roleId}).roleName;</code><br>==&gt; 找 roleList 中 id 为 roleId 的那个对象并返回该对象，并获取该对象的 roleName</p>
+<p><strong>4. <a href="https://blog.coding.net/blog/the-difference-between-throttle-and-debounce-in-underscorejs" target="_blank" rel="noopener">_.throttle 和 _.debounce 的差异</a></strong></p>
+<ul>
+<li>throttle 策略的电梯。保证如果电梯第一个人进来后，15秒后准时运送一次，不等待。如果没有人，则待机。</li>
+<li>debounce 策略的电梯。如果电梯里有人进来，等待15秒。如果又人进来，15秒等待重新计时，直到15秒超时，开始运送。</li>
+</ul>
+<p><strong>5. _.difference(array, *others)</strong><br>返回的值来自array参数数组，并且不存在于other 数组。<br><code>_.difference([1, 2, 3, 4, 5], [5, 2, 10]); =&gt; [1, 3, 4]</code></p>
+<p><strong>6. _.clone(obj)浅拷贝</strong><br>npm 拓展包 underscore.deepclone</p>
+<p><strong>7. _.findIndex(array, predicate, [context])</strong><br>类似于_.indexOf，当predicate通过真检查时，返回第一个索引值；否则返回-1。<br><code>tabActive={brandList.findIndex((item, i, arr)=&gt;brandId==arr[i].brandId)+1}</code></p>
+<p><strong>6. _.keys(object) </strong><br><code>_.keys({one: 1, two: 2, three: 3});=&gt; [&quot;one&quot;, &quot;two&quot;, &quot;three&quot;]</code></p>
+<hr>
+<h2 id="moment-tips"><a href="#moment-tips" class="headerlink" title="moment tips"></a>moment tips</h2><p><strong>1. Unix偏移量毫秒</strong><br>moment().valueOf();  或 +moment();</p>
+<p><strong>2. moment 报错</strong></p>
+<ul>
+<li>‘Deprecation warning: value provided is not in a recognized RFC2822 or ISO fo’<br>解决方法：<code>moment(&quot;Apr 2017&quot;, &quot;MMM YYYY&quot;)</code></li>
+</ul>
+<p><strong>3. moment获取当天0点0分</strong><br><code>moment().startOf(&#39;day&#39;)</code></p>
+<p><strong>3. 设置指定时间</strong><br><code>moment().set({&#39;hour&#39;: 0, &#39;minute&#39;: 0}).subtract(3, &#39;days&#39;)</code></p>
+<hr>
+<h2 id="命令行-及-键盘操作-tips"><a href="#命令行-及-键盘操作-tips" class="headerlink" title="命令行 及 键盘操作 tips"></a>命令行 及 键盘操作 tips</h2><p><strong>1. 查看全局安装的npm</strong><br><code>npm list -g --depth 0</code></p>
+<p><strong>2. mac自带截图</strong><br><code>cmd+shift+4</code></p>
+<p><strong>3. 显示隐藏文件夹</strong><br><code>cmd+shift+.</code></p>
+<p><strong>4. 查看eslint的配置</strong><br><code>vi ~/.eslintrc.json</code></p>
+<p><strong>5. 解决git报ssh variant ‘simple’ does not support setting port</strong><br><code>git config --global ssh.variant ssh</code></p>
+<p><strong>6. <a href="https://jeffjade.com/2017/12/30/135-npm-vs-yarn-detial-memo/" target="_blank" rel="noopener">npm VS yarn</a></strong></p>
+<p><strong>7. <a href="http://banwagong.cn/gonglue.html" target="_blank" rel="noopener">搬瓦工教程</a></strong></p>
+<p><strong>8. 清除 npm 缓存</strong><br><code>npm cache clean --force</code></p>
+<p><strong>9.来创建 package.json 文件</strong><br><code>npm init</code></p>
+<p><strong>10. <a href="https://segmentfault.com/a/1190000004818718" target="_blank" rel="noopener">atom配置eslint</a></strong></p>
+<hr>
+<h2 id="术语-tips"><a href="#术语-tips" class="headerlink" title="术语 tips"></a>术语 tips</h2><p><strong>1. GUID</strong><br>Globally Unique Identifier 全球唯一标识符</p>
+<p><strong>2. <a href="https://blog.csdn.net/ontides/article/details/52727180" target="_blank" rel="noopener">LHS RHS</a></strong><br>JavaScript中在预编译后执行代码时对变量的查询分为LHS（Left-Hand-Side）查询和RHS(Right-Hand-Side)查询。</p>
+<p><strong>3. package.json 中 ^ 代表大版本，~ 代表小版本</strong></p>
+<p><strong>4. source map</strong><br>资源映射 – 压缩后代码的 bug 定位</p>
+<p><strong>5. 构建</strong><br>构建就是做这件事情，把源代码转换成发布到线上的可执行 JavaScrip、CSS、HTML 代码，包括如下内容。</p>
+<ul>
+<li>代码转换：TypeScript 编译成 JavaScript、SCSS 编译成 CSS 等。</li>
+<li>文件优化：压缩 JavaScript、CSS、HTML 代码，压缩合并图片等。</li>
+<li>代码分割：提取多个页面的公共代码、提取首屏不需要执行部分的代码让其异步加载。</li>
+<li>模块合并：在采用模块化的项目里会有很多个模块和文件，需要构建功能把模块分类合并成一个文件。</li>
+<li>自动刷新：监听本地源代码的变化，自动重新构建、刷新浏览器。</li>
+<li>代码校验：在代码被提交到仓库前需要校验代码是否符合规范，以及单元测试是否通过。</li>
+<li>自动发布：更新完代码后，自动构建出线上发布代码并传输给发布系统。</li>
+</ul>
+<h2 id="souce-tips"><a href="#souce-tips" class="headerlink" title="souce tips"></a>souce tips</h2><p><strong>1. <a href="https://jeffjade.com/2017/11/29/133-high-quality-front-end-channel/" target="_blank" rel="noopener">『优质』前端频道汇聚</a></strong></p>
+<p><strong>2. <a href="https://www.codecasts.com/series/free" target="_blank" rel="noopener">免费视频教程</a></strong></p>
+<p><strong>3. <a href="https://shields.io/" target="_blank" rel="noopener">URL链接图标</a></strong></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">月度总结</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">tips</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://github.com/steakxiaoxin/steakxiaoxin.github.io/2018/06/07/20180702-scattered-tips/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2018/06/09/20180609-hexo-setup/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          hexo博客框架搭建
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2018/06/05/20180605-hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello-World</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
   
 
-    
+  
+
+  
+
+  
+
+  
 
 
           </div>
@@ -218,9 +398,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
@@ -280,15 +460,31 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">月度总结</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">我是标签</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">tips</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">react-router</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">react</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
             
             <div class="clearfix"></div>
