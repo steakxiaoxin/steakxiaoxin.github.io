@@ -6,15 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/steakxiaoxin/steakxiaoxin.github.io">
-  <title>Archives: 2018/7 | 小新的演唱会</title>
+  <title>React生命周期 | 小新的演唱会</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="小新的演唱会">
-<meta property="og:url" content="https://github.com/steakxiaoxin/steakxiaoxin.github.io/archives/2018/07/index.html">
+  <meta name="description" content="图解ES6中的React生命周期 一个React组件的生命周期分为三个部分：初始化阶段、运行中阶段和销毁阶段。  初始化阶段:static defaultPropsconstructorcomponentWillMountrendercomponentDidMount 运行中阶段:componentWillReceiveProps(nextProps)shouldComponentUpdate(n">
+<meta name="keywords" content="react">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React生命周期">
+<meta property="og:url" content="https://github.com/steakxiaoxin/steakxiaoxin.github.io/2018/07/04/20180704-ReactLifeCycle/index.html">
 <meta property="og:site_name" content="小新的演唱会">
+<meta property="og:description" content="图解ES6中的React生命周期 一个React组件的生命周期分为三个部分：初始化阶段、运行中阶段和销毁阶段。  初始化阶段:static defaultPropsconstructorcomponentWillMountrendercomponentDidMount 运行中阶段:componentWillReceiveProps(nextProps)shouldComponentUpdate(n">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://github.com/assets/blogImgs/reactlifecycle-min.png">
+<meta property="og:updated_time" content="2018-07-04T08:24:39.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小新的演唱会">
+<meta name="twitter:title" content="React生命周期">
+<meta name="twitter:description" content="图解ES6中的React生命周期 一个React组件的生命周期分为三个部分：初始化阶段、运行中阶段和销毁阶段。  初始化阶段:static defaultPropsconstructorcomponentWillMountrendercomponentDidMount 运行中阶段:componentWillReceiveProps(nextProps)shouldComponentUpdate(n">
+<meta name="twitter:image" content="https://github.com/assets/blogImgs/reactlifecycle-min.png">
   
   
     <link rel="icon" href="/assets/imgs/favicon.ico">
@@ -134,36 +141,167 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-20180704-ReactLifeCycle" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      React生命周期
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/04/20180704-ReactLifeCycle/" class="archive-article-date">
+
+        
+        <a href="/2018/07/04/20180704-ReactLifeCycle/" class="archive-article-date">
   	<time datetime="2018-07-04T08:07:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-04</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/04/20180704-ReactLifeCycle/">React生命周期</a>
-    </h1>
-  
+        
+      </header>
+      
+		<span class="archive-article-date">
+			阅读量 <span id="busuanzi_value_page_pv"></span>
+		</span>
+      
+    
+    <!-- 目录内容 -->
+    
+    <!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="图解ES6中的React生命周期"><a href="#图解ES6中的React生命周期" class="headerlink" title="图解ES6中的React生命周期"></a>图解ES6中的React生命周期</h1><blockquote>
+<p>一个React组件的生命周期分为三个部分：初始化阶段、运行中阶段和销毁阶段。</p>
+</blockquote>
+<p>初始化阶段:<br>static defaultProps<br>constructor<br>componentWillMount<br>render<br>componentDidMount</p>
+<p>运行中阶段:<br>componentWillReceiveProps(nextProps)<br>shouldComponentUpdate(nextProps, nextState)<br>componentWillUpdate(nextProps, nextState)<br>render<br>componentDidUpdate</p>
+<p>销毁阶段:<br>componentWillUnmount</p>
+<a id="more"></a>
+<p><img src="/assets/blogImgs/reactlifecycle-min.png" alt="lifecycle"></p>
+<h2 id="一、初始化阶段"><a href="#一、初始化阶段" class="headerlink" title="一、初始化阶段"></a>一、初始化阶段</h2><h3 id="1、设置组件的默认属性"><a href="#1、设置组件的默认属性" class="headerlink" title="1、设置组件的默认属性"></a>1、设置组件的默认属性</h3><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> defaultProps = &#123;</span><br><span class="line">    name: <span class="string">'qiang'</span>,</span><br><span class="line">    age:<span class="number">23</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//or</span></span><br><span class="line">Counter.defaltProps=&#123;<span class="attr">name</span>:<span class="string">'qiang'</span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2、设置组件的初始化状态"><a href="#2、设置组件的初始化状态" class="headerlink" title="2、设置组件的初始化状态"></a>2、设置组件的初始化状态</h3><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">    <span class="keyword">super</span>(props);</span><br><span class="line">    <span class="keyword">this</span>.state = &#123;<span class="attr">number</span>: <span class="number">0</span>&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3、componentWillMount"><a href="#3、componentWillMount" class="headerlink" title="3、componentWillMount()"></a>3、componentWillMount()</h3><blockquote>
+<p>组件即将被渲染到页面之前触发</p>
+</blockquote>
+<h3 id="4、render"><a href="#4、render" class="headerlink" title="4、render()"></a>4、render()</h3><blockquote>
+<p>组件渲染</p>
+</blockquote>
+<h3 id="5、componentDidMount"><a href="#5、componentDidMount" class="headerlink" title="5、componentDidMount()"></a>5、componentDidMount()</h3><blockquote>
+<p>组件已经被渲染到页面中后触发：此时可以进行开启定时器、向服务器发送请求等操作、此时页面中有了真正的DOM的元素，可以进行DOM相关的操作</p>
+</blockquote>
+<h2 id="二、运行中阶段"><a href="#二、运行中阶段" class="headerlink" title="二、运行中阶段"></a>二、运行中阶段</h2><h3 id="1、componentWillReceiveProps-nextProps"><a href="#1、componentWillReceiveProps-nextProps" class="headerlink" title="1、componentWillReceiveProps(nextProps)"></a>1、componentWillReceiveProps(nextProps)</h3><blockquote>
+<p>组件接收到属性时触发</p>
+</blockquote>
+<h3 id="2、shouldComponentUpdate-nextProps-nextState"><a href="#2、shouldComponentUpdate-nextProps-nextState" class="headerlink" title="2、shouldComponentUpdate(nextProps, nextState)"></a>2、shouldComponentUpdate(nextProps, nextState)</h3><blockquote>
+<p>当组件接收到新属性，或者组件的状态发生改变时触发。组件首次渲染时并不会触发</p>
+</blockquote>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">shouldComponentUpdate(newProps, newState) &#123;</span><br><span class="line">    <span class="keyword">if</span> (newProps.number &lt; <span class="number">5</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//该钩子函数可以接收到两个参数，新的属性和状态，返回true/false来控制组件是否需要更新。</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>一般我们通过该函数来优化性能：</p>
+</blockquote>
+<blockquote>
+<p>一个React项目需要更新一个小组件时，很可能需要父组件更新自己的状态。而一个父组件的重新更新会造成它旗下所有的子组件重新执行render()方法，形成新的虚拟DOM，再用diff算法对新旧虚拟DOM进行结构和属性的比较，决定组件是否需要重新渲染</p>
+</blockquote>
+<blockquote>
+<p>无疑这样的操作会造成很多的性能浪费，所以我们开发者可以根据项目的业务逻辑，在<code>shouldComponentUpdate()</code>中加入条件判断，从而优化性能</p>
+</blockquote>
+<blockquote>
+<p>例如React中的就提供了一个<code>PureComponent</code>的类，当我们的组件继承于它时，组件更新时就会默认先比较新旧属性和状态，从而决定组件是否更新。值得注意的是，<code>PureComponent</code>进行的是浅比较，所以组件状态或属性改变时，都需要返回一个新的对象或数组</p>
+</blockquote>
+<h3 id="3、componentWillUpdate-nextProps-nextState"><a href="#3、componentWillUpdate-nextProps-nextState" class="headerlink" title="3、componentWillUpdate(nextProps, nextState)"></a>3、componentWillUpdate(nextProps, nextState)</h3><blockquote>
+<p>组件即将被更新时触发</p>
+</blockquote>
+<h3 id="4、componentDidUpdate"><a href="#4、componentDidUpdate" class="headerlink" title="4、componentDidUpdate()"></a>4、componentDidUpdate()</h3><blockquote>
+<p>组件被更新完成后触发。页面中产生了新的DOM的元素，可以进行DOM操作</p>
+</blockquote>
+<h2 id="三、销毁阶段"><a href="#三、销毁阶段" class="headerlink" title="三、销毁阶段"></a>三、销毁阶段</h2><h3 id="1、componentWillUnmount"><a href="#1、componentWillUnmount" class="headerlink" title="1、componentWillUnmount()"></a>1、componentWillUnmount()</h3><blockquote>
+<p>组件被销毁时触发。这里我们可以进行一些清理操作，例如清理定时器，取消Redux的订阅事件等等。</p>
+</blockquote>
+<h2 id="四、栗子"><a href="#四、栗子" class="headerlink" title="四、栗子"></a>四、栗子</h2><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 基本顺序</span></span><br><span class="line"><span class="comment">1、父组件加载默认属性 &gt;&gt; static defaultProps</span></span><br><span class="line"><span class="comment">2、父组件加载默认状态 &gt;&gt; constructor</span></span><br><span class="line"><span class="comment">3、父组件挂载之前 &gt;&gt; componentWillMount</span></span><br><span class="line"><span class="comment">4、render(父组件挂载) &gt;&gt; render</span></span><br><span class="line"><span class="comment">12、子组件挂载中</span></span><br><span class="line"><span class="comment">5、父组件挂载完成 &gt;&gt; componentDidMount</span></span><br><span class="line"><span class="comment">6、父组件是否需要更新 &gt;&gt; shouldComponentUpdate</span></span><br><span class="line"><span class="comment">7、父组件将要更新 &gt;&gt; componentWillUpdate</span></span><br><span class="line"><span class="comment">4、render(父组件挂载) &gt;&gt; render</span></span><br><span class="line"><span class="comment">9、子组件将要接收到新属性</span></span><br><span class="line"><span class="comment">10、子组件是否需要更新</span></span><br><span class="line"><span class="comment">11、子组件将要更新</span></span><br><span class="line"><span class="comment">12、子组件挂载中</span></span><br><span class="line"><span class="comment">13、子组件更新完成</span></span><br><span class="line"><span class="comment">8、父组件更新完成 &gt;&gt; componentDidUpdate</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span></span><br><span class="line"><span class="keyword">import</span> ReactDOM <span class="keyword">from</span> <span class="string">'react-dom'</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SubCounter</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">    componentWillReceiveProps() &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'9、子组件将要接收到新属性'</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    shouldComponentUpdate(newProps, newState) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'10、子组件是否需要更新'</span>);</span><br><span class="line">        <span class="keyword">if</span> (newProps.number &lt; <span class="number">5</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    componentWillUpdate() &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'11、子组件将要更新'</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    componentDidUpdate() &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'13、子组件更新完成'</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    componentWillUnmount() &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'14、子组件将卸载'</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'12、子组件挂载中'</span>);</span><br><span class="line">        <span class="keyword">return</span> (</span><br><span class="line">                &lt;p&gt;&#123;<span class="keyword">this</span>.props.number&#125;&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">        )</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">class Counter extends React.Component &#123;</span></span><br><span class="line"><span class="regexp">    static defaultProps = &#123;</span></span><br><span class="line"><span class="regexp">        /</span><span class="regexp">/1、加载默认属性</span></span><br><span class="line"><span class="regexp">        name: 'sls',</span></span><br><span class="line"><span class="regexp">        age:23</span></span><br><span class="line"><span class="regexp">    &#125;;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">    constructor() &#123;</span></span><br><span class="line"><span class="regexp">        super();</span></span><br><span class="line"><span class="regexp">        /</span><span class="regexp">/2、加载默认状态</span></span><br><span class="line"><span class="regexp">        this.state = &#123;number: 0&#125;</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">    componentWillMount() &#123;</span></span><br><span class="line"><span class="regexp">        console.log('3、父组件挂载之前');</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">    componentDidMount() &#123;</span></span><br><span class="line"><span class="regexp">        console.log('5、父组件挂载完成');</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">    shouldComponentUpdate(newProps, newState) &#123;</span></span><br><span class="line"><span class="regexp">        console.log('6、父组件是否需要更新');</span></span><br><span class="line"><span class="regexp">        if (newState.number&lt;15) return true;</span></span><br><span class="line"><span class="regexp">        return false</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">    componentWillUpdate() &#123;</span></span><br><span class="line"><span class="regexp">        console.log('7、父组件将要更新');</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">    componentDidUpdate() &#123;</span></span><br><span class="line"><span class="regexp">        console.log('8、父组件更新完成');</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">    handleClick = () =&gt; &#123;</span></span><br><span class="line"><span class="regexp">        this.setState(&#123;</span></span><br><span class="line"><span class="regexp">            number: this.state.number + 1</span></span><br><span class="line"><span class="regexp">        &#125;)</span></span><br><span class="line"><span class="regexp">    &#125;;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">    render() &#123;</span></span><br><span class="line"><span class="regexp">        console.log('4、render(父组件挂载)');</span></span><br><span class="line"><span class="regexp">        return (</span></span><br><span class="line"><span class="regexp">            &lt;div&gt;</span></span><br><span class="line"><span class="regexp">                &lt;p&gt;&#123;this.state.number&#125;&lt;/</span>p&gt;</span><br><span class="line">                &lt;button onClick=&#123;<span class="keyword">this</span>.handleClick&#125;&gt;+&lt;/button&gt;</span><br><span class="line">                &#123;<span class="keyword">this</span>.state.number&lt;<span class="number">10</span>?&lt;SubCounter number=&#123;this.state.number&#125;/&gt;:null&#125;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">ReactDOM.render(&lt;Counter/&gt;, <span class="built_in">document</span>.getElementById(<span class="string">'root'</span>));</span><br></pre></td></tr></table></figure>
+<p><a href="https://stackblitz.com/edit/react-kgyevr" target="_blank" rel="noopener">试一下</a></p>
+<h1 id="如果使用es5"><a href="#如果使用es5" class="headerlink" title="如果使用es5"></a>如果使用es5</h1><p>在组件的整个生命周期中，随着该组件的props或者state发生改变，其DOM表现也会有相应的变化。一个组件就是一个状态机，对于特定地输入，它总返回一致的输出。</p>
+<p>一个React组件的生命周期分为三个部分：实例化、存在期和销毁时。</p>
+<h2 id="实例化"><a href="#实例化" class="headerlink" title="实例化"></a>实例化</h2><p>当组件在<strong>客户端</strong>被实例化，第一次被创建时，以下方法依次被调用：</p>
+<p>1、getDefaultProps<br>2、getInitialState<br>3、componentWillMount<br>4、render<br>5、componentDidMount</p>
+<p>当组件在<strong>服务端</strong>被实例化，首次被创建时，以下方法依次被调用：</p>
+<p>1、getDefaultProps<br>2、getInitialState<br>3、componentWillMount<br>4、render</p>
+<p>componentDidMount 不会在服务端被渲染的过程中调用。</p>
+<h3 id="getDefaultProps"><a href="#getDefaultProps" class="headerlink" title="getDefaultProps"></a><strong>getDefaultProps</strong></h3><p>对于每个组件实例来讲，这个方法只会调用一次，该组件类的所有后续应用，getDefaultPops 将不会再被调用，其返回的对象可以用于设置默认的 props(properties的缩写) 值。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Hello = React.creatClass(&#123;</span><br><span class="line">    getDefaultProps: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            name: <span class="string">'pomy'</span>,</span><br><span class="line">            git: <span class="string">'dwqs'</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    render: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (</span><br><span class="line">            &lt;div&gt;Hello,&#123;<span class="keyword">this</span>.props.name&#125;,git username is &#123;<span class="keyword">this</span>.props.dwqs&#125;&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">        )</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">&#125;);</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">ReactDOM.render(&lt;Hello /</span>&gt;, <span class="built_in">document</span>.body);</span><br></pre></td></tr></table></figure>
+<p>也可以在挂载组件的时候设置 props：</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> data = [&#123;<span class="attr">title</span>: <span class="string">'Hello'</span>&#125;];</span><br><span class="line">&lt;Hello data=&#123;data&#125; /&gt;</span><br></pre></td></tr></table></figure>
+<p>或者调用 <code>setProps</code> （一般不需要调用）来设置其 props：</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> data = [&#123;<span class="attr">title</span>: <span class="string">'Hello'</span>&#125;];</span><br><span class="line"><span class="keyword">var</span> Hello = React.render(&lt;Demo /&gt;, document.body);</span><br><span class="line">Hello.setProps(&#123;data:data&#125;);</span><br></pre></td></tr></table></figure>
+<p><strong>但只能在子组件或组件树上调用 setProps。别调用 this.setProps 或者 直接修改 this.props。将其当做只读数据。</strong></p>
+<p>React通过 <code>propTypes</code> 提供了一种验证 props 的方式，<code>propTypes</code> 是一个配置对象，用于定义属性类型：</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> survey = React.createClass(&#123;</span><br><span class="line">    propTypes: &#123;</span><br><span class="line">        survey: React.PropTypes.shape(&#123;</span><br><span class="line">            id: React.PropTypes.number.isRequired</span><br><span class="line">        &#125;).isRequired,</span><br><span class="line">        onClick: React.PropTypes.func,</span><br><span class="line">        name: React.PropTypes.string,</span><br><span class="line">        score: React.PropTypes.array</span><br><span class="line">        ...</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>组件初始化时，如果传递的属性和 <code>propTypes</code> 不匹配，则会打印一个 console.warn 日志。如果是可选配置，可以去掉.isRequired。</p>
+<h3 id="getInitialState"><a href="#getInitialState" class="headerlink" title="getInitialState"></a><strong>getInitialState</strong></h3><p>对于组件的每个实例来说，这个方法的调用<strong>有且只有一次，</strong>用来初始化每个实例的 state，在这个方法里，可以访问组件的 props。每一个React组件都有自己的 state，其与 props 的区别在于 state只存在组件的内部，props 在所有实例中共享。</p>
+<p>getInitialState 和 getDefaultPops 的调用是有区别的，getDefaultPops 是对于组件类来说只调用一次，后续该类的应用都不会被调用，而 getInitialState 是对于每个组件实例来讲都会调用，并且只调一次。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> LikeButton = React.createClass(&#123;</span><br><span class="line">  getInitialState: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;<span class="attr">liked</span>: <span class="literal">false</span>&#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  handleClick: <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.setState(&#123;<span class="attr">liked</span>: !<span class="keyword">this</span>.state.liked&#125;);</span><br><span class="line">  &#125;,</span><br><span class="line">  render: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> text = <span class="keyword">this</span>.state.liked ? <span class="string">'like'</span> : <span class="string">'haven\'t liked'</span>;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;p onClick=&#123;<span class="keyword">this</span>.handleClick&#125;&gt;</span><br><span class="line">        You &#123;text&#125; <span class="keyword">this</span>. Click to toggle.</span><br><span class="line">      &lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">    );</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;);</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">ReactDOM.render(</span></span><br><span class="line"><span class="regexp">  &lt;LikeButton /</span>&gt;,</span><br><span class="line">  <span class="built_in">document</span>.getElementById(<span class="string">'example'</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p>每次修改 state，都会重新渲染组件，实例化后通过 state 更新组件，会依次调用下列方法：</p>
+<p>1、shouldComponentUpdate<br>2、componentWillUpdate<br>3、render<br>4、componentDidUpdate</p>
+<p>但是<strong>不要直接修改 this.state，要通过 this.setState 方法来修改。</strong></p>
+<h3 id="componentWillMount"><a href="#componentWillMount" class="headerlink" title="componentWillMount"></a><strong>componentWillMount</strong></h3><p>该方法在首次渲染之前调用，也是再 render 方法调用之前修改 state 的最后一次机会。</p>
+<h3 id="render"><a href="#render" class="headerlink" title="render"></a><strong>render</strong></h3><p>该方法会创建一个虚拟DOM，用来表示组件的输出。对于一个组件来讲，render方法是唯一一个必需的方法。render方法需要满足下面几点：</p>
+<ol>
+<li>只能通过 this.props 和 this.state 访问数据（不能修改）</li>
+<li>可以返回 null,false 或者任何React组件</li>
+<li>只能出现一个顶级组件，不能返回一组元素</li>
+<li>不能改变组件的状态</li>
+<li>不能修改DOM的输出</li>
+</ol>
+<p>render方法返回的结果并不是真正的DOM元素，而是一个虚拟的表现，类似于一个DOM tree的结构的对象。react之所以效率高，就是这个原因。</p>
+<h3 id="componentDidMount"><a href="#componentDidMount" class="headerlink" title="componentDidMount"></a><strong>componentDidMount</strong></h3><p>该方法不会在服务端被渲染的过程中调用。该方法被调用时，已经渲染出真实的 DOM，可以再该方法中通过 <code>this.getDOMNode()</code> 访问到真实的 DOM(推荐使用 <code>ReactDOM.findDOMNode()</code>)。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> data = [..];</span><br><span class="line"><span class="keyword">var</span> comp = React.createClass(&#123;</span><br><span class="line">    render: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> &lt;imput .. /&gt;</span><br><span class="line">    &#125;,</span><br><span class="line">    componentDidMount: function()&#123;</span><br><span class="line">        $(this.getDOMNode()).autoComplete(&#123;</span><br><span class="line">            src: data</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>由于组件并不是真实的 DOM 节点，而是存在于内存之中的一种数据结构，叫做虚拟 DOM （virtual DOM）。只有当它插入文档以后，才会变成真实的 DOM 。有时需要从组件获取真实 DOM 的节点，这时就要用到 <code>ref</code> 属性：</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Area = React.createClass(&#123;</span><br><span class="line">    render: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.getDOMNode(); <span class="comment">//render调用时，组件未挂载，这里将报错</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> &lt;canvas ref='mainCanvas'&gt;</span><br><span class="line">    &#125;,</span><br><span class="line">    componentDidMount: function()&#123;</span><br><span class="line">        var canvas = this.refs.mainCanvas.getDOMNode();</span><br><span class="line">        //这是有效的，可以访问到 Canvas 节点</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>需要注意的是，由于 <code>this.refs.[refName]</code> 属性获取的是真实 DOM ，所以必须等到虚拟 DOM 插入文档以后，才能使用这个属性，否则会报错。</p>
+<h2 id="存在期"><a href="#存在期" class="headerlink" title="存在期"></a>存在期</h2><p>此时组件已经渲染好并且用户可以与它进行交互，比如鼠标点击，手指点按，或者其它的一些事件，导致应用状态的改变，你将会看到下面的方法依次被调用</p>
+<p>1、componentWillReceiveProps<br>2、shouldComponentUpdate<br>3、componentWillUpdate<br>4、render<br>5、componentDidUpdate</p>
+<h3 id="componentWillReceiveProps"><a href="#componentWillReceiveProps" class="headerlink" title="componentWillReceiveProps"></a><strong>componentWillReceiveProps</strong></h3><p>组件的 props 属性可以通过父组件来更改，这时，componentWillReceiveProps 将来被调用。可以在这个方法里更新 state,以触发 render 方法重新渲染组件。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">componentWillReceiveProps: <span class="function"><span class="keyword">function</span>(<span class="params">nextProps</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(nextProps.checked !== <span class="literal">undefined</span>)&#123;</span><br><span class="line">        <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">            checked: nextProps.checked</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="shouldComponentUpdate"><a href="#shouldComponentUpdate" class="headerlink" title="shouldComponentUpdate"></a><strong>shouldComponentUpdate</strong></h3><p>如果你确定组件的 props 或者 state 的改变不需要重新渲染，可以通过在这个方法里通过返回 <code>false</code> 来阻止组件的重新渲染，返回 `false 则不会执行 render 以及后面的 componentWillUpdate，componentDidUpdate 方法。</p>
+<p>该方法是非必须的，并且大多数情况下没有在开发中使用。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">shouldComponentUpdate: <span class="function"><span class="keyword">function</span>(<span class="params">nextProps, nextState</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.state.checked === nextState.checked;</span><br><span class="line">    <span class="comment">//return false 则不更新组件</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="componentWillUpdate"><a href="#componentWillUpdate" class="headerlink" title="componentWillUpdate"></a><strong>componentWillUpdate</strong></h3><p>这个方法和 componentWillMount 类似，在组件接收到了新的 props 或者 state 即将进行重新渲染前，componentWillUpdate(object nextProps, object nextState) 会被调用，<strong>注意不要在此方面里再去更新 props 或者 state。</strong></p>
+<h3 id="componentDidUpdate"><a href="#componentDidUpdate" class="headerlink" title="componentDidUpdate"></a><strong>componentDidUpdate</strong></h3><p>这个方法和 componentDidMount 类似，在组件重新被渲染之后，componentDidUpdate(object prevProps, object prevState) 会被调用。可以在这里访问并修改 DOM。</p>
+<h2 id="销毁时"><a href="#销毁时" class="headerlink" title="销毁时"></a>销毁时</h2><h3 id="componentWillUnmount"><a href="#componentWillUnmount" class="headerlink" title="componentWillUnmount"></a><strong>componentWillUnmount</strong></h3><p>每当React使用完一个组件，这个组件必须从 DOM 中卸载后被销毁，此时 componentWillUnmout 会被执行，完成所有的清理和销毁工作，在 componentDidMount 中添加的任务都需要再该方法中撤销，如创建的定时器或事件监听器。</p>
+<p>当再次装载组件时，以下方法会被依次调用：</p>
+<p>1、getInitialState<br>2、componentWillMount<br>3、render<br>4、componentDidMount</p>
+<h2 id="反模式"><a href="#反模式" class="headerlink" title="反模式"></a>反模式</h2><p>在 getInitialState 方法中，尝试通过 this.props 来创建 state 的做法是一种反模式。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//反模式</span></span><br><span class="line">getDefaultProps: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        data: <span class="keyword">new</span> <span class="built_in">Date</span>()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br><span class="line">getInitialState: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        day: <span class="keyword">this</span>.props.date - <span class="keyword">new</span> <span class="built_in">Date</span>()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br><span class="line">render: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> &lt;div&gt;Day:&#123;this.state.day&#125;&lt;/div&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>经过计算后的值不应该赋给 state，正确的模式应该是在渲染时计算这些值。这样保证了计算后的值永远不会与派生出它的 props 值不同步。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//正确模式</span></span><br><span class="line">getDefaultProps: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        data: <span class="keyword">new</span> <span class="built_in">Date</span>()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br><span class="line">render: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> day = <span class="keyword">this</span>.props.date - <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">    <span class="keyword">return</span> &lt;div&gt;Day:&#123;day&#125;&lt;/div&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果只是简单的初始化 state，那么应用反模式是没有问题的。</p>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -175,225 +313,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://github.com/steakxiaoxin/steakxiaoxin.github.io/2018/07/04/20180704-ReactLifeCycle/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/03/20180703-React.createClass & extends Component/" class="archive-article-date">
-  	<time datetime="2018-07-03T12:08:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-03</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/03/20180703-React.createClass & extends Component/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">React.createClass 和 extends Component的区别</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/03/20180703-React.createClass & extends Component/">React.createClass 和 extends Component的区别</a>
-    </h1>
+        
+        
+    </div>
+</aside>
+
+
+
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">react</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/02/20180702-react-router/" class="archive-article-date">
-  	<time datetime="2018-07-02T12:14:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/02/20180702-react-router/">react-router</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">react-router</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/02/20180702-webpack-tips/" class="archive-article-date">
-  	<time datetime="2018-07-02T12:03:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/02/20180702-webpack-tips/">Webpack-Tips Summary</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">tips</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/02/20180702-js-tips/" class="archive-article-date">
-  	<time datetime="2018-07-02T12:00:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/02/20180702-js-tips/">JavaScrip-tips Summary</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">tips</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/02/20180702-react-tips/" class="archive-article-date">
-  	<time datetime="2018-07-02T11:50:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/02/20180702-react-tips/">React-tips Summary</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">tips</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">react</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -424,8 +443,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
