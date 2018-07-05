@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="https://github.com/steakxiaoxin/steakxiaoxin.github.io">
   <title>React生命周期 | 小新的演唱会</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="图解ES6中的React生命周期 一个React组件的生命周期分为三个部分：初始化阶段、运行中阶段和销毁阶段。  初始化阶段:static defaultPropsconstructorcomponentWillMountrendercomponentDidMount 运行中阶段:componentWillReceiveProps(nextProps)shouldComponentUpdate(n">
+  <meta name="description" content="图解ES6中的React生命周期 一个React组件的生命周期分为三个部分：初始化阶段、运行中阶段、销毁阶段。  初始化阶段:static defaultPropsconstructorcomponentWillMountrendercomponentDidMount 运行中阶段:componentWillReceiveProps(nextProps)shouldComponentUpdate(n">
 <meta name="keywords" content="react">
 <meta property="og:type" content="article">
 <meta property="og:title" content="React生命周期">
 <meta property="og:url" content="https://github.com/steakxiaoxin/steakxiaoxin.github.io/2018/07/04/20180704-react-lifecycle/index.html">
 <meta property="og:site_name" content="小新的演唱会">
-<meta property="og:description" content="图解ES6中的React生命周期 一个React组件的生命周期分为三个部分：初始化阶段、运行中阶段和销毁阶段。  初始化阶段:static defaultPropsconstructorcomponentWillMountrendercomponentDidMount 运行中阶段:componentWillReceiveProps(nextProps)shouldComponentUpdate(n">
+<meta property="og:description" content="图解ES6中的React生命周期 一个React组件的生命周期分为三个部分：初始化阶段、运行中阶段、销毁阶段。  初始化阶段:static defaultPropsconstructorcomponentWillMountrendercomponentDidMount 运行中阶段:componentWillReceiveProps(nextProps)shouldComponentUpdate(n">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://github.com/assets/blogImgs/reactlifecycle-min.png">
-<meta property="og:updated_time" content="2018-07-04T08:24:39.000Z">
+<meta property="og:updated_time" content="2018-07-05T02:46:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React生命周期">
-<meta name="twitter:description" content="图解ES6中的React生命周期 一个React组件的生命周期分为三个部分：初始化阶段、运行中阶段和销毁阶段。  初始化阶段:static defaultPropsconstructorcomponentWillMountrendercomponentDidMount 运行中阶段:componentWillReceiveProps(nextProps)shouldComponentUpdate(n">
+<meta name="twitter:description" content="图解ES6中的React生命周期 一个React组件的生命周期分为三个部分：初始化阶段、运行中阶段、销毁阶段。  初始化阶段:static defaultPropsconstructorcomponentWillMountrendercomponentDidMount 运行中阶段:componentWillReceiveProps(nextProps)shouldComponentUpdate(n">
 <meta name="twitter:image" content="https://github.com/assets/blogImgs/reactlifecycle-min.png">
   
   
@@ -170,7 +170,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="图解ES6中的React生命周期"><a href="#图解ES6中的React生命周期" class="headerlink" title="图解ES6中的React生命周期"></a>图解ES6中的React生命周期</h1><blockquote>
-<p>一个React组件的生命周期分为三个部分：初始化阶段、运行中阶段和销毁阶段。</p>
+<p>一个React组件的生命周期分为三个部分：初始化阶段、运行中阶段、销毁阶段。</p>
 </blockquote>
 <p>初始化阶段:<br>static defaultProps<br>constructor<br>componentWillMount<br>render<br>componentDidMount</p>
 <p>运行中阶段:<br>componentWillReceiveProps(nextProps)<br>shouldComponentUpdate(nextProps, nextState)<br>componentWillUpdate(nextProps, nextState)<br>render<br>componentDidUpdate</p>
@@ -182,15 +182,57 @@
 <h3 id="3、componentWillMount"><a href="#3、componentWillMount" class="headerlink" title="3、componentWillMount()"></a>3、componentWillMount()</h3><blockquote>
 <p>组件即将被渲染到页面之前触发</p>
 </blockquote>
+<ul>
+<li>在<code>render()</code>方法之前</li>
+</ul>
+<ul>
+<li>1 因为componentWillMount是在render之前执行，所以在这个方法中<code>setState</code>不会发生重新渲染(re-render);</li>
+<li>2 这是服务端渲染(<code>server render</code>)中唯一调用的钩子(hook);</li>
+<li>3 通常情况下，推荐用<code>constructor()</code>方法代替;</li>
+</ul>
 <h3 id="4、render"><a href="#4、render" class="headerlink" title="4、render()"></a>4、render()</h3><blockquote>
 <p>组件渲染</p>
 </blockquote>
+<p>执行场景</p>
+<ul>
+<li>1 在<code>componentWillMount()</code>方法之后</li>
+<li>2 在<code>componentWillReceive(nextProps, nextState)</code>方法之后</li>
+</ul>
 <h3 id="5、componentDidMount"><a href="#5、componentDidMount" class="headerlink" title="5、componentDidMount()"></a>5、componentDidMount()</h3><blockquote>
 <p>组件已经被渲染到页面中后触发：此时可以进行开启定时器、向服务器发送请求等操作、此时页面中有了真正的DOM的元素，可以进行DOM相关的操作</p>
 </blockquote>
+<ul>
+<li>执行场景<ul>
+<li>在<code>render()</code>方法之后</li>
+</ul>
+</li>
+<li>解释<ul>
+<li>1 这个方法会在render()之后立即执行；</li>
+<li>2 这里可以对DOM进行操作，这个函数之后ref变成实际的DOM(@TODO 表述可能不清晰);</li>
+<li>3 这里可以加载服务器数据，并且如果使用了redux之类的数据服务，这里可以出发加载服务器数据的action;</li>
+<li>4 这里可以使用<code>setState()</code>方法触发<code>重新渲染(re-render)</code>;</li>
+</ul>
+</li>
+</ul>
 <h2 id="二、运行中阶段"><a href="#二、运行中阶段" class="headerlink" title="二、运行中阶段"></a>二、运行中阶段</h2><h3 id="1、componentWillReceiveProps-nextProps"><a href="#1、componentWillReceiveProps-nextProps" class="headerlink" title="1、componentWillReceiveProps(nextProps)"></a>1、componentWillReceiveProps(nextProps)</h3><blockquote>
 <p>组件接收到属性时触发</p>
 </blockquote>
+<ul>
+<li>执行场景<ul>
+<li>在已经挂在的组件(mounted component)接收到新props时触发;</li>
+<li>简单的说是在除了第一次生命周期(componentWillMount -&gt; render -&gt; componentDidMount)之后的生命周期中出发;</li>
+</ul>
+</li>
+<li>解释<ul>
+<li>1 如果你需要在<code>props</code>发生变化(或者说新传入的props)来更新<code>state</code>，你可能需要比较<code>this.props</code>和<code>nextProps</code>, 然后使用<code>this.setState()</code>方法来改变<code>this.state</code>;</li>
+</ul>
+</li>
+<li>注意<ul>
+<li>1 React可能会在props传入时即使没有发生改变的时候也发生重新渲染, 所以如果你想自己处理改变，请确保比较props当前值和下一次值; 这可能造成组件重新渲染;</li>
+<li>2 如果你只是调用<code>this.setState()</code>而不是从外部传入<code>props</code>, 那么不会触发<code>componentWillReceiveProps(nextProps)</code>函数；这就意味着: <code>this.setState()</code>方法不会触发<code>componentWillReceiveProps()</code>, <code>props</code>的改变或者<code>props</code>没有改变才会触发这个方法;</li>
+</ul>
+</li>
+</ul>
 <h3 id="2、shouldComponentUpdate-nextProps-nextState"><a href="#2、shouldComponentUpdate-nextProps-nextState" class="headerlink" title="2、shouldComponentUpdate(nextProps, nextState)"></a>2、shouldComponentUpdate(nextProps, nextState)</h3><blockquote>
 <p>当组件接收到新属性，或者组件的状态发生改变时触发。组件首次渲染时并不会触发</p>
 </blockquote>
@@ -207,17 +249,111 @@
 <blockquote>
 <p>例如React中的就提供了一个<code>PureComponent</code>的类，当我们的组件继承于它时，组件更新时就会默认先比较新旧属性和状态，从而决定组件是否更新。值得注意的是，<code>PureComponent</code>进行的是浅比较，所以组件状态或属性改变时，都需要返回一个新的对象或数组</p>
 </blockquote>
+<ul>
+<li>执行场景<ul>
+<li>在接收到新<code>props</code>或<code>state</code>时，或者说在<code>componentWillReceiveProps(nextProps)</code>后触发</li>
+</ul>
+</li>
+<li>解释<ul>
+<li>在接收新的<code>props</code>或<code>state</code>时确定是否发生重新渲染，默认情况返回<code>true</code>，表示会发生重新渲染</li>
+</ul>
+</li>
+<li>注意<ul>
+<li>1 这个方法在首次渲染时或者<code>forceUpdate()</code>时不会触发;</li>
+<li>2 这个方法如果返回<code>false</code>, 那么<code>props</code>或<code>state</code>发生改变的时候会阻止子组件发生重新渲染;</li>
+<li>3 目前，如果<code>shouldComponentUpdate(nextProps, nextState)</code>返回<code>false</code>, 那么<code>componentWillUpdate(nextProps, nextState)</code>, <code>render()</code>, <code>componentDidUpdate()</code>都不会被触发;</li>
+</ul>
+</li>
+</ul>
 <h3 id="3、componentWillUpdate-nextProps-nextState"><a href="#3、componentWillUpdate-nextProps-nextState" class="headerlink" title="3、componentWillUpdate(nextProps, nextState)"></a>3、componentWillUpdate(nextProps, nextState)</h3><blockquote>
 <p>组件即将被更新时触发</p>
 </blockquote>
+<ul>
+<li>执行场景<ul>
+<li>在<code>props</code>或<code>state</code>发生改变或者<code>shouldComponentUpdate(nextProps, nextState)</code>触发后, 在<code>render()</code>之前</li>
+</ul>
+</li>
+<li>解释<ul>
+<li>1 这个方法在组件初始化时不会被调用;</li>
+</ul>
+</li>
+<li>注意<ul>
+<li>1 <strong>千万不要在这个函数中调用this.setState()方法.</strong>;</li>
+<li>2 如果确实需要响应<code>props</code>的改变，那么你可以在<code>componentWillReceiveProps(nextProps)</code>中做响应操作;</li>
+<li>3 如果<code>shouldComponentUpdate(nextProps, nextState)</code>返回<code>false</code>，那么<code>componentWillUpdate()</code>不会被触发;</li>
+</ul>
+</li>
+</ul>
 <h3 id="4、componentDidUpdate"><a href="#4、componentDidUpdate" class="headerlink" title="4、componentDidUpdate()"></a>4、componentDidUpdate()</h3><blockquote>
 <p>组件被更新完成后触发。页面中产生了新的DOM的元素，可以进行DOM操作</p>
 </blockquote>
+<ul>
+<li>执行场景<ul>
+<li>在发生更新或<code>componentWillUpdate(nextProps, nextState)</code>后</li>
+</ul>
+</li>
+<li>解释<ul>
+<li>1 该方法不会再组件初始化时触发;</li>
+<li>2 使用这个方法可以对组件中的DOM进行操作;</li>
+<li>3 只要你比较了<code>this.props</code>和<code>nextProps</code>，你想要发出网络请求(nextwork requests)时就可以发出, 当然你也可以不发出网络请求;</li>
+</ul>
+</li>
+<li>注意<ul>
+<li>如果<code>shouldComponentUpdate(nextProps, nextState)</code>返回<code>false</code>, 那么<code>componentDidUpdate(prevProps, prevState)</code>不会被触发;</li>
+</ul>
+</li>
+</ul>
 <h2 id="三、销毁阶段"><a href="#三、销毁阶段" class="headerlink" title="三、销毁阶段"></a>三、销毁阶段</h2><h3 id="1、componentWillUnmount"><a href="#1、componentWillUnmount" class="headerlink" title="1、componentWillUnmount()"></a>1、componentWillUnmount()</h3><blockquote>
 <p>组件被销毁时触发。这里我们可以进行一些清理操作，例如清理定时器，取消Redux的订阅事件等等。</p>
 </blockquote>
+<ul>
+<li>在组件卸载(unmounted)或销毁(destroyed)之前</li>
+</ul>
+<ul>
+<li>这个方法可以让你处理一些必要的清理操作，比如无效的timers、interval，或者取消网络请求，或者清理任何在<code>componentDidMount()</code>中创建的DOM元素(elements);</li>
+</ul>
 <h2 id="四、栗子"><a href="#四、栗子" class="headerlink" title="四、栗子"></a>四、栗子</h2><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 基本顺序</span></span><br><span class="line"><span class="comment">1、父组件加载默认属性 &gt;&gt; static defaultProps</span></span><br><span class="line"><span class="comment">2、父组件加载默认状态 &gt;&gt; constructor</span></span><br><span class="line"><span class="comment">3、父组件挂载之前 &gt;&gt; componentWillMount</span></span><br><span class="line"><span class="comment">4、render(父组件挂载) &gt;&gt; render</span></span><br><span class="line"><span class="comment">12、子组件挂载中</span></span><br><span class="line"><span class="comment">5、父组件挂载完成 &gt;&gt; componentDidMount</span></span><br><span class="line"><span class="comment">6、父组件是否需要更新 &gt;&gt; shouldComponentUpdate</span></span><br><span class="line"><span class="comment">7、父组件将要更新 &gt;&gt; componentWillUpdate</span></span><br><span class="line"><span class="comment">4、render(父组件挂载) &gt;&gt; render</span></span><br><span class="line"><span class="comment">9、子组件将要接收到新属性</span></span><br><span class="line"><span class="comment">10、子组件是否需要更新</span></span><br><span class="line"><span class="comment">11、子组件将要更新</span></span><br><span class="line"><span class="comment">12、子组件挂载中</span></span><br><span class="line"><span class="comment">13、子组件更新完成</span></span><br><span class="line"><span class="comment">8、父组件更新完成 &gt;&gt; componentDidUpdate</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span></span><br><span class="line"><span class="keyword">import</span> ReactDOM <span class="keyword">from</span> <span class="string">'react-dom'</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SubCounter</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">    componentWillReceiveProps() &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'9、子组件将要接收到新属性'</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    shouldComponentUpdate(newProps, newState) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'10、子组件是否需要更新'</span>);</span><br><span class="line">        <span class="keyword">if</span> (newProps.number &lt; <span class="number">5</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    componentWillUpdate() &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'11、子组件将要更新'</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    componentDidUpdate() &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'13、子组件更新完成'</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    componentWillUnmount() &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'14、子组件将卸载'</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'12、子组件挂载中'</span>);</span><br><span class="line">        <span class="keyword">return</span> (</span><br><span class="line">                &lt;p&gt;&#123;<span class="keyword">this</span>.props.number&#125;&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">        )</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">class Counter extends React.Component &#123;</span></span><br><span class="line"><span class="regexp">    static defaultProps = &#123;</span></span><br><span class="line"><span class="regexp">        /</span><span class="regexp">/1、加载默认属性</span></span><br><span class="line"><span class="regexp">        name: 'sls',</span></span><br><span class="line"><span class="regexp">        age:23</span></span><br><span class="line"><span class="regexp">    &#125;;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">    constructor() &#123;</span></span><br><span class="line"><span class="regexp">        super();</span></span><br><span class="line"><span class="regexp">        /</span><span class="regexp">/2、加载默认状态</span></span><br><span class="line"><span class="regexp">        this.state = &#123;number: 0&#125;</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">    componentWillMount() &#123;</span></span><br><span class="line"><span class="regexp">        console.log('3、父组件挂载之前');</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">    componentDidMount() &#123;</span></span><br><span class="line"><span class="regexp">        console.log('5、父组件挂载完成');</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">    shouldComponentUpdate(newProps, newState) &#123;</span></span><br><span class="line"><span class="regexp">        console.log('6、父组件是否需要更新');</span></span><br><span class="line"><span class="regexp">        if (newState.number&lt;15) return true;</span></span><br><span class="line"><span class="regexp">        return false</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">    componentWillUpdate() &#123;</span></span><br><span class="line"><span class="regexp">        console.log('7、父组件将要更新');</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">    componentDidUpdate() &#123;</span></span><br><span class="line"><span class="regexp">        console.log('8、父组件更新完成');</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">    handleClick = () =&gt; &#123;</span></span><br><span class="line"><span class="regexp">        this.setState(&#123;</span></span><br><span class="line"><span class="regexp">            number: this.state.number + 1</span></span><br><span class="line"><span class="regexp">        &#125;)</span></span><br><span class="line"><span class="regexp">    &#125;;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">    render() &#123;</span></span><br><span class="line"><span class="regexp">        console.log('4、render(父组件挂载)');</span></span><br><span class="line"><span class="regexp">        return (</span></span><br><span class="line"><span class="regexp">            &lt;div&gt;</span></span><br><span class="line"><span class="regexp">                &lt;p&gt;&#123;this.state.number&#125;&lt;/</span>p&gt;</span><br><span class="line">                &lt;button onClick=&#123;<span class="keyword">this</span>.handleClick&#125;&gt;+&lt;/button&gt;</span><br><span class="line">                &#123;<span class="keyword">this</span>.state.number&lt;<span class="number">10</span>?&lt;SubCounter number=&#123;this.state.number&#125;/&gt;:null&#125;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">ReactDOM.render(&lt;Counter/&gt;, <span class="built_in">document</span>.getElementById(<span class="string">'root'</span>));</span><br></pre></td></tr></table></figure>
 <p><a href="https://stackblitz.com/edit/react-kgyevr" target="_blank" rel="noopener">试一下</a></p>
+<h3 id="五、两种生命周期"><a href="#五、两种生命周期" class="headerlink" title="五、两种生命周期"></a>五、两种生命周期</h3><h4 id="1-组件初始化"><a href="#1-组件初始化" class="headerlink" title="1 组件初始化"></a>1 组件初始化</h4><ul>
+<li>原因<ul>
+<li><code>组件第一次建立</code></li>
+</ul>
+</li>
+<li>触发<ul>
+<li>componentWillMount -&gt; render -&gt; componentDidMount</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-组件更新-–-props-change"><a href="#2-组件更新-–-props-change" class="headerlink" title="2 组件更新 – props change"></a>2 组件更新 – props change</h4><ul>
+<li>原因<ul>
+<li><code>props</code>发生改变</li>
+</ul>
+</li>
+<li>触发<ul>
+<li>componentWillReceiveProps -&gt; shouldComponentUpdate -&gt; componentWillUpdate -&gt; componentDidUpdate</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-组件更新-–-state-change"><a href="#3-组件更新-–-state-change" class="headerlink" title="3 组件更新 – state change"></a>3 组件更新 – state change</h4><ul>
+<li>原因<ul>
+<li><code>this.setState()</code>使<code>state</code>发生改变</li>
+</ul>
+</li>
+<li>触发<ul>
+<li>shoudlComponentUpdate -&gt; componentWillUpdate -&gt; componentDidUpdate</li>
+</ul>
+</li>
+</ul>
+<h4 id="4-组件卸载或销毁"><a href="#4-组件卸载或销毁" class="headerlink" title="4 组件卸载或销毁"></a>4 组件卸载或销毁</h4><ul>
+<li>原因<ul>
+<li><code>组件卸载或销毁</code></li>
+</ul>
+</li>
+<li>触发<ul>
+<li>componentWillUnmount</li>
+</ul>
+</li>
+</ul>
 <h1 id="如果使用es5"><a href="#如果使用es5" class="headerlink" title="如果使用es5"></a>如果使用es5</h1><p>在组件的整个生命周期中，随着该组件的props或者state发生改变，其DOM表现也会有相应的变化。一个组件就是一个状态机，对于特定地输入，它总返回一致的输出。</p>
 <p>一个React组件的生命周期分为三个部分：实例化、存在期和销毁时。</p>
 <h2 id="实例化"><a href="#实例化" class="headerlink" title="实例化"></a>实例化</h2><p>当组件在<strong>客户端</strong>被实例化，第一次被创建时，以下方法依次被调用：</p>
@@ -513,15 +649,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">tips</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">react-router</a>
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -529,7 +665,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+                <a href="javascript:void(0)" class="js-tag color3">react-router</a>
               </li>
             
             <div class="clearfix"></div>
