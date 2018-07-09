@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="小新的演唱会">
 <meta property="og:description" content="webpack TM 到底是什么和为什么历史因为早期浏览器的标准的不统一导致 web 技术的历史包袱比较重，旧的浏览器无法支持新的标准，但是又有旧的浏览器的用户群体，同时也有需要新方法的用户群体，新需求和旧标准之间的矛盾一直存在，而且愈演愈烈。整个前端生态就好像一个巨人在一个鸡窝里头去跳芭蕾舞，又要跳的优雅，又要跳的小心，还不能踩死鸡娃，就是这种感觉。那咋搞？webpack lei了。 坑坑 -">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-09T11:23:01.000Z">
+<meta property="og:updated_time" content="2018-07-09T11:24:42.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Webpack 基础概念">
 <meta name="twitter:description" content="webpack TM 到底是什么和为什么历史因为早期浏览器的标准的不统一导致 web 技术的历史包袱比较重，旧的浏览器无法支持新的标准，但是又有旧的浏览器的用户群体，同时也有需要新方法的用户群体，新需求和旧标准之间的矛盾一直存在，而且愈演愈烈。整个前端生态就好像一个巨人在一个鸡窝里头去跳芭蕾舞，又要跳的优雅，又要跳的小心，还不能踩死鸡娃，就是这种感觉。那咋搞？webpack lei了。 坑坑 -">
@@ -169,7 +169,7 @@
       
         <h2 id="webpack-TM-到底是什么和为什么"><a href="#webpack-TM-到底是什么和为什么" class="headerlink" title="webpack TM 到底是什么和为什么"></a>webpack TM 到底是什么和为什么</h2><h3 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h3><p>因为早期浏览器的标准的不统一导致 web 技术的历史包袱比较重，旧的浏览器无法支持新的标准，但是又有旧的浏览器的用户群体，同时也有需要新方法的用户群体，新需求和旧标准之间的矛盾一直存在，而且愈演愈烈。整个前端生态就好像一个巨人在一个鸡窝里头去跳芭蕾舞，又要跳的优雅，又要跳的小心，还不能踩死鸡娃，就是这种感觉。那咋搞？<strong>webpack</strong> lei了。</p>
 <h3 id="坑坑-模块化"><a href="#坑坑-模块化" class="headerlink" title="坑坑 - 模块化"></a>坑坑 - 模块化</h3><p>要理解 webpack 是个什么东西，以及它解决了什么问题，首先得了解前端的一个最大的坑，就是浏览器在解析js的时候，它有个盲点，无法像其他语言一样做到 js 文件的模块化。</p>
-<p>比如说：一个文件想要对另一个文件暴露出去一个变量，你只能把它定义在全局作用域下。在 script src 中引入 js 文件，但是一旦文件数量一多，可能变量就会发生冲突，覆盖。</p>
+<p>比如说：一个文件想要对另一个文件暴露出去一个变量，你只能把它定义在全局作用域下。在 script src 中引入 js 文件，但是一旦文件数量一多，可能变量就会发生冲突，覆盖。<br><a id="more"></a></p>
 <p>文件目录下有：index.html , a.js , b.js</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./a.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./b.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./c.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">...</span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./n.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>后来，出现了一个东西，node。它可以跑 js，而且 node 可以直接跑在操作系统上，直接终端输入 <code>node</code>就可以。而且 node 有个非常好的东西是浏览器不存在的，模块化。在 node 中，所有的文件都是模块，任何的模块都有两个口，一个是入口 require(XXX)，一个是出口 module.exports = {XXX}。</p>
@@ -436,19 +436,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">react-router</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">react</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">javascript</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">tips</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">react-router</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">react</a>
               </li>
              
               <li class="article-tag-list-item">
