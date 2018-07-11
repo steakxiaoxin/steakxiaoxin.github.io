@@ -160,9 +160,10 @@
     <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="1-entry"><a href="#1-entry" class="headerlink" title="1.entry"></a>1.entry</h3><p><strong>缓存</strong></p>
-<p>缓存无处不在，使用缓存的最好方法是保证你的文件名和文件内容是匹配的（内容改变，名称相应改变）</p>
-<p>webpack可以把一个哈希值添加到打包的文件名中，使用方法如下,添加特殊的字符串混合体（[name], [id] and [hash]）到输出文件名前</p>
+        <blockquote>
+<p>Webpack 启动后会从Entry里配置的Module开始递归解析 Entry 依赖的所有 Module。 每找到一个 Module， 就会根据配置的Loader去找出对应的转换规则，对 Module 进行转换后，再解析出当前 Module 依赖的 Module。 这些模块会以 Entry 为单位进行分组，一个 Entry 和其所有依赖的 Module 被分到一个组也就是一个 Chunk。最后 Webpack 会把所有 Chunk 转换成文件输出。 在整个流程中 Webpack 会在恰当的时机执行 Plugin 里定义的逻辑。</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    entry: <span class="string">''</span>,               <span class="comment">// 入口文件</span></span><br><span class="line">    output: &#123;&#125;,              <span class="comment">// 出口文件</span></span><br><span class="line">    <span class="built_in">module</span>: &#123;&#125;,              <span class="comment">// 处理对应模块</span></span><br><span class="line">    plugins: [],             <span class="comment">// 对应的插件</span></span><br><span class="line">    devServer: &#123;&#125;,           <span class="comment">// 开发服务器配置</span></span><br><span class="line">    mode: <span class="string">'development'</span>      <span class="comment">// 模式配置 -- 在webpack@4以上才有</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         
       
 
@@ -1085,15 +1086,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">react-router</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">react</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">webpack</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">react-router</a>
               </li>
             
             <div class="clearfix"></div>
