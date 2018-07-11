@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="小新的演唱会">
 <meta property="og:description" content="webpack TM 到底是什么和为什么历史因为早期浏览器的标准的不统一导致 web 技术的历史包袱比较重，旧的浏览器无法支持新的标准，但是又有旧的浏览器的用户群体，同时也有需要新方法的用户群体，新需求和旧标准之间的矛盾一直存在，而且愈演愈烈。整个前端生态就好像一个巨人在一个鸡窝里头去跳芭蕾舞，又要跳的优雅，又要跳的小心，还不能踩死鸡娃，就是这种感觉。那咋搞？webpack lei了。 坑坑 -">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-09T11:26:14.000Z">
+<meta property="og:updated_time" content="2018-07-10T07:11:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Webpack 基础概念">
 <meta name="twitter:description" content="webpack TM 到底是什么和为什么历史因为早期浏览器的标准的不统一导致 web 技术的历史包袱比较重，旧的浏览器无法支持新的标准，但是又有旧的浏览器的用户群体，同时也有需要新方法的用户群体，新需求和旧标准之间的矛盾一直存在，而且愈演愈烈。整个前端生态就好像一个巨人在一个鸡窝里头去跳芭蕾舞，又要跳的优雅，又要跳的小心，还不能踩死鸡娃，就是这种感觉。那咋搞？webpack lei了。 坑坑 -">
@@ -196,7 +196,15 @@
 <li>npm run pack</li>
 </ol>
 <h3 id="这就是最基本的-webpack"><a href="#这就是最基本的-webpack" class="headerlink" title="这就是最基本的 webpack"></a>这就是最基本的 webpack</h3><p>webpack 是什么应该心里有些 b 树了吧，模块化和打包 (感觉自己菜的一笔啊)</p>
-<p>我们可以直接使用 require(XXX) 的形式来引入各模块，即使它们可能需要经过编译（比如JSX和sass），但我们无须在上面花费太多心思，因为 webpack 有着各种健全的加载器（loader）在默默处理这些事情，这块后续会提到。</p>
+<p>我们可以直接使用 require(XXX) 的形式来引入各模块，即使它们可能需要经过编译（比如JSX和sass），但我们无须在上面花费太多心思，因为 webpack 有着各种健全的加载器（loader）在默默处理这些事情，这块后续会提到。<br><strong>总结</strong><br>可以看做一个模块化打包机，分析项目结构，处理模块化依赖，转换成为浏览器可运行的代码。</p>
+<ul>
+<li>代码转换: TypeScript,JSX 编译成 JavaScript、SCSS,LESS 编译成 CSS.</li>
+<li>文件优化：压缩 JavaScript、CSS、HTML 代码，压缩合并图片。</li>
+<li>代码分割：提取多个页面的公共代码、提取首屏不需要执行部分的代码让其异步加载。</li>
+<li>模块合并：在采用模块化的项目里会有很多个模块和文件，需要构建功能把模块分类合并成一个文件。</li>
+<li>自动刷新：监听本地源代码的变化，自动重新构建、刷新浏览器。</li>
+</ul>
+<p>构建把一系列前端代码自动化去处理复杂的流程，解放生产力。</p>
 
       
 
@@ -442,6 +450,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">javascript</a>
               </li>
              
@@ -450,15 +462,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color1">react</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">webpack</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">react</a>
               </li>
              
               <li class="article-tag-list-item">
