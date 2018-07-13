@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/steakxiaoxin/steakxiaoxin.github.io">
-  <title>小新的演唱会</title>
+  <title>Webpack篇1-基础概念 | 小新的演唱会</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="小新的演唱会">
-<meta property="og:url" content="https://github.com/steakxiaoxin/steakxiaoxin.github.io/index.html">
+  <meta name="description" content="webpack TM 到底是什么和为什么历史因为早期浏览器的标准的不统一导致 web 技术的历史包袱比较重，旧的浏览器无法支持新的标准，但是又有旧的浏览器的用户群体，同时也有需要新方法的用户群体，新需求和旧标准之间的矛盾一直存在，而且愈演愈烈。整个前端生态就好像一个巨人在一个鸡窝里头去跳芭蕾舞，又要跳的优雅，又要跳的小心，还不能踩死鸡娃，就是这种感觉。那咋搞？webpack lei了。 坑坑 -">
+<meta name="keywords" content="webpack">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Webpack篇1-基础概念">
+<meta property="og:url" content="https://github.com/steakxiaoxin/steakxiaoxin.github.io/2018/07/09/20180709-webpack-basic-concept/index.html">
 <meta property="og:site_name" content="小新的演唱会">
+<meta property="og:description" content="webpack TM 到底是什么和为什么历史因为早期浏览器的标准的不统一导致 web 技术的历史包袱比较重，旧的浏览器无法支持新的标准，但是又有旧的浏览器的用户群体，同时也有需要新方法的用户群体，新需求和旧标准之间的矛盾一直存在，而且愈演愈烈。整个前端生态就好像一个巨人在一个鸡窝里头去跳芭蕾舞，又要跳的优雅，又要跳的小心，还不能踩死鸡娃，就是这种感觉。那咋搞？webpack lei了。 坑坑 -">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-07-13T01:30:53.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小新的演唱会">
+<meta name="twitter:title" content="Webpack篇1-基础概念">
+<meta name="twitter:description" content="webpack TM 到底是什么和为什么历史因为早期浏览器的标准的不统一导致 web 技术的历史包袱比较重，旧的浏览器无法支持新的标准，但是又有旧的浏览器的用户群体，同时也有需要新方法的用户群体，新需求和旧标准之间的矛盾一直存在，而且愈演愈烈。整个前端生态就好像一个巨人在一个鸡窝里头去跳芭蕾舞，又要跳的优雅，又要跳的小心，还不能踩死鸡娃，就是这种感觉。那咋搞？webpack lei了。 坑坑 -">
   
   
     <link rel="icon" href="/assets/imgs/favicon.ico">
@@ -134,184 +139,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-20180711-webpack-process" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-20180709-webpack-basic-concept" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/11/20180711-webpack-process/">Webpack篇3-流程 0到1</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/11/20180711-webpack-process/" class="archive-article-date">
-  	<time datetime="2018-07-11T11:09:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-11</time>
-</a>
-        
-      </header>
-      
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ol>
-<li><p><code>npm init</code></p>
-</li>
-<li><p><code>npm i -D webpack@3</code></p>
-</li>
-<li><p><strong>have a try</strong></p>
-<p>package.json 中添加 script</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">"scripts": &#123;</span><br><span class="line">  "build": "webpack"</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/11/20180711-webpack-process/">More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-20180710-webpack-detail" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/10/20180710-webpack-detail/">Webpack篇2-详解</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/10/20180710-webpack-detail/" class="archive-article-date">
-  	<time datetime="2018-07-10T01:23:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-10</time>
-</a>
-        
-      </header>
-      
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>Webpack 启动后会从Entry里配置的Module开始递归解析 Entry 依赖的所有 Module。 每找到一个 Module， 就会根据配置的Loader去找出对应的转换规则，对 Module 进行转换后，再解析出当前 Module 依赖的 Module。 这些模块会以 Entry 为单位进行分组，一个 Entry 和其所有依赖的 Module 被分到一个组也就是一个 Chunk。最后 Webpack 会把所有 Chunk 转换成文件输出。 在整个流程中 Webpack 会在恰当的时机执行 Plugin 里定义的逻辑。</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    entry: <span class="string">''</span>,               <span class="comment">// 入口文件</span></span><br><span class="line">    output: &#123;&#125;,              <span class="comment">// 出口文件</span></span><br><span class="line">    <span class="built_in">module</span>: &#123;&#125;,              <span class="comment">// 处理对应模块</span></span><br><span class="line">    plugins: [],             <span class="comment">// 对应的插件</span></span><br><span class="line">    devServer: &#123;&#125;,           <span class="comment">// 开发服务器配置</span></span><br><span class="line">    mode: <span class="string">'development'</span>      <span class="comment">// 模式配置 -- 在webpack@4以上才有</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/10/20180710-webpack-detail/">More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-20180709-webpack-basic-concept" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/09/20180709-webpack-basic-concept/">Webpack篇1-基础概念</a>
+    <h1 class="article-title" itemprop="name">
+      Webpack篇1-基础概念
     </h1>
   
 
@@ -322,6 +157,10 @@
         
       </header>
       
+		<span class="archive-article-date">
+			阅读量 <span id="busuanzi_value_page_pv"></span>
+		</span>
+      
     
     <!-- 目录内容 -->
     
@@ -331,9 +170,65 @@
         <h2 id="webpack-TM-到底是什么和为什么"><a href="#webpack-TM-到底是什么和为什么" class="headerlink" title="webpack TM 到底是什么和为什么"></a>webpack TM 到底是什么和为什么</h2><h3 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h3><p>因为早期浏览器的标准的不统一导致 web 技术的历史包袱比较重，旧的浏览器无法支持新的标准，但是又有旧的浏览器的用户群体，同时也有需要新方法的用户群体，新需求和旧标准之间的矛盾一直存在，而且愈演愈烈。整个前端生态就好像一个巨人在一个鸡窝里头去跳芭蕾舞，又要跳的优雅，又要跳的小心，还不能踩死鸡娃，就是这种感觉。那咋搞？<strong>webpack</strong> lei了。</p>
 <h3 id="坑坑-模块化"><a href="#坑坑-模块化" class="headerlink" title="坑坑 - 模块化"></a>坑坑 - 模块化</h3><p>要理解 webpack 是个什么东西，以及它解决了什么问题，首先得了解前端的一个最大的坑，就是浏览器在解析js的时候，它有个盲点，无法像其他语言一样做到 js 文件的模块化。</p>
 <p>比如说：一个文件想要对另一个文件暴露出去一个变量，你只能把它定义在全局作用域下。在 script src 中引入 js 文件，但是一旦文件数量一多，可能变量就会发生冲突，覆盖。</p>
-        
+<a id="more"></a>
+<p>文件目录下有：index.html , a.js , b.js</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./a.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./b.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./c.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">...</span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./n.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>后来，出现了一个东西，node。它可以跑 js，而且 node 可以直接跑在操作系统上，直接终端输入 <code>node</code>就可以。而且 node 有个非常好的东西是浏览器不存在的，模块化。在 node 中，所有的文件都是模块，任何的模块都有两个口，一个是入口 require(XXX)，一个是出口 module.exports = {XXX}。</p>
+<p>举个栗子：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// a.js</span></span><br><span class="line"><span class="keyword">let</span> msg = <span class="string">'这是 a 里面的消息'</span>;</span><br><span class="line"><span class="built_in">module</span>.exports = &#123;msg&#125;;<span class="comment">//出口</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// b.js</span></span><br><span class="line"><span class="keyword">let</span> msg = <span class="built_in">require</span>(<span class="string">'./a'</span>).msg;<span class="comment">//入口</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'msg:'</span>, msg);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 终端输入: node b.js</span></span><br><span class="line"><span class="comment">// msg: 这是 a 里面的消息</span></span><br></pre></td></tr></table></figure>
+<p>但是浏览器不识别这东西，怎么办？webpack 来搞。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 终端输入: webpack b.js bundle.js  --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 在 index.html 中引入生成的 bundle.js  --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./bundle.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这样运行 index.html 就能在控制台看到生成的消息 <code>msg: 这是 a 里面的消息</code></p>
+<p>webpack 能动态的把后端的代码变成浏览器能读懂的代码， 做到了后端代码前端化，这样我们既做到了用后端的方式来让我们的代码更加模块化，也能够让浏览器读懂我们的代码。至于打包出来的 js 代码有多丑陋，我们不管，只要它体积小，性能好，就行了。</p>
+<h3 id="安装和配置"><a href="#安装和配置" class="headerlink" title="安装和配置"></a>安装和配置</h3><ol>
+<li>npm init -y</li>
+<li>npm i webpack@3 -D</li>
+<li>在 package.json 中添加 scripts 命令 “pack”: “node_modules/.bin/webpack b.js bundle.js”</li>
+<li>npm run pack</li>
+</ol>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"scripts"</span>: &#123;</span><br><span class="line">    <span class="attr">"test"</span>: <span class="string">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span>,</span><br><span class="line">    <span class="attr">"pack"</span>: <span class="string">"node_modules/.bin/webpack b.js bundle.js"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">"devDependencies"</span>: &#123;</span><br><span class="line">    <span class="attr">"webpack"</span>: <span class="string">"^3.12.0"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>为了添加更多的配置项，我们新建一个 webpack.config.js</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  entry: <span class="string">'./b.js'</span>,</span><br><span class="line">  output: &#123;</span><br><span class="line">    filename: <span class="string">'bundle.js'</span>, <span class="comment">// 出口文件名</span></span><br><span class="line">    path: __dirname <span class="comment">// 目录为当前文件所在的目录</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="6">
+<li>修改 scripts 命令 “pack”: “node_modules/.bin/webpack –watch”</li>
+<li>npm run pack</li>
+</ol>
+<h3 id="这就是最基本的-webpack"><a href="#这就是最基本的-webpack" class="headerlink" title="这就是最基本的 webpack"></a>这就是最基本的 webpack</h3><p>webpack 是什么应该心里有些 b 树了吧，模块化和打包 (感觉自己菜的一笔啊)</p>
+<p>我们可以直接使用 require(XXX) 的形式来引入各模块，即使它们可能需要经过编译（比如JSX和sass），但我们无须在上面花费太多心思，因为 webpack 有着各种健全的加载器（loader）在默默处理这些事情，这块后续会提到。<br><strong>总结</strong><br>可以看做一个模块化打包机，分析项目结构，处理模块化依赖，转换成为浏览器可运行的代码。</p>
+<ul>
+<li>代码转换: TypeScript,JSX 编译成 JavaScript、SCSS,LESS 编译成 CSS.</li>
+<li>文件优化：压缩 JavaScript、CSS、HTML 代码，压缩合并图片。</li>
+<li>代码分割：提取多个页面的公共代码、提取首屏不需要执行部分的代码让其异步加载。</li>
+<li>模块合并：在采用模块化的项目里会有很多个模块和文件，需要构建功能把模块分类合并成一个文件。</li>
+<li>自动刷新：监听本地源代码的变化，自动重新构建、刷新浏览器。</li>
+</ul>
+<p>构建把一系列前端代码自动化去处理复杂的流程，解放生产力。</p>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -353,16 +248,84 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/09/20180709-webpack-basic-concept/">More >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://github.com/steakxiaoxin/steakxiaoxin.github.io/2018/07/09/20180709-webpack-basic-concept/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2018/07/10/20180710-webpack-detail/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Webpack篇2-详解
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/07/04/20180704-react-lifecycle/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">React生命周期</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -382,607 +345,14 @@
 
 
 
-
-  
-    <article id="post-20180704-react-lifecycle" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/04/20180704-react-lifecycle/">React生命周期</a>
-    </h1>
   
 
-        
-        <a href="/2018/07/04/20180704-react-lifecycle/" class="archive-article-date">
-  	<time datetime="2018-07-04T08:07:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-04</time>
-</a>
-        
-      </header>
-      
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="图解ES6中的React生命周期"><a href="#图解ES6中的React生命周期" class="headerlink" title="图解ES6中的React生命周期"></a>图解ES6中的React生命周期</h1><blockquote>
-<p>一个React组件的生命周期分为三个部分：初始化阶段、运行中阶段、销毁阶段。</p>
-</blockquote>
-<p>初始化阶段:<br>static defaultProps<br>constructor<br>componentWillMount<br>render<br>componentDidMount</p>
-<p>运行中阶段:<br>componentWillReceiveProps(nextProps)<br>shouldComponentUpdate(nextProps, nextState)<br>componentWillUpdate(nextProps, nextState)<br>render<br>componentDidUpdate</p>
-<p>销毁阶段:<br>componentWillUnmount</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">react</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/04/20180704-react-lifecycle/">More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-20180703-React.createClass &amp; extends Component" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/03/20180703-React.createClass & extends Component/">React.createClass 和 extends Component的区别</a>
-    </h1>
   
 
-        
-        <a href="/2018/07/03/20180703-React.createClass & extends Component/" class="archive-article-date">
-  	<time datetime="2018-07-03T12:08:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-03</time>
-</a>
-        
-      </header>
-      
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>createClass本质上是一个工厂函数，extends的方式更加接近最新的ES6规范的class写法。两种方式在语法上的差别主要体现在方法的定义和静态属性的声明上。<br>createClass方式的方法定义<strong>使用逗号,隔开</strong>，因为creatClass本质上是一个函数，传递给它的是一个Object；<br>而class的方式定义方法时<strong>务必谨记不要使用逗号</strong>隔开，这是ES6 class的语法规范。</p>
-</blockquote>
-<p>React.createClass和extends Component的区别主要在于：</p>
-<ol>
-<li>语法区别</li>
-<li>propType 和 getDefaultProps</li>
-<li>状态的区别</li>
-<li>this区别</li>
-<li>Mixins
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">react</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/03/20180703-React.createClass & extends Component/">More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-20180702-react-router" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/02/20180702-react-router/">react-router</a>
-    </h1>
   
 
-        
-        <a href="/2018/07/02/20180702-react-router/" class="archive-article-date">
-  	<time datetime="2018-07-02T12:14:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-02</time>
-</a>
-        
-      </header>
-      
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>At its heart, React Router is a component.</p>
-</blockquote>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">react-router</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/02/20180702-react-router/">More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-20180702-webpack-tips" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/02/20180702-webpack-tips/">Webpack-Tips Summary</a>
-    </h1>
   
 
-        
-        <a href="/2018/07/02/20180702-webpack-tips/" class="archive-article-date">
-  	<time datetime="2018-07-02T12:03:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-02</time>
-</a>
-        
-      </header>
-      
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>1. webpack plugins</strong></p>
-<ul>
-<li>webpack-parallel-uglify-plugin<br>可以并行运行 UglifyJS 插件，更加充分而合理的使用 CPU 资源，这可以大大减少的构建时间<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ParallelUglifyPlugin = <span class="built_in">require</span>(<span class="string">'webpack-parallel-uglify-plugin'</span>);</span><br><span class="line"><span class="keyword">new</span> ParallelUglifyPlugin(&#123;</span><br><span class="line">  cacheDir: <span class="string">'.cache/'</span>,</span><br><span class="line">  uglifyJS:&#123;</span><br><span class="line">    output: &#123;</span><br><span class="line">      comments: <span class="literal">false</span></span><br><span class="line">    &#125;,</span><br><span class="line">    compress: &#123;</span><br><span class="line">      warnings: <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">tips</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/02/20180702-webpack-tips/">More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-20180702-js-tips" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/02/20180702-js-tips/">JavaScrip-tips Summary</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/02/20180702-js-tips/" class="archive-article-date">
-  	<time datetime="2018-07-02T12:00:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-02</time>
-</a>
-        
-      </header>
-      
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>1. Element.scrollIntoView()</strong><br>让当前的元素滚动到浏览器窗口的可视区域内。<br><code>element.scrollIntoView({block: &quot;end&quot;, behavior: &quot;smooth&quot;});</code><br><code>scrollIntoView(false)</code><br>参数布尔值是 dom 元素尽可能往可视区顶端(true)或底端靠近(false)</p>
-<p><strong>2. Set()</strong></p>
-<ul>
-<li><strong>size</strong>：size属性将会返回Set对象中元素的个数。</li>
-<li><strong>add(value)</strong>：添加某个值，返回 Set 结构本身。</li>
-<li>delete(value)：删除某个值，返回一个布尔值，表示删除是否成功。
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">tips</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/02/20180702-js-tips/">More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-20180702-react-tips" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/02/20180702-react-tips/">React-tips Summary</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/02/20180702-react-tips/" class="archive-article-date">
-  	<time datetime="2018-07-02T11:50:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-02</time>
-</a>
-        
-      </header>
-      
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>1. react 中引入图片</strong><br><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">本地：&lt;img src=&#123;<span class="built_in">require</span>(<span class="string">'xxx.jpg'</span>)&#125; /&gt;</span><br><span class="line">外链：&lt;img src=&#123;<span class="string">'imgurl'</span>&#125; /&gt;</span><br></pre></td></tr></table></figure></p>
-<p><strong>2. 关于_.throttle 与 setState 冲突失效问题</strong><br>原因：因为每当 setState 时会重新 render 一次，每次都会重新执行 throttle 函数<br>解决：将节流放到 constructor 里，因为在 constructor 中只会执行一次<br><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.throttleSearch = _.throttle( <span class="keyword">this</span>.Search, <span class="number">800</span> );</span><br></pre></td></tr></table></figure></p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">tips</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">react</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/02/20180702-react-tips/">More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-20180609-hexo-setup" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/06/09/20180609-hexo-setup/">hexo博客框架搭建</a>
-    </h1>
-  
-
-        
-        <a href="/2018/06/09/20180609-hexo-setup/" class="archive-article-date">
-  	<time datetime="2018-06-09T08:47:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-09</time>
-</a>
-        
-      </header>
-      
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="搭建步骤说明"><a href="#搭建步骤说明" class="headerlink" title="搭建步骤说明"></a>搭建步骤说明</h2><ul>
-<li><p>第一步：创建仓库 <code>username.github.io</code></p>
-</li>
-<li><p>第二步：安装脚手架 <code>sudo npm install hexo-cli -g</code></p>
-</li>
-<li><p>第三步：创建博客 <code>hexo init username.github.io</code></p>
-</li>
-</ul>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/06/09/20180609-hexo-setup/">More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -1013,8 +383,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="小新的演唱会">
-<meta property="og:url" content="https://github.com/steakxiaoxin/steakxiaoxin.github.io/index.html">
+<meta property="og:url" content="https://github.com/steakxiaoxin/steakxiaoxin.github.io/page/2/index.html">
 <meta property="og:site_name" content="小新的演唱会">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
@@ -136,20 +136,20 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-20180711-webpack-process" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-20180702-scattered-tips" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/11/20180711-webpack-process/">Webpack篇3-流程 0到1</a>
+      <a class="article-title" href="/2018/06/07/20180702-scattered-tips/">Scattered-Tips Summary</a>
     </h1>
   
 
         
-        <a href="/2018/07/11/20180711-webpack-process/" class="archive-article-date">
-  	<time datetime="2018-07-11T11:09:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-11</time>
+        <a href="/2018/06/07/20180702-scattered-tips/" class="archive-article-date">
+  	<time datetime="2018-06-07T11:33:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-07</time>
 </a>
         
       </header>
@@ -160,509 +160,10 @@
     <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <ol>
-<li><p><code>npm init</code></p>
-</li>
-<li><p><code>npm i -D webpack@3</code></p>
-</li>
-<li><p><strong>have a try</strong></p>
-<p>package.json 中添加 script</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">"scripts": &#123;</span><br><span class="line">  "build": "webpack"</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/11/20180711-webpack-process/">More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-20180710-webpack-detail" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/10/20180710-webpack-detail/">Webpack篇2-详解</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/10/20180710-webpack-detail/" class="archive-article-date">
-  	<time datetime="2018-07-10T01:23:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-10</time>
-</a>
-        
-      </header>
-      
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>Webpack 启动后会从Entry里配置的Module开始递归解析 Entry 依赖的所有 Module。 每找到一个 Module， 就会根据配置的Loader去找出对应的转换规则，对 Module 进行转换后，再解析出当前 Module 依赖的 Module。 这些模块会以 Entry 为单位进行分组，一个 Entry 和其所有依赖的 Module 被分到一个组也就是一个 Chunk。最后 Webpack 会把所有 Chunk 转换成文件输出。 在整个流程中 Webpack 会在恰当的时机执行 Plugin 里定义的逻辑。</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    entry: <span class="string">''</span>,               <span class="comment">// 入口文件</span></span><br><span class="line">    output: &#123;&#125;,              <span class="comment">// 出口文件</span></span><br><span class="line">    <span class="built_in">module</span>: &#123;&#125;,              <span class="comment">// 处理对应模块</span></span><br><span class="line">    plugins: [],             <span class="comment">// 对应的插件</span></span><br><span class="line">    devServer: &#123;&#125;,           <span class="comment">// 开发服务器配置</span></span><br><span class="line">    mode: <span class="string">'development'</span>      <span class="comment">// 模式配置 -- 在webpack@4以上才有</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/10/20180710-webpack-detail/">More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-20180709-webpack-basic-concept" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/09/20180709-webpack-basic-concept/">Webpack篇1-基础概念</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/09/20180709-webpack-basic-concept/" class="archive-article-date">
-  	<time datetime="2018-07-09T10:42:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-09</time>
-</a>
-        
-      </header>
-      
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="webpack-TM-到底是什么和为什么"><a href="#webpack-TM-到底是什么和为什么" class="headerlink" title="webpack TM 到底是什么和为什么"></a>webpack TM 到底是什么和为什么</h2><h3 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h3><p>因为早期浏览器的标准的不统一导致 web 技术的历史包袱比较重，旧的浏览器无法支持新的标准，但是又有旧的浏览器的用户群体，同时也有需要新方法的用户群体，新需求和旧标准之间的矛盾一直存在，而且愈演愈烈。整个前端生态就好像一个巨人在一个鸡窝里头去跳芭蕾舞，又要跳的优雅，又要跳的小心，还不能踩死鸡娃，就是这种感觉。那咋搞？<strong>webpack</strong> lei了。</p>
-<h3 id="坑坑-模块化"><a href="#坑坑-模块化" class="headerlink" title="坑坑 - 模块化"></a>坑坑 - 模块化</h3><p>要理解 webpack 是个什么东西，以及它解决了什么问题，首先得了解前端的一个最大的坑，就是浏览器在解析js的时候，它有个盲点，无法像其他语言一样做到 js 文件的模块化。</p>
-<p>比如说：一个文件想要对另一个文件暴露出去一个变量，你只能把它定义在全局作用域下。在 script src 中引入 js 文件，但是一旦文件数量一多，可能变量就会发生冲突，覆盖。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/09/20180709-webpack-basic-concept/">More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-20180704-react-lifecycle" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/04/20180704-react-lifecycle/">React生命周期</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/04/20180704-react-lifecycle/" class="archive-article-date">
-  	<time datetime="2018-07-04T08:07:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-04</time>
-</a>
-        
-      </header>
-      
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="图解ES6中的React生命周期"><a href="#图解ES6中的React生命周期" class="headerlink" title="图解ES6中的React生命周期"></a>图解ES6中的React生命周期</h1><blockquote>
-<p>一个React组件的生命周期分为三个部分：初始化阶段、运行中阶段、销毁阶段。</p>
-</blockquote>
-<p>初始化阶段:<br>static defaultProps<br>constructor<br>componentWillMount<br>render<br>componentDidMount</p>
-<p>运行中阶段:<br>componentWillReceiveProps(nextProps)<br>shouldComponentUpdate(nextProps, nextState)<br>componentWillUpdate(nextProps, nextState)<br>render<br>componentDidUpdate</p>
-<p>销毁阶段:<br>componentWillUnmount</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">react</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/04/20180704-react-lifecycle/">More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-20180703-React.createClass &amp; extends Component" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/03/20180703-React.createClass & extends Component/">React.createClass 和 extends Component的区别</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/03/20180703-React.createClass & extends Component/" class="archive-article-date">
-  	<time datetime="2018-07-03T12:08:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-03</time>
-</a>
-        
-      </header>
-      
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>createClass本质上是一个工厂函数，extends的方式更加接近最新的ES6规范的class写法。两种方式在语法上的差别主要体现在方法的定义和静态属性的声明上。<br>createClass方式的方法定义<strong>使用逗号,隔开</strong>，因为creatClass本质上是一个函数，传递给它的是一个Object；<br>而class的方式定义方法时<strong>务必谨记不要使用逗号</strong>隔开，这是ES6 class的语法规范。</p>
-</blockquote>
-<p>React.createClass和extends Component的区别主要在于：</p>
-<ol>
-<li>语法区别</li>
-<li>propType 和 getDefaultProps</li>
-<li>状态的区别</li>
-<li>this区别</li>
-<li>Mixins
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">react</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/03/20180703-React.createClass & extends Component/">More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-20180702-react-router" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/02/20180702-react-router/">react-router</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/02/20180702-react-router/" class="archive-article-date">
-  	<time datetime="2018-07-02T12:14:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-02</time>
-</a>
-        
-      </header>
-      
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>At its heart, React Router is a component.</p>
-</blockquote>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">react-router</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/02/20180702-react-router/">More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-20180702-webpack-tips" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/02/20180702-webpack-tips/">Webpack-Tips Summary</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/02/20180702-webpack-tips/" class="archive-article-date">
-  	<time datetime="2018-07-02T12:03:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-02</time>
-</a>
-        
-      </header>
-      
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>1. webpack plugins</strong></p>
-<ul>
-<li>webpack-parallel-uglify-plugin<br>可以并行运行 UglifyJS 插件，更加充分而合理的使用 CPU 资源，这可以大大减少的构建时间<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ParallelUglifyPlugin = <span class="built_in">require</span>(<span class="string">'webpack-parallel-uglify-plugin'</span>);</span><br><span class="line"><span class="keyword">new</span> ParallelUglifyPlugin(&#123;</span><br><span class="line">  cacheDir: <span class="string">'.cache/'</span>,</span><br><span class="line">  uglifyJS:&#123;</span><br><span class="line">    output: &#123;</span><br><span class="line">      comments: <span class="literal">false</span></span><br><span class="line">    &#125;,</span><br><span class="line">    compress: &#123;</span><br><span class="line">      warnings: <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
+        <hr>
+<!-- ![小新](/assets/blogImgs/5.jpeg) -->
+<h2 id="underscore-tips"><a href="#underscore-tips" class="headerlink" title="underscore tips"></a>underscore tips</h2><p><strong>1. _.union(*arrays)</strong><br>返回传入的 arrays(数组)并集：按顺序返回，返回数组的元素是唯一的，可以传入一个或多个 arrays (数组)。<br><code>_.union([1, 2, 3], [101, 2, 1, 10], [2, 1]); =&gt; [1, 2, 3, 101, 10]</code></p>
+<p><strong>2. _.difference(array, *others)</strong><br>返回的值来自array参数数组，并且不存在于other 数组。<br><code>_.difference([1, 2, 3, 4, 5], [5, 2, 10]); =&gt; [1, 3, 4]</code></p>
         
       
 
@@ -678,10 +179,6 @@
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">tips</a>
         		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
-        		</li>
       		
 		</ul>
 	</div>
@@ -690,7 +187,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/02/20180702-webpack-tips/">More >></a>
+          <a class="article-more-a" href="/2018/06/07/20180702-scattered-tips/">More >></a>
         </p>
       
 
@@ -720,20 +217,20 @@
 
 
   
-    <article id="post-20180702-js-tips" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-20180605-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/02/20180702-js-tips/">JavaScrip-tips Summary</a>
+      <a class="article-title" href="/2018/06/05/20180605-hello-world/">Hello-World</a>
     </h1>
   
 
         
-        <a href="/2018/07/02/20180702-js-tips/" class="archive-article-date">
-  	<time datetime="2018-07-02T12:00:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-02</time>
+        <a href="/2018/06/05/20180605-hello-world/" class="archive-article-date">
+  	<time datetime="2018-06-05T02:39:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-05</time>
 </a>
         
       </header>
@@ -744,12 +241,9 @@
     <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>1. Element.scrollIntoView()</strong><br>让当前的元素滚动到浏览器窗口的可视区域内。<br><code>element.scrollIntoView({block: &quot;end&quot;, behavior: &quot;smooth&quot;});</code><br><code>scrollIntoView(false)</code><br>参数布尔值是 dom 元素尽可能往可视区顶端(true)或底端靠近(false)</p>
-<p><strong>2. Set()</strong></p>
-<ul>
-<li><strong>size</strong>：size属性将会返回Set对象中元素的个数。</li>
-<li><strong>add(value)</strong>：添加某个值，返回 Set 结构本身。</li>
-<li>delete(value)：删除某个值，返回一个布尔值，表示删除是否成功。
+        <blockquote>
+<p>我有一头<strong>小毛驴</strong>，可是我从来都不骑。</p>
+</blockquote>
         
       
 
@@ -763,11 +257,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">tips</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">我是标签</a>
         		</li>
       		
 		</ul>
@@ -777,179 +267,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/02/20180702-js-tips/">More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-20180702-react-tips" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/02/20180702-react-tips/">React-tips Summary</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/02/20180702-react-tips/" class="archive-article-date">
-  	<time datetime="2018-07-02T11:50:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-02</time>
-</a>
-        
-      </header>
-      
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>1. react 中引入图片</strong><br><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">本地：&lt;img src=&#123;<span class="built_in">require</span>(<span class="string">'xxx.jpg'</span>)&#125; /&gt;</span><br><span class="line">外链：&lt;img src=&#123;<span class="string">'imgurl'</span>&#125; /&gt;</span><br></pre></td></tr></table></figure></p>
-<p><strong>2. 关于_.throttle 与 setState 冲突失效问题</strong><br>原因：因为每当 setState 时会重新 render 一次，每次都会重新执行 throttle 函数<br>解决：将节流放到 constructor 里，因为在 constructor 中只会执行一次<br><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.throttleSearch = _.throttle( <span class="keyword">this</span>.Search, <span class="number">800</span> );</span><br></pre></td></tr></table></figure></p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">tips</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">react</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/02/20180702-react-tips/">More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-20180609-hexo-setup" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/06/09/20180609-hexo-setup/">hexo博客框架搭建</a>
-    </h1>
-  
-
-        
-        <a href="/2018/06/09/20180609-hexo-setup/" class="archive-article-date">
-  	<time datetime="2018-06-09T08:47:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-09</time>
-</a>
-        
-      </header>
-      
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="搭建步骤说明"><a href="#搭建步骤说明" class="headerlink" title="搭建步骤说明"></a>搭建步骤说明</h2><ul>
-<li><p>第一步：创建仓库 <code>username.github.io</code></p>
-</li>
-<li><p>第二步：安装脚手架 <code>sudo npm install hexo-cli -g</code></p>
-</li>
-<li><p>第三步：创建博客 <code>hexo init username.github.io</code></p>
-</li>
-</ul>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/06/09/20180609-hexo-setup/">More >></a>
+          <a class="article-more-a" href="/2018/06/05/20180605-hello-world/">More >></a>
         </p>
       
 
@@ -981,7 +299,7 @@
   
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
     </nav>
   
 
