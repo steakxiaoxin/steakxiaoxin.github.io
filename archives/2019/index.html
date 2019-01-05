@@ -6,19 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/steakxiaoxin/steakxiaoxin.github.io">
-  <title>小新的演唱会</title>
+  <title>Archives: 2019 | 小新的演唱会</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="12345678910/*  index.js  */import &apos;./style/lib/animate.css&apos;;import thunk from &apos;redux-thunk&apos;;import &amp;#123; createStore, applyMiddleware &amp;#125; from &apos;redux&apos;;import reducer from &apos;./reducer&apos;;// redux 注入操作">
-<meta property="og:type" content="article">
+  <meta property="og:type" content="website">
 <meta property="og:title" content="小新的演唱会">
-<meta property="og:url" content="https://github.com/steakxiaoxin/steakxiaoxin.github.io/2018/08/17/react-admin-note/index.html">
+<meta property="og:url" content="https://github.com/steakxiaoxin/steakxiaoxin.github.io/archives/2019/index.html">
 <meta property="og:site_name" content="小新的演唱会">
-<meta property="og:description" content="12345678910/*  index.js  */import &apos;./style/lib/animate.css&apos;;import thunk from &apos;redux-thunk&apos;;import &amp;#123; createStore, applyMiddleware &amp;#125; from &apos;redux&apos;;import reducer from &apos;./reducer&apos;;// redux 注入操作">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-17T07:20:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小新的演唱会">
-<meta name="twitter:description" content="12345678910/*  index.js  */import &apos;./style/lib/animate.css&apos;;import thunk from &apos;redux-thunk&apos;;import &amp;#123; createStore, applyMiddleware &amp;#125; from &apos;redux&apos;;import reducer from &apos;./reducer&apos;;// redux 注入操作">
   
   
     <link rel="icon" href="/assets/imgs/favicon.ico">
@@ -138,253 +134,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-react-admin-note" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
+            
+  
+  
     
-    <!-- 目录内容 -->
     
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*  index.js  */</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">'./style/lib/animate.css'</span>;</span><br><span class="line"><span class="keyword">import</span> thunk <span class="keyword">from</span> <span class="string">'redux-thunk'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; createStore, applyMiddleware &#125; <span class="keyword">from</span> <span class="string">'redux'</span>;</span><br><span class="line"><span class="keyword">import</span> reducer <span class="keyword">from</span> <span class="string">'./reducer'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// redux 注入操作</span></span><br><span class="line"><span class="keyword">const</span> middleware = [thunk];</span><br><span class="line"><span class="keyword">const</span> store = createStore(reducer, applyMiddleware(...middleware));</span><br><span class="line"><span class="comment">/*  index.js  */</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>animate.css</li>
-</ul>
-<ul>
-<li><p>screenfull</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 不使用screenfull.js */</span></span><br><span class="line"><span class="built_in">document</span>.fullscreenEnabled = <span class="built_in">document</span>.fullscreenEnabled || <span class="built_in">document</span>.mozFullScreenEnabled || <span class="built_in">document</span>.documentElement.webkitRequestFullScreen;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">requestFullscreen</span>(<span class="params">element</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (element.requestFullscreen) &#123;</span><br><span class="line">        element.requestFullscreen();</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (element.mozRequestFullScreen) &#123;</span><br><span class="line">        element.mozRequestFullScreen();</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (element.webkitRequestFullScreen) &#123;</span><br><span class="line">        element.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (<span class="built_in">document</span>.fullscreenEnabled) &#123;</span><br><span class="line">    requestFullscreen(<span class="built_in">document</span>.documentElement);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 使用screenfull.js */</span></span><br><span class="line"><span class="keyword">if</span> (screenfull.enabled) &#123;</span><br><span class="line">    screenfull.request();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 对某元素使用全屏</span></span><br><span class="line"><span class="keyword">if</span> (screenfull.enabled) &#123;</span><br><span class="line">  screenfull.request(<span class="built_in">document</span>.getElementById(<span class="string">'image'</span>));</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 关闭全屏</span></span><br><span class="line"><span class="keyword">if</span> (screenfull.enabled) &#123;</span><br><span class="line">  screenfull.exit();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>redux-thunk</p>
-</li>
-</ul>
-<ul>
-<li>withRouter</li>
-</ul>
-<ul>
-<li><p>react@16中使用 getDerivedStateFromProps 代替 componentWillReceiveProps</p>
-<p>static getDerivedStateFromProps (nextProps, prevState) {}     (Derived: 派生)</p>
-</li>
-</ul>
-<ul>
-<li><p>去除最后一个 / 及之后的内容</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"/app/dashboard/index"</span>.substr(<span class="number">0</span>, <span class="string">"/app/dashboard/index"</span>.lastIndexOf(<span class="string">'/'</span>))</span><br><span class="line"></span><br><span class="line">==&gt; <span class="string">"/app/dashboard"</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Github 登录</p>
-<p><code>window.location.href = &#39;https://github.com/login/oauth/authorize?client_id=792cdcd244e98dcd2dee&amp;redirect_uri=http://localhost:3006/&amp;scope=user&amp;state=reactAdmin&#39;;</code></p>
-</li>
-</ul>
-<ul>
-<li><p>美化webkit内核滚动条</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">::-webkit-scrollbar</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">8px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">8px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-pseudo">::-webkit-scrollbar-thumb</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#777</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>mapDispatchToProps</p>
-<ul>
-<li><p>bindActionCreators</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//bindActionCreators 的作用就是将 Actions 和 dispatch 组合起来生成 mapDispatchToProps 需要生成的内容。</span></span><br><span class="line"><span class="keyword">import</span> &#123; bindActionCreators &#125; <span class="keyword">from</span> <span class="string">'redux'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> mapDispatchToProps = <span class="function"><span class="params">dispatch</span> =&gt;</span> (&#123;</span><br><span class="line">    fetchData: bindActionCreators(fetchData, dispatch),</span><br><span class="line">    receiveData: bindActionCreators(receiveData, dispatch)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>或者</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">mapDispatchToProps</span>(<span class="params">dispatch</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    updateState: <span class="function">(<span class="params">payload</span>) =&gt;</span> dispatch(&#123;<span class="attr">type</span>: <span class="string">'updateAreaAnalysis'</span>, payload&#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*  reducer.js  */</span></span><br><span class="line"><span class="keyword">import</span> &#123; <span class="keyword">default</span> <span class="keyword">as</span> shopState &#125; <span class="keyword">from</span> <span class="string">'./initialState/shop'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> INITIAL_STATE = &#123;</span><br><span class="line">  ...shopState</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">updateAreaAnalysis</span>(<span class="params">state, &#123; payload &#125; = &#123;&#125;</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; areaAnalysis &#125; = state;</span><br><span class="line">  <span class="keyword">return</span> &#123;...state, <span class="attr">areaAnalysis</span>: &#123;...areaAnalysis, ...payload&#125;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> handlers = &#123;</span><br><span class="line">    [<span class="string">'updateAreaAnalysis'</span>]: updateAreaAnalysis,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">shopReducer</span>(<span class="params">state = INITIAL_STATE, action = &#123;&#125;</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> handler = handlers[action.type];</span><br><span class="line">  <span class="keyword">if</span> (!handler) <span class="keyword">return</span> state;</span><br><span class="line">  <span class="keyword">return</span> handler(state, action);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="antd组件"><a href="#antd组件" class="headerlink" title="antd组件"></a>antd组件</h3><ol>
-<li><p>Form</p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//形如以下：</span></span><br><span class="line"><span class="comment">//经过装饰函数 getFieldDecorator(id, options) 包装的控件</span></span><br><span class="line"><span class="comment">//校验 this.props.form.validateFields </span></span><br><span class="line"></span><br><span class="line">&lt;Form onSubmit=&#123;<span class="keyword">this</span>.handleSubmit&#125; style=&#123;&#123;<span class="attr">maxWidth</span>: <span class="string">'300px'</span>&#125;&#125;&gt;</span><br><span class="line">    &lt;Form.Item&gt;</span><br><span class="line">        &#123;<span class="keyword">this</span>.props.form.getFieldDecorator(<span class="string">'userName'</span>, &#123;</span><br><span class="line">            rules: [&#123; <span class="attr">required</span>: <span class="literal">true</span>, <span class="attr">message</span>: <span class="string">'请输入用户名!'</span> &#125;],</span><br><span class="line">        &#125;)(</span><br><span class="line">            &lt;Input prefix=&#123;&lt;Icon type=<span class="string">"user"</span> style=&#123;&#123; <span class="attr">fontSize</span>: <span class="number">13</span> &#125;&#125; /&gt;&#125; placeholder=<span class="string">"管理员输入admin, 游客输入guest"</span> /&gt;</span><br><span class="line">        )&#125;</span><br><span class="line">    &lt;<span class="regexp">/Form.Item&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>Form&gt;</span><br><span class="line"></span><br><span class="line">handleSubmit = <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">  	e.preventDefault();</span><br><span class="line">  	<span class="keyword">this</span>.props.form.validateFields(<span class="function">(<span class="params">err, values</span>) =&gt;</span> &#123;</span><br><span class="line">      	<span class="keyword">if</span> (!err) &#123;</span><br><span class="line">          	<span class="built_in">console</span>.log(<span class="string">'Received values of form: '</span>, values);</span><br><span class="line">      	&#125;</span><br><span class="line">  	&#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//经过 Form.create 包装的组件将会自带 this.props.form 属性</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CustomizedForm</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">CustomizedForm = Form.create(&#123;&#125;)(CustomizedForm);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Row &amp; Col      24 栅格系统Grid</p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;Row gutter=&#123;<span class="number">16</span>&#125;&gt;</span><br><span class="line">  &lt;Col span=&#123;<span class="number">12</span>&#125; /&gt;</span><br><span class="line">  &lt;Col span=&#123;<span class="number">12</span>&#125; /&gt;</span><br><span class="line">&lt;<span class="regexp">/Row&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Card   最基础的卡片容器，可承载文字、列表、图片、段落，常用于后台概览页面。</p>
-</li>
-<li><p>Timeline    垂直展示的时间流信息。</p>
-</li>
-<li><p>Popover    点击/鼠标移入元素，弹出气泡式的卡片浮层。</p>
-</li>
-<li><p>Badge        图标右上角的圆形徽标数字。</p>
-</li>
-<li><p>Dropdown    向下弹出的列表。</p>
-</li>
-</ol>
-<ul>
-<li>首页<ul>
-<li>完整布局</li>
-<li>换肤(全局功能，暂时只实现了顶部导航的换肤，后续加上其他模块)</li>
-</ul>
-</li>
-<li>导航菜单<ul>
-<li>顶部导航(菜单伸缩，全屏功能)</li>
-<li>左边菜单(增加滚动条以及适配路由的active操作)</li>
-</ul>
-</li>
-<li>UI模块<ul>
-<li>按钮(antd组件)</li>
-<li>图标(antd组件并增加彩色表情符)</li>
-<li>加载中(antd组件并增加顶部加载条)</li>
-<li>通知提醒框(antd组件)</li>
-<li>标签页(antd组件)</li>
-<li>轮播图(ant动效组件)</li>
-<li>富文本</li>
-<li>拖拽</li>
-<li>画廊</li>
-</ul>
-</li>
-<li>动画<ul>
-<li>基础动画(animate.css所有动画)</li>
-<li>动画案例</li>
-</ul>
-</li>
-<li>表格<ul>
-<li>基础表格(antd组件)</li>
-<li>高级表格(antd组件)</li>
-<li>异步表格(数据来自掘金酱的接口)</li>
-</ul>
-</li>
-<li>表单<ul>
-<li>基础表单(antd组件)</li>
-</ul>
-</li>
-<li>图表<ul>
-<li>echarts图表</li>
-<li>recharts图表</li>
-</ul>
-</li>
-<li>页面<ul>
-<li>登录页面(包括GitHub第三方登录)</li>
-<li>404页面</li>
-</ul>
-</li>
-</ul>
-
       
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
         </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/01/05/20190105-interview-01/" class="archive-article-date">
+  	<time datetime="2019-01-05T13:26:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-05</time>
+</a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/01/05/20190105-interview-01/">JS 基础知识点及常考面试题（一）</a>
+    </h1>
+  
 
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://github.com/steakxiaoxin/steakxiaoxin.github.io/2018/08/17/react-admin-note/" alt="微信分享二维码">
-    </div>
-</div>
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">interview</a>
+        		</li>
+      		
+		</ul>
+	</div>
 
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
   
   
-    <a href="/2018/08/08/20180804-my-utils/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">My Utils</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
+    </div></section>
   
 
-  
-
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -415,8 +218,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
@@ -501,11 +304,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">utils</a>
+                <a href="javascript:void(0)" class="js-tag color3">react-router</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">react-router</a>
+                <a href="javascript:void(0)" class="js-tag color1">utils</a>
               </li>
              
               <li class="article-tag-list-item">
