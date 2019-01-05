@@ -6,22 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/steakxiaoxin/steakxiaoxin.github.io">
-  <title>Hello-World | 小新的演唱会</title>
+  <title>JS 基础知识点及常考面试题（一） | 小新的演唱会</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="记得 QQ 空间说说的名字以前叫 心情 ~">
-<meta name="keywords" content="心情">
+  <meta name="description" content="原始(Primitive)类型 涉及面试题：原始类型有哪几种？null是对象吗？  在 JS 中，存在着6种原始值，分别是：  Boolean null undefined number string symbol">
+<meta name="keywords" content="interview">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello-World">
-<meta property="og:url" content="https://github.com/steakxiaoxin/steakxiaoxin.github.io/2018/06/05/20180605-hello-world/index.html">
+<meta property="og:title" content="JS 基础知识点及常考面试题（一）">
+<meta property="og:url" content="https://github.com/steakxiaoxin/steakxiaoxin.github.io/2018/07/12/20190105-interview-01/index.html">
 <meta property="og:site_name" content="小新的演唱会">
-<meta property="og:description" content="记得 QQ 空间说说的名字以前叫 心情 ~">
+<meta property="og:description" content="原始(Primitive)类型 涉及面试题：原始类型有哪几种？null是对象吗？  在 JS 中，存在着6种原始值，分别是：  Boolean null undefined number string symbol">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://github.com/assets/blogImgs/5.jpeg">
-<meta property="og:updated_time" content="2018-08-04T06:08:27.000Z">
+<meta property="og:image" content="https://i.loli.net/2019/01/04/5c2f72f12c13a.png">
+<meta property="og:image" content="https://i.loli.net/2019/01/05/5c30891dc1d64.png">
+<meta property="og:image" content="https://i.loli.net/2019/01/05/5c3090744ad23.png">
+<meta property="og:image" content="https://i.loli.net/2019/01/05/5c30a8d23458d.png">
+<meta property="og:updated_time" content="2019-01-05T13:21:38.791Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello-World">
-<meta name="twitter:description" content="记得 QQ 空间说说的名字以前叫 心情 ~">
-<meta name="twitter:image" content="https://github.com/assets/blogImgs/5.jpeg">
+<meta name="twitter:title" content="JS 基础知识点及常考面试题（一）">
+<meta name="twitter:description" content="原始(Primitive)类型 涉及面试题：原始类型有哪几种？null是对象吗？  在 JS 中，存在着6种原始值，分别是：  Boolean null undefined number string symbol">
+<meta name="twitter:image" content="https://i.loli.net/2019/01/04/5c2f72f12c13a.png">
   
   
     <link rel="icon" href="/assets/imgs/favicon.ico">
@@ -141,20 +144,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-20180605-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-20190105-interview-01" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello-World
+      JS 基础知识点及常考面试题（一）
     </h1>
   
 
         
-        <a href="/2018/06/05/20180605-hello-world/" class="archive-article-date">
-  	<time datetime="2018-06-05T02:39:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-05</time>
+        <a href="/2018/07/12/20190105-interview-01/" class="archive-article-date">
+  	<time datetime="2018-07-12T05:47:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-12</time>
 </a>
         
       </header>
@@ -166,41 +169,131 @@
     
     <!-- 目录内容 -->
     
-        <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
-              <span class="btn-bg"></span>
-              <span class="btn-text">文章导航</span>
-              </p>
-    	<div id="toc-article" class="toc-article">
-    	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
-    		<strong class="toc-title">文章目录</strong>
-               <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#标题一"><span class="toc-number">1.</span> <span class="toc-text">标题一</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#标题二"><span class="toc-number">1.1.</span> <span class="toc-text">标题二</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#标题三"><span class="toc-number">1.1.1.</span> <span class="toc-text">标题三</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#标题四"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">标题四</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#标题五"><span class="toc-number">1.1.1.1.1.</span> <span class="toc-text">标题五</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#标题六"><span class="toc-number">1.1.1.1.1.1.</span> <span class="toc-text">标题六</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li></ol>
-             </div>
-       <script type="text/javascript">
-    	function showToc(){
-    		var toc_article = document.getElementById("toc-article");
-    		var show_toc_btn = document.getElementById("show-toc-btn");
-    		toc_article.setAttribute("style","display:block");
-    		show_toc_btn.setAttribute("style","display:none");
-    		};
-    	function showBtn(){
-    		var toc_article = document.getElementById("toc-article");
-    		var show_toc_btn = document.getElementById("show-toc-btn");
-    		toc_article.setAttribute("style","display:none");
-    		show_toc_btn.setAttribute("style","display:block");
-    		};
-       </script>
-          
     <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>记得 QQ 空间说说的名字以前叫 <strong>心情</strong> ~</p>
+        <h2 id="原始-Primitive-类型"><a href="#原始-Primitive-类型" class="headerlink" title="原始(Primitive)类型"></a>原始(Primitive)类型</h2><blockquote>
+<p>涉及面试题：原始类型有哪几种？null是对象吗？</p>
 </blockquote>
+<p>在 JS 中，存在着6种原始值，分别是：</p>
+<ul>
+<li>Boolean</li>
+<li>null</li>
+<li>undefined</li>
+<li>number</li>
+<li>string</li>
+<li>symbol</li>
+</ul>
 <a id="more"></a>
-<p><img src="/assets/blogImgs/5.jpeg" alt="小新"></p>
-<h1 id="标题一"><a href="#标题一" class="headerlink" title="标题一"></a>标题一</h1><h2 id="标题二"><a href="#标题二" class="headerlink" title="标题二"></a>标题二</h2><h3 id="标题三"><a href="#标题三" class="headerlink" title="标题三"></a>标题三</h3><h4 id="标题四"><a href="#标题四" class="headerlink" title="标题四"></a>标题四</h4><h5 id="标题五"><a href="#标题五" class="headerlink" title="标题五"></a>标题五</h5><h6 id="标题六"><a href="#标题六" class="headerlink" title="标题六"></a>标题六</h6><blockquote>
-<p><em>2018年08月04日</em><br>最近一直在忙统一后台的项目，前阵子忙着搬家，着实有点小累。<br>最近也是走背字，先是一屁股坐坏了才戴了一个月的眼睛，然后macPro教育优惠被拒，接着beats耳机还坏了。<br>最近每天晚上不是骑车回家就是跑步回家，还真瘦了几斤，希望夏天结束的时候能到达目标的150斤吧，早上称的时候154😝。<br>近期想实现的就是MacPor教育优惠能搞定，目前等待之前的取消订单的退款中。<br>不会，不学，不听，不练<br>vue, miniProgram, react, and…<br>想养个陆龟来着<br>也不知道她现在咋样了<br><span style="color: #e95731;">第一次写，就这样吧<span></span></span></p>
+<p>首先原始类型存储的都是值，是没有函数可以调用的，比如 <code>undefined.toString()</code></p>
+<p><img src="https://i.loli.net/2019/01/04/5c2f72f12c13a.png" alt="undefined.toString()"></p>
+<p>此时你肯定会有疑问，这不对呀，明明<code>&#39;1&#39;.toString()</code>是可以使用的。其实在这种情况下，<code>&#39;1&#39;</code>已经不是原始类型了，而是被强制转换成了<code>String</code>类型也就是对象类型，所以可以调用<code>toString</code>函数。</p>
+<p>除了会在必要的情况下强转类型以外，原始类型还有一些坑。</p>
+<p>其中 JS 的<code>number</code>类型是浮点类型的，在使用中会遇到某些bug，比如<code>0.1+0.2 !== 0.3</code>。<code>string</code>类型是不可变的(这话意思是不改变原来地址中的字符串，如果有变化，是新建一个字符串指向新地址)，无论你在<code>string</code>类型上调用何种方法，都不会对值有改变。</p>
+<p>另外对于<code>null</code>来说，很多人会认为他是个对象类型，其实这是错误的。虽然<code>typeof null</code>会输出<code>object</code>，但是这只是 JS 存在的一个悠久 bug。在 JS 的最初版本中使用的是32位系统，为了性能考虑使用低位存储变量的类型信息，<code>000</code>开头便是对象，然而<code>null</code>表示为全零，所以将它错误的判断为<code>object</code>。虽然现在的内部类型判断代码已经改变了，但是对于这个 bug 却是一直流传下来。</p>
+<h2 id="对象-Object-类型"><a href="#对象-Object-类型" class="headerlink" title="对象(Object)类型"></a>对象(Object)类型</h2><blockquote>
+<p>涉及面试题：对象类型和原始类型的不通之处？函数参数是对象会发生什么问题？</p>
 </blockquote>
+<p>在 JS 中，除了原始类型那么其他的都是对象类型了。对象类型和原始类型不同的是，原始类型存储的是值，对象类型存储的是地址(指针)。当你创建了一个对象类型的时候，计算机会在内存中帮我们开辟一个空间来存放值，但是我们需要找到这个空间，这个空间会拥有一个地址(指针)。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a = []</span><br></pre></td></tr></table></figure>
+<p>对于常量<code>a</code>来说，假设内存地址(指针)为<code>#001</code>，那么在地址<code>#001</code>的位置存放了值<code>[]</code>，常量<code>a</code>存放了地址(指针)<code>#001</code>，再看以下代码</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a = []</span><br><span class="line"><span class="keyword">const</span> b = a</span><br><span class="line">b.push(<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<p>当我们将变量赋值给另外一个变量时，复制的是原本变量的地址(指针)，也就是说当前变量<code>b</code>存放的地址(指针)也是<code>#001</code>，当我们进行数据修改的时候，就会修改存放在地址(指针)<code>#001</code>上的值，也就导致了两个变量的值都发生了改变。</p>
+<p>接下来我们来看函数参数是对象的情况</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">person</span>) </span>&#123;</span><br><span class="line">    person.age = <span class="number">26</span></span><br><span class="line">    person = &#123;</span><br><span class="line">        name: <span class="string">'aaa'</span>,</span><br><span class="line">        age: <span class="number">30</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> person</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> p1 = &#123;</span><br><span class="line">    name: <span class="string">'bbb'</span>,</span><br><span class="line">    age: <span class="number">23</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> p2 = test(p1)</span><br><span class="line"><span class="built_in">console</span>.log(p1) <span class="comment">// -&gt; ?</span></span><br><span class="line"><span class="built_in">console</span>.log(p2) <span class="comment">// -&gt; ?</span></span><br></pre></td></tr></table></figure>
+<p>对于以上代码，你是否能正确写出结果呢？接下来让我为你解析一番：</p>
+<ul>
+<li>首先，函数传参是传递对象指针的副本</li>
+<li>到函数内部修改参数的属性这不，我相信大家都知道，当前<code>p1</code>的值也被修改了</li>
+<li>但是当我们重新为<code>person</code>分配了一个对象时就出现了分歧，请看下图</li>
+</ul>
+<p><img src="https://i.loli.net/2019/01/05/5c30891dc1d64.png" alt="person"></p>
+<p>所以最后<code>person</code>拥有了一个新的地址(指针)，也就和<code>p1</code>么有人和关系了，导致了最终两个变量的值是不相同的</p>
+<h2 id="typeof-vs-instanceof"><a href="#typeof-vs-instanceof" class="headerlink" title="typeof vs instanceof"></a>typeof vs instanceof</h2><blockquote>
+<p>涉及面试题：typeof 是否能正确判断类型？instanceof 能正确判断对象的原理是什么？</p>
+</blockquote>
+<p><code>typeof</code>对于<strong>原始类型</strong>来说，除了<code>null</code>都可以显示正确的类型</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> <span class="number">1</span> <span class="comment">// 'number'</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="string">'1'</span> <span class="comment">// 'string'</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">undefined</span> <span class="comment">// 'undefined'</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">true</span> <span class="comment">// 'boolean'</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="built_in">Symbol</span>() <span class="comment">// 'symbol'</span></span><br></pre></td></tr></table></figure>
+<p><code>typeof</code>对于对象来说，除了函数都会显示<code>object</code>，所以说<code>typeof</code>并不能准确判断变量到底是什么类型</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> [] <span class="comment">// 'object'</span></span><br><span class="line"><span class="keyword">typeof</span> &#123;&#125; <span class="comment">// 'object'</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="built_in">console</span>.log <span class="comment">// 'function'</span></span><br></pre></td></tr></table></figure>
+<p>如果我们想判断一个对象的正确类型，这时候可以考虑使用<code>instanceof</code>，因为内部机制是通过原型链来判断的</p>
+<p>(instanceof运算符用于测试构造函数的prototype属性是否出现在对象的原型链中的任何位置)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Person = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line"><span class="keyword">const</span> p1 = <span class="keyword">new</span> Person()</span><br><span class="line">p1 <span class="keyword">instanceof</span> Person <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">'hello world'</span></span><br><span class="line">str <span class="keyword">instanceof</span> <span class="built_in">String</span> <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> str1 = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">'hello world'</span>)</span><br><span class="line">str1 <span class="keyword">instanceof</span> <span class="built_in">String</span> <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>对于原始类型来说，你想通过<code>instanceof</code>来判断类型是不行的，当然我们还是有办法让<code>instanceof</code>判断原始类型的</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">PrimitiveString</span> </span>&#123;</span><br><span class="line">    <span class="keyword">static</span> [<span class="built_in">Symbol</span>.hasInstance](x) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">typeof</span> x === <span class="string">'string'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="string">'hello world'</span> <span class="keyword">instanceof</span> PrimitiveString <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>你可能不知道<code>Symbol.hasInstance</code>是什么东西，其实就是一个能让我们自定义<code>instanceof</code>行为的东西，以上代码等同于<code>typeof &#39;hello world&#39; === &#39;string&#39;</code>，所以结果自然是<code>true</code>了。这其实也侧面反映了一个问题，<code>instanceof</code>也不是百分百可信的。</p>
+<h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2><blockquote>
+<p>涉及面试题：该知识点常在笔试题中见到，熟悉了转换规则就不惧怕此类题目了。</p>
+</blockquote>
+<p>首先我们要知道，在 JS 中类型转换只有三种情况，分别是：</p>
+<ul>
+<li>转换为布尔值</li>
+<li>转换为数字</li>
+<li>转换为字符串</li>
+</ul>
+<p>我们先来看一个类型转换变革，然后再进入正题</p>
+<p><img src="https://i.loli.net/2019/01/05/5c3090744ad23.png" alt="03.png"></p>
+<h3 id="转Boolean"><a href="#转Boolean" class="headerlink" title="转Boolean"></a>转Boolean</h3><p>在条件判断时，除了<code>undefined</code>, <code>null</code>, <code>false</code>, <code>NaN</code>, <code>&#39;&#39;</code>, <code>0</code>, <code>-0</code>，其他所有值都转为<code>true</code>，包括所有对象。</p>
+<h3 id="对象转原始类型"><a href="#对象转原始类型" class="headerlink" title="对象转原始类型"></a>对象转原始类型</h3><p>对象在转换类型的时候，会调用内置的<code>[[ToPrimitive]]</code>函数，对于该函数来说，算法逻辑一般来说如下：</p>
+<ul>
+<li>如果已经是原始类型了，那就不需要转换了</li>
+<li>调用 <code>x.valueOf()</code>，如果转换为基础类型，就返回转换的值</li>
+<li>调用 <code>x.toString()</code>，如果转换为基础类型，就返回转换的值</li>
+<li>如果都没有返回原始类型，就会报错</li>
+</ul>
+<p>当然你也可以重写 <code>Symbol.toPrimitive</code> ，该方法在转原始类型时调用优先级最高</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = &#123;</span><br><span class="line">    valueOf() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    &#125;,</span><br><span class="line">    toString() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">'1'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    [<span class="built_in">Symbol</span>.toPrimitive]() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">2</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="number">1</span> + a <span class="comment">// -&gt; 3</span></span><br></pre></td></tr></table></figure>
+<h3 id="四则运算符"><a href="#四则运算符" class="headerlink" title="四则运算符"></a>四则运算符</h3><p>加法运算符不同于其他几个运算符，它有以下几个特点：</p>
+<ul>
+<li>运算中其中一方为字符串，那么就会把另一方也转换为字符串</li>
+<li>如果一方不是字符串或是数字，那么会将它转换为数字或者字符串</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> + <span class="string">'1'</span> <span class="comment">// '11'</span></span><br><span class="line"><span class="literal">true</span> + <span class="literal">true</span> <span class="comment">// 2</span></span><br><span class="line"><span class="number">4</span> + [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>] <span class="comment">// '41,2,3'</span></span><br></pre></td></tr></table></figure>
+<p>如果你对答案有疑问的话，请看解析：</p>
+<ul>
+<li>对于第一行代码来说，触发特点一，所以将数字<code>1</code>转换为字符串，得到结果<code>11</code></li>
+<li>对于第二行代码来说，触发特点二，所以将<code>true</code>转换为数字<code>1</code></li>
+<li>对于第三行代码来说，触发特点二，所以将数组通过<code>toString</code>转换为字符串<code>1,2,3</code>，得到结果<code>41,2,3</code></li>
+</ul>
+<p>另外对于加法还需要注意这个表达式<code>&#39;a&#39; + + &#39;b&#39;</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'a'</span> + + <span class="string">'b'</span> <span class="comment">// -&gt; 'aNaN'</span></span><br></pre></td></tr></table></figure>
+<p>因为<code>+ &#39;b&#39;</code>等于<code>NaN</code>，所以结果为<code>&#39;aNaN&#39;</code>，你可能也会在一些代码中看到过<code>+ &#39;1&#39;</code>的形式来快速获取<code>number</code>类型。</p>
+<p>另外对于下面这种情况 <code>{}</code>被放在运算的最前面以为，它就会被当做代码块来处理，无论里面有什么，都不会影响计算结果。如果<code>{}</code>被放在运算中，那么他首先会调用<code>[[ToPrimitive]]</code>，得出的结果是<code>&#39;[object Object]&#39;</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123; <span class="attr">name</span>:<span class="number">1</span> &#125; + <span class="string">''</span> + <span class="number">1</span> <span class="comment">// 1</span></span><br><span class="line">&#123;&#125; + [] <span class="comment">// 0</span></span><br><span class="line">[] + &#123;&#125; <span class="comment">// "[object Object]"</span></span><br></pre></td></tr></table></figure>
+<p>那么对于除了加法的运算符来说，只要其中一方是数字，那么另一方就会被转为数字</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">4</span> * <span class="string">'3'</span> <span class="comment">// 12</span></span><br><span class="line"><span class="number">4</span> * [] <span class="comment">// 0</span></span><br><span class="line"><span class="number">4</span> [<span class="number">1</span>, <span class="number">2</span>] <span class="comment">// NaN</span></span><br></pre></td></tr></table></figure>
+<h3 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h3><ul>
+<li>如果是对象，就通过 <code>toPrimitive</code>转换对象</li>
+<li>如果是字符串，就通过<code>unicode</code>字符索引来比较</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = &#123;</span><br><span class="line">    valueOf() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    &#125;,</span><br><span class="line">    toString() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">'1'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">a &gt; <span class="number">-1</span> <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>在以上代码中，因为<code>a</code>是对象，所以会通过<code>valueOf</code>转换为原始类型再比较值。</p>
+<h2 id="this"><a href="#this" class="headerlink" title="this"></a>this</h2><blockquote>
+<p>涉及面试题：如何正确判断this？箭头函数的this是什么？</p>
+</blockquote>
+<p><code>this</code>是很多人会混淆的概念，但是其实它一点都不难，只是网上很多文章把简单的东西说复杂了。在这一小节中，你一定会彻底明白this这个概念的。</p>
+<p>我们先来看几个函数调用的场景</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.a)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> a = <span class="number">1</span></span><br><span class="line">foo()</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">    a: <span class="number">2</span>,</span><br><span class="line">    foo: foo</span><br><span class="line">&#125;</span><br><span class="line">obj.foo()</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> c = <span class="keyword">new</span> foo()</span><br></pre></td></tr></table></figure>
+<p>接下来我们一个个分析上面几个场景</p>
+<ul>
+<li>对于直接调用 <code>foo</code>来说，不管 <code>foo</code> 函数被放在了什么地方，<code>this</code>一定是 <code>window</code></li>
+<li>对于 <code>obj.foo()</code>来说，我们只需要记住，谁调用了函数，谁就是 <code>this</code>，所以在这个场景下，<code>foo</code>函数中的<code>this</code>就是<code>obj</code>对象</li>
+<li>对于<code>new</code> 的方式来说，<code>this</code>被永远绑定在了<code>c</code>上面，不会被人和方式改变<code>this</code></li>
+</ul>
+<p>说完了以上几种情况，其实很多代码中的<code>this</code>应该就没什么问题了，下面让我们看看箭头函数中的<code>this</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="keyword">this</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">a()()()</span><br></pre></td></tr></table></figure>
+<p>首先箭头函数其实是没有<code>this</code>的，箭头函数中的<code>this</code>只取决包裹箭头函数的第一个普通函数的<code>this</code>。在这个例子中，因为包裹箭头函数的第一个普通函数是<code>a</code>，所以此时的<code>this</code>是<code>window</code>。另外对箭头函数使用<code>bind</code>这类函数式无效的。</p>
+<p>最后一种情况也就是<code>bind</code>这些改变上下文的 API 了，对于这些函数来说，<code>this</code>取决于第一个参数，如果第一个参数为空，那么就是<code>window</code>。</p>
+<p>那么说到<code>bind</code>，不知道大家是否考虑过，如果对一个函数进行多次<code>bind</code>，那么上下文会是什么呢？</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = &#123;&#125;</span><br><span class="line"><span class="keyword">let</span> fn = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="built_in">console</span>.log(<span class="keyword">this</span>) &#125;</span><br><span class="line">fn.bind().bind(a)() <span class="comment">// -&gt; ?</span></span><br></pre></td></tr></table></figure>
+<p>如果你认为输出结果是<code>a</code>，那么你就错了，其实我们可以把上述代码转换成另一种形式</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// fn.bind().bind(a) 等于</span></span><br><span class="line"><span class="keyword">let</span> fn2 = <span class="function"><span class="keyword">function</span> <span class="title">fn1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> fn.apply()</span><br><span class="line">    &#125;.apply(a)</span><br><span class="line">&#125;</span><br><span class="line">fn2()</span><br></pre></td></tr></table></figure>
+<p>可以从上述代码中发现，不管我们给函数<code>bind</code>几次，<code>fn</code>中的<code>this</code>永远由第一次<code>bind</code>决定，所以结果永远是<code>window</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = &#123; <span class="attr">name</span>: <span class="string">'xiaoxin'</span> &#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.name)</span><br><span class="line">&#125;</span><br><span class="line">foo.bind(a)() <span class="comment">// -&gt; 'xiaoxin'</span></span><br></pre></td></tr></table></figure>
+<p>以上就是<code>this</code>的规则了，但是可能会发生多个规则同时出现的情况，这时候不同的规则之间会根据优先级最高的来决定<code>this</code>最终指向哪里。</p>
+<p>首先，<code>new</code>的方式优先级最高，接下来是<code>bind</code>这些函数，然后是<code>obj.foo()</code>这种调用方式，最后是<code>foo</code>这种调用方式，同时，箭头函数的<code>this</code>一旦被绑定，就不会再被任何凡是所改变。</p>
+<p>如果你还是觉得有点绕，那么就看一下的这张流程图吧，图中的流程只针对单个规则。</p>
+<p><img src="https://i.loli.net/2019/01/05/5c30a8d23458d.png" alt="04.png"></p>
 
       
 
@@ -235,7 +328,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">心情</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">interview</a>
         		</li>
       		
 		</ul>
@@ -291,7 +384,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://github.com/steakxiaoxin/steakxiaoxin.github.io/2018/06/05/20180605-hello-world/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://github.com/steakxiaoxin/steakxiaoxin.github.io/2018/07/12/20190105-interview-01/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -305,15 +398,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/06/07/20180702-scattered-tips/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/07/13/20180709-webpack-basic-concept/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Scattered-Tips Summary
+          Webpack篇1-基础概念
         
       </div>
     </a>
   
+  
+    <a href="/2018/07/05/20180704-react-lifecycle/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">React生命周期</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -354,7 +452,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 XiaoXin
+    		&copy; 2019 XiaoXin
     	</div>
       	<div class="footer-right">
       		<!-- <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten -->
@@ -437,6 +535,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">心情</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">javascript</a>
               </li>
              
@@ -445,11 +551,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">react-router</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">心情</a>
+                <a href="javascript:void(0)" class="js-tag color1">react</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -457,15 +559,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">react</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">utils</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">react-router</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">interview</a>
               </li>
             
             <div class="clearfix"></div>

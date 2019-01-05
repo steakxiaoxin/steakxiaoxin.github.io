@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/steakxiaoxin/steakxiaoxin.github.io">
-  <title>React-tips Summary | 小新的演唱会</title>
+  <title>Webpack篇1-基础概念 | 小新的演唱会</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1. react 中引入图片12本地：&amp;lt;img src=&amp;#123;require(&apos;xxx.jpg&apos;)&amp;#125; /&amp;gt;外链：&amp;lt;img src=&amp;#123;&apos;imgurl&apos;&amp;#125; /&amp;gt; 2. 关于_.throttle 与 setState 冲突失效问题原因：因为每当 setState 时会重新 render 一次，每次都会重新执行 throttle 函数解决：将节流">
-<meta name="keywords" content="javascript,tips,react">
+  <meta name="description" content="webpack TM 到底是什么和为什么历史因为早期浏览器的标准的不统一导致 web 技术的历史包袱比较重，旧的浏览器无法支持新的标准，但是又有旧的浏览器的用户群体，同时也有需要新方法的用户群体，新需求和旧标准之间的矛盾一直存在，而且愈演愈烈。整个前端生态就好像一个巨人在一个鸡窝里头去跳芭蕾舞，又要跳的优雅，又要跳的小心，还不能踩死鸡娃，就是这种感觉。那咋搞？webpack lei了。 坑坑 -">
+<meta name="keywords" content="webpack">
 <meta property="og:type" content="article">
-<meta property="og:title" content="React-tips Summary">
-<meta property="og:url" content="https://github.com/steakxiaoxin/steakxiaoxin.github.io/2018/07/02/20180702-react-tips/index.html">
+<meta property="og:title" content="Webpack篇1-基础概念">
+<meta property="og:url" content="https://github.com/steakxiaoxin/steakxiaoxin.github.io/2018/07/13/20180709-webpack-basic-concept/index.html">
 <meta property="og:site_name" content="小新的演唱会">
-<meta property="og:description" content="1. react 中引入图片12本地：&amp;lt;img src=&amp;#123;require(&apos;xxx.jpg&apos;)&amp;#125; /&amp;gt;外链：&amp;lt;img src=&amp;#123;&apos;imgurl&apos;&amp;#125; /&amp;gt; 2. 关于_.throttle 与 setState 冲突失效问题原因：因为每当 setState 时会重新 render 一次，每次都会重新执行 throttle 函数解决：将节流">
+<meta property="og:description" content="webpack TM 到底是什么和为什么历史因为早期浏览器的标准的不统一导致 web 技术的历史包袱比较重，旧的浏览器无法支持新的标准，但是又有旧的浏览器的用户群体，同时也有需要新方法的用户群体，新需求和旧标准之间的矛盾一直存在，而且愈演愈烈。整个前端生态就好像一个巨人在一个鸡窝里头去跳芭蕾舞，又要跳的优雅，又要跳的小心，还不能踩死鸡娃，就是这种感觉。那咋搞？webpack lei了。 坑坑 -">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-02T12:06:36.000Z">
+<meta property="og:updated_time" content="2018-07-13T01:30:53.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="React-tips Summary">
-<meta name="twitter:description" content="1. react 中引入图片12本地：&amp;lt;img src=&amp;#123;require(&apos;xxx.jpg&apos;)&amp;#125; /&amp;gt;外链：&amp;lt;img src=&amp;#123;&apos;imgurl&apos;&amp;#125; /&amp;gt; 2. 关于_.throttle 与 setState 冲突失效问题原因：因为每当 setState 时会重新 render 一次，每次都会重新执行 throttle 函数解决：将节流">
+<meta name="twitter:title" content="Webpack篇1-基础概念">
+<meta name="twitter:description" content="webpack TM 到底是什么和为什么历史因为早期浏览器的标准的不统一导致 web 技术的历史包袱比较重，旧的浏览器无法支持新的标准，但是又有旧的浏览器的用户群体，同时也有需要新方法的用户群体，新需求和旧标准之间的矛盾一直存在，而且愈演愈烈。整个前端生态就好像一个巨人在一个鸡窝里头去跳芭蕾舞，又要跳的优雅，又要跳的小心，还不能踩死鸡娃，就是这种感觉。那咋搞？webpack lei了。 坑坑 -">
   
   
     <link rel="icon" href="/assets/imgs/favicon.ico">
@@ -139,20 +139,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-20180702-react-tips" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-20180709-webpack-basic-concept" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      React-tips Summary
+      Webpack篇1-基础概念
     </h1>
   
 
         
-        <a href="/2018/07/02/20180702-react-tips/" class="archive-article-date">
-  	<time datetime="2018-07-02T12:06:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-02</time>
+        <a href="/2018/07/13/20180709-webpack-basic-concept/" class="archive-article-date">
+  	<time datetime="2018-07-13T01:30:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-13</time>
 </a>
         
       </header>
@@ -167,72 +167,44 @@
     <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>1. react 中引入图片</strong><br><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">本地：&lt;img src=&#123;<span class="built_in">require</span>(<span class="string">'xxx.jpg'</span>)&#125; /&gt;</span><br><span class="line">外链：&lt;img src=&#123;<span class="string">'imgurl'</span>&#125; /&gt;</span><br></pre></td></tr></table></figure></p>
-<p><strong>2. 关于_.throttle 与 setState 冲突失效问题</strong><br>原因：因为每当 setState 时会重新 render 一次，每次都会重新执行 throttle 函数<br>解决：将节流放到 constructor 里，因为在 constructor 中只会执行一次<br><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.throttleSearch = _.throttle( <span class="keyword">this</span>.Search, <span class="number">800</span> );</span><br></pre></td></tr></table></figure></p>
+        <h2 id="webpack-TM-到底是什么和为什么"><a href="#webpack-TM-到底是什么和为什么" class="headerlink" title="webpack TM 到底是什么和为什么"></a>webpack TM 到底是什么和为什么</h2><h3 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h3><p>因为早期浏览器的标准的不统一导致 web 技术的历史包袱比较重，旧的浏览器无法支持新的标准，但是又有旧的浏览器的用户群体，同时也有需要新方法的用户群体，新需求和旧标准之间的矛盾一直存在，而且愈演愈烈。整个前端生态就好像一个巨人在一个鸡窝里头去跳芭蕾舞，又要跳的优雅，又要跳的小心，还不能踩死鸡娃，就是这种感觉。那咋搞？<strong>webpack</strong> lei了。</p>
+<h3 id="坑坑-模块化"><a href="#坑坑-模块化" class="headerlink" title="坑坑 - 模块化"></a>坑坑 - 模块化</h3><p>要理解 webpack 是个什么东西，以及它解决了什么问题，首先得了解前端的一个最大的坑，就是浏览器在解析js的时候，它有个盲点，无法像其他语言一样做到 js 文件的模块化。</p>
+<p>比如说：一个文件想要对另一个文件暴露出去一个变量，你只能把它定义在全局作用域下。在 script src 中引入 js 文件，但是一旦文件数量一多，可能变量就会发生冲突，覆盖。</p>
 <a id="more"></a>
-<p><strong>3. <a href="http://www.ruanyifeng.com/blog/2016/05/react_router.html?utm_source=tool.lu" target="_blank" rel="noopener">react-router</a></strong></p>
+<p>文件目录下有：index.html , a.js , b.js</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./a.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./b.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./c.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">...</span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./n.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>后来，出现了一个东西，node。它可以跑 js，而且 node 可以直接跑在操作系统上，直接终端输入 <code>node</code>就可以。而且 node 有个非常好的东西是浏览器不存在的，模块化。在 node 中，所有的文件都是模块，任何的模块都有两个口，一个是入口 require(XXX)，一个是出口 module.exports = {XXX}。</p>
+<p>举个栗子：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// a.js</span></span><br><span class="line"><span class="keyword">let</span> msg = <span class="string">'这是 a 里面的消息'</span>;</span><br><span class="line"><span class="built_in">module</span>.exports = &#123;msg&#125;;<span class="comment">//出口</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// b.js</span></span><br><span class="line"><span class="keyword">let</span> msg = <span class="built_in">require</span>(<span class="string">'./a'</span>).msg;<span class="comment">//入口</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'msg:'</span>, msg);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 终端输入: node b.js</span></span><br><span class="line"><span class="comment">// msg: 这是 a 里面的消息</span></span><br></pre></td></tr></table></figure>
+<p>但是浏览器不识别这东西，怎么办？webpack 来搞。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 终端输入: webpack b.js bundle.js  --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 在 index.html 中引入生成的 bundle.js  --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./bundle.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这样运行 index.html 就能在控制台看到生成的消息 <code>msg: 这是 a 里面的消息</code></p>
+<p>webpack 能动态的把后端的代码变成浏览器能读懂的代码， 做到了后端代码前端化，这样我们既做到了用后端的方式来让我们的代码更加模块化，也能够让浏览器读懂我们的代码。至于打包出来的 js 代码有多丑陋，我们不管，只要它体积小，性能好，就行了。</p>
+<h3 id="安装和配置"><a href="#安装和配置" class="headerlink" title="安装和配置"></a>安装和配置</h3><ol>
+<li>npm init -y</li>
+<li>npm i webpack@3 -D</li>
+<li>在 package.json 中添加 scripts 命令 “pack”: “node_modules/.bin/webpack b.js bundle.js”</li>
+<li>npm run pack</li>
+</ol>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"scripts"</span>: &#123;</span><br><span class="line">    <span class="attr">"test"</span>: <span class="string">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span>,</span><br><span class="line">    <span class="attr">"pack"</span>: <span class="string">"node_modules/.bin/webpack b.js bundle.js"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">"devDependencies"</span>: &#123;</span><br><span class="line">    <span class="attr">"webpack"</span>: <span class="string">"^3.12.0"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>为了添加更多的配置项，我们新建一个 webpack.config.js</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  entry: <span class="string">'./b.js'</span>,</span><br><span class="line">  output: &#123;</span><br><span class="line">    filename: <span class="string">'bundle.js'</span>, <span class="comment">// 出口文件名</span></span><br><span class="line">    path: __dirname <span class="comment">// 目录为当前文件所在的目录</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="6">
+<li>修改 scripts 命令 “pack”: “node_modules/.bin/webpack –watch”</li>
+<li>npm run pack</li>
+</ol>
+<h3 id="这就是最基本的-webpack"><a href="#这就是最基本的-webpack" class="headerlink" title="这就是最基本的 webpack"></a>这就是最基本的 webpack</h3><p>webpack 是什么应该心里有些 b 树了吧，模块化和打包 (感觉自己菜的一笔啊)</p>
+<p>我们可以直接使用 require(XXX) 的形式来引入各模块，即使它们可能需要经过编译（比如JSX和sass），但我们无须在上面花费太多心思，因为 webpack 有着各种健全的加载器（loader）在默默处理这些事情，这块后续会提到。<br><strong>总结</strong><br>可以看做一个模块化打包机，分析项目结构，处理模块化依赖，转换成为浏览器可运行的代码。</p>
 <ul>
-<li>react 获取路由参数<br>通过 this.props.params.id 获取路由中 /:id<br>新版 this.props.match.params.id 获取路由中 /:id</li>
-<li><a href="https://www.jianshu.com/p/e3adc9b5f75c/  ---  http://reacttraining.cn/web/api/Route" target="_blank" rel="noopener"><code>&lt;Route&gt;组件</code></a>]<br>render methods 分别是： component、render、children<br>props 分别是：match、location、history</li>
+<li>代码转换: TypeScript,JSX 编译成 JavaScript、SCSS,LESS 编译成 CSS.</li>
+<li>文件优化：压缩 JavaScript、CSS、HTML 代码，压缩合并图片。</li>
+<li>代码分割：提取多个页面的公共代码、提取首屏不需要执行部分的代码让其异步加载。</li>
+<li>模块合并：在采用模块化的项目里会有很多个模块和文件，需要构建功能把模块分类合并成一个文件。</li>
+<li>自动刷新：监听本地源代码的变化，自动重新构建、刷新浏览器。</li>
 </ul>
-<p><strong>4. browserHistory</strong></p>
-<ul>
-<li>browserHistory.goBack() 返回上一页</li>
-<li>browserHistory.push时如何优雅地传参<ul>
-<li>传参方式1：将参数直接写在路径中，前提是router定义时，需要指定参数的名字，这里假定为:value;<br><code>browserHistory.push(pathname: &#39;/routerName/123&#39;);</code><br>通过<code>this.props.params.value</code>即可获取</li>
-<li>传参方式2：通过state传参，可以在页面跳转时，url中不显示参数；<br><code>browserHistory.push(pathname: &#39;/routerName&#39;,state: { key: value });</code><br>通过<code>this.props.location.state.key</code>便可以获得state中的key的value;</li>
-</ul>
-</li>
-<li>路由跳转问题<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//老写法会产生更新警告warning</span></span><br><span class="line"><span class="keyword">this</span>.props.history.push(<span class="string">`<span class="subst">$&#123;MOTHER_PAGE_URL&#125;</span>`</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//用 browserHistory 代替 history</span></span><br><span class="line"><span class="keyword">import</span> &#123; browserHistory &#125; <span class="keyword">from</span> <span class="string">'react-router'</span>;</span><br><span class="line">browserHistory.push(<span class="string">`<span class="subst">$&#123;MOTHER_PAGE_URL&#125;</span>`</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//或者 必须验证router的类型，否则会报错</span></span><br><span class="line"><span class="keyword">static</span> contextTypes = &#123;    </span><br><span class="line">  router: React.PropTypes.object.isRequired</span><br><span class="line">&#125;;</span><br><span class="line">componentDidMount() &#123;</span><br><span class="line">  <span class="comment">//原来的写法    </span></span><br><span class="line">  <span class="keyword">this</span>.props.history.push(<span class="string">`/`</span>)    </span><br><span class="line">  <span class="comment">//现在的写法    </span></span><br><span class="line">  <span class="keyword">this</span>.context.router.push(<span class="string">`/`</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><strong>5. <a href="https://www.cnblogs.com/wgl1995/p/6489038.html" target="_blank" rel="noopener">react 中使用echarts</a></strong></p>
-<ul>
-<li><p>echarts X轴坐标文字显示不全 – 在 xAxis 中添加配置</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">xAxis: &#123;</span><br><span class="line">  axisLabel:&#123;</span><br><span class="line">    interval:<span class="number">0</span>,<span class="comment">//横轴信息全部显示</span></span><br><span class="line">    rotate:<span class="number">-30</span>,<span class="comment">//-30度角倾斜显示</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>echarts 柱状图 legend 数据改变后，他的页码不变，但是旧数据有三页，新数据就两页，数据改变后还留在第三页，但是第三页没数据，所以显示空白<br>解决方法：实例先clear，再setOption</p>
-</li>
-<li><p>echart 线图 柱图 溢出部分包含<br><code>grid: {containLabel: true}</code></p>
-</li>
-<li><p>react 中实现初始化时只绑定一次dom<br>在初始化图标，setOption 前<br><code>if (!this.myChart) this.myChart = echarts.init(this.chartRef);</code></p>
-</li>
-<li><p>在柱状图中，tooltip 上显示多个数据，配置 formatter 为一个函数，在 series 的 data 中添加 tooltip 中使用的参数对象</p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.myChart.setOption(&#123;</span><br><span class="line">  ...options,</span><br><span class="line">  tooltip: &#123;</span><br><span class="line">    trigger: <span class="string">'axis'</span>,</span><br><span class="line">    formatter: <span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</span><br><span class="line">      data = data[<span class="number">0</span>].data.tooltip;</span><br><span class="line">      <span class="keyword">return</span> <span class="string">`<span class="subst">$&#123;data.foodName&#125;</span>&lt;br/&gt;</span></span><br><span class="line"><span class="string">      - 提及次数: <span class="subst">$&#123;data.foodMentionCount&#125;</span>次&lt;br/&gt;</span></span><br><span class="line"><span class="string">      - 点赞次数: <span class="subst">$&#123;data.thumbsUpCount&#125;</span>次&lt;br/&gt;</span></span><br><span class="line"><span class="string">      - 点赞率: <span class="subst">$&#123;data.thumbsUpRate&#125;</span>`</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  series: [&#123;</span><br><span class="line">    ...options,</span><br><span class="line">    data: thumbsUpDataList.map(<span class="function"><span class="params">item</span> =&gt;</span> (&#123;</span><br><span class="line">      value: item.thumbsUpCount,</span><br><span class="line">      tooltip:&#123;</span><br><span class="line">        foodName: item.foodName,</span><br><span class="line">        foodMentionCount: item.foodMentionCount,</span><br><span class="line">        thumbsUpCount: item.thumbsUpCount,</span><br><span class="line">        thumbsUpRate: item.thumbsUpRate</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;))</span><br><span class="line">  &#125;],</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><strong>6. <a href="https://doc.react-china.org/docs/events.html" target="_blank" rel="noopener">react 的 event.persist()</a></strong><br>异步事件队列合并 就是让你在异步中能拿到事件对象</p>
-<p><strong>7. react-datetime</strong></p>
-<ul>
-<li>中将语言设置为中文<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//将语言设置为中文</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">'moment/locale/zh-cn'</span>;</span><br><span class="line">&lt;Datetime locale=<span class="string">"zh-cn"</span> /&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">//input 只读设置</span></span><br><span class="line">inputProps=&#123;&#123;<span class="attr">placeholder</span>: <span class="string">'请输入时间'</span>,<span class="attr">readOnly</span>: <span class="literal">true</span>&#125;&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><strong>8. h5自定义属性data-* 及react 的 innerHTML</strong></p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;li</span><br><span class="line">  key=&#123;item.code&#125;</span><br><span class="line">  data-value=&#123;item.code&#125;</span><br><span class="line">  data-name=&#123;item.name&#125;</span><br><span class="line">  dangerouslySetInnerHTML=&#123;&#123;<span class="attr">__html</span>: item._name_&#125;&#125;</span><br><span class="line">  onClick=&#123;e =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> $curTar = $(e.currentTarget);</span><br><span class="line">    <span class="keyword">const</span> value = $curTar.data(<span class="string">'value'</span>);</span><br><span class="line">    <span class="keyword">const</span> name = $curTar.data(<span class="string">'name'</span>);</span><br><span class="line">    <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">      accountBank: value,</span><br><span class="line">      accountBankName: name</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;&#125;</span><br><span class="line">&gt;&lt;/li&gt;</span><br></pre></td></tr></table></figure>
-<p><strong>9. react 绑定 this 的几种方式</strong></p>
-<ul>
-<li>在 render 中直接 bind <code>&lt;button onClick={ this.handleClick.bind(this) }&gt;Say Hello&lt;/button&gt;</code> 缺点：在每次渲染时都要重新绑定</li>
-<li>在 constructor 中 bind <code>this.handleClick = this.handleClick.bind(this)</code> 优点：仅需要绑定一次</li>
-<li>使用es6语法+箭头函数在 constructor 中赋值 <code>this.handleClick = (e) =&gt; {console.log(this.state.message)}</code></li>
-<li>使用es7语法+箭头函数在 class 中直接赋值 <code>handleClick = (e) =&gt; {console.log(this.state.message)}</code><ul>
-<li>在 react 中使用 es7 箭头函数的方法来绑定 this<br><code>npm i babel-preset-stage-0 -D</code><br>在 .babelrc 中 presets 添加 “stage-0” 即可</li>
-</ul>
-</li>
-</ul>
-<p><strong>10. <a href="https://www.zcfy.cc/@jiaxianhua/article" target="_blank" rel="noopener">react 30 天</a></strong></p>
-<p><strong>11. componentWillReceiveProps</strong><br>组件接收到新的props时调用，并将其作为参数nextProps使用，此时可以更改组件props及state。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">componentWillReceiveProps(nextProps) &#123;</span><br><span class="line">  <span class="keyword">if</span> (nextProps.bool) &#123;</span><br><span class="line">    <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">      bool: <span class="literal">true</span></span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><strong>12. 使用 create-react-app</strong></p>
-<ul>
-<li>npm install -g create-react-app<ul>
-<li>create-react-app my-app</li>
-<li>cd my-app</li>
-<li>npm start</li>
-</ul>
-</li>
-<li>修改端口：node_modules\react-scripts\scripts\start.js<br>在node_modules文件夹里面搜索react-scripts，之后可以在该文件夹下看到scripts文件夹。在start.js里面找到端口号并修改。</li>
-<li>显示隐藏 webpack 配置：npm run eject (不可逆)</li>
-</ul>
-<hr>
+<p>构建把一系列前端代码自动化去处理复杂的流程，解放生产力。</p>
 
       
 
@@ -267,15 +239,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">tips</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">react</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
         		</li>
       		
 		</ul>
@@ -331,7 +295,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://github.com/steakxiaoxin/steakxiaoxin.github.io/2018/07/02/20180702-react-tips/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://github.com/steakxiaoxin/steakxiaoxin.github.io/2018/07/13/20180709-webpack-basic-concept/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -345,18 +309,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/07/02/20180702-js-tips/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/07/13/20180710-webpack-detail/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          JavaScrip-tips Summary
+          Webpack篇2-详解
         
       </div>
     </a>
   
   
-    <a href="/2018/06/11/20180609-hexo-setup/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">hexo博客框架搭建</div>
+    <a href="/2018/07/12/20190105-interview-01/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JS 基础知识点及常考面试题（一）</div>
       <i class="icon-circle-right"></i>
     </a>
   

@@ -6,20 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/steakxiaoxin/steakxiaoxin.github.io">
-  <title>React-tips Summary | 小新的演唱会</title>
+  <title>Hello-World | 小新的演唱会</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1. react 中引入图片12本地：&amp;lt;img src=&amp;#123;require(&apos;xxx.jpg&apos;)&amp;#125; /&amp;gt;外链：&amp;lt;img src=&amp;#123;&apos;imgurl&apos;&amp;#125; /&amp;gt; 2. 关于_.throttle 与 setState 冲突失效问题原因：因为每当 setState 时会重新 render 一次，每次都会重新执行 throttle 函数解决：将节流">
-<meta name="keywords" content="javascript,tips,react">
+  <meta name="description" content="记得 QQ 空间说说的名字以前叫 心情 ~">
+<meta name="keywords" content="心情">
 <meta property="og:type" content="article">
-<meta property="og:title" content="React-tips Summary">
-<meta property="og:url" content="https://github.com/steakxiaoxin/steakxiaoxin.github.io/2018/07/02/20180702-react-tips/index.html">
+<meta property="og:title" content="Hello-World">
+<meta property="og:url" content="https://github.com/steakxiaoxin/steakxiaoxin.github.io/2018/08/04/20180605-hello-world/index.html">
 <meta property="og:site_name" content="小新的演唱会">
-<meta property="og:description" content="1. react 中引入图片12本地：&amp;lt;img src=&amp;#123;require(&apos;xxx.jpg&apos;)&amp;#125; /&amp;gt;外链：&amp;lt;img src=&amp;#123;&apos;imgurl&apos;&amp;#125; /&amp;gt; 2. 关于_.throttle 与 setState 冲突失效问题原因：因为每当 setState 时会重新 render 一次，每次都会重新执行 throttle 函数解决：将节流">
+<meta property="og:description" content="记得 QQ 空间说说的名字以前叫 心情 ~">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-02T12:06:36.000Z">
+<meta property="og:image" content="https://github.com/assets/blogImgs/5.jpeg">
+<meta property="og:updated_time" content="2018-08-04T06:08:27.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="React-tips Summary">
-<meta name="twitter:description" content="1. react 中引入图片12本地：&amp;lt;img src=&amp;#123;require(&apos;xxx.jpg&apos;)&amp;#125; /&amp;gt;外链：&amp;lt;img src=&amp;#123;&apos;imgurl&apos;&amp;#125; /&amp;gt; 2. 关于_.throttle 与 setState 冲突失效问题原因：因为每当 setState 时会重新 render 一次，每次都会重新执行 throttle 函数解决：将节流">
+<meta name="twitter:title" content="Hello-World">
+<meta name="twitter:description" content="记得 QQ 空间说说的名字以前叫 心情 ~">
+<meta name="twitter:image" content="https://github.com/assets/blogImgs/5.jpeg">
   
   
     <link rel="icon" href="/assets/imgs/favicon.ico">
@@ -139,20 +141,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-20180702-react-tips" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-20180605-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      React-tips Summary
+      Hello-World
     </h1>
   
 
         
-        <a href="/2018/07/02/20180702-react-tips/" class="archive-article-date">
-  	<time datetime="2018-07-02T12:06:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-02</time>
+        <a href="/2018/08/04/20180605-hello-world/" class="archive-article-date">
+  	<time datetime="2018-08-04T06:08:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-04</time>
 </a>
         
       </header>
@@ -164,75 +166,41 @@
     
     <!-- 目录内容 -->
     
+        <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+              <span class="btn-bg"></span>
+              <span class="btn-text">文章导航</span>
+              </p>
+    	<div id="toc-article" class="toc-article">
+    	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+    		<strong class="toc-title">文章目录</strong>
+               <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#标题一"><span class="toc-number">1.</span> <span class="toc-text">标题一</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#标题二"><span class="toc-number">1.1.</span> <span class="toc-text">标题二</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#标题三"><span class="toc-number">1.1.1.</span> <span class="toc-text">标题三</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#标题四"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">标题四</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#标题五"><span class="toc-number">1.1.1.1.1.</span> <span class="toc-text">标题五</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#标题六"><span class="toc-number">1.1.1.1.1.1.</span> <span class="toc-text">标题六</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li></ol>
+             </div>
+       <script type="text/javascript">
+    	function showToc(){
+    		var toc_article = document.getElementById("toc-article");
+    		var show_toc_btn = document.getElementById("show-toc-btn");
+    		toc_article.setAttribute("style","display:block");
+    		show_toc_btn.setAttribute("style","display:none");
+    		};
+    	function showBtn(){
+    		var toc_article = document.getElementById("toc-article");
+    		var show_toc_btn = document.getElementById("show-toc-btn");
+    		toc_article.setAttribute("style","display:none");
+    		show_toc_btn.setAttribute("style","display:block");
+    		};
+       </script>
+          
     <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>1. react 中引入图片</strong><br><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">本地：&lt;img src=&#123;<span class="built_in">require</span>(<span class="string">'xxx.jpg'</span>)&#125; /&gt;</span><br><span class="line">外链：&lt;img src=&#123;<span class="string">'imgurl'</span>&#125; /&gt;</span><br></pre></td></tr></table></figure></p>
-<p><strong>2. 关于_.throttle 与 setState 冲突失效问题</strong><br>原因：因为每当 setState 时会重新 render 一次，每次都会重新执行 throttle 函数<br>解决：将节流放到 constructor 里，因为在 constructor 中只会执行一次<br><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.throttleSearch = _.throttle( <span class="keyword">this</span>.Search, <span class="number">800</span> );</span><br></pre></td></tr></table></figure></p>
+        <blockquote>
+<p>记得 QQ 空间说说的名字以前叫 <strong>心情</strong> ~</p>
+</blockquote>
 <a id="more"></a>
-<p><strong>3. <a href="http://www.ruanyifeng.com/blog/2016/05/react_router.html?utm_source=tool.lu" target="_blank" rel="noopener">react-router</a></strong></p>
-<ul>
-<li>react 获取路由参数<br>通过 this.props.params.id 获取路由中 /:id<br>新版 this.props.match.params.id 获取路由中 /:id</li>
-<li><a href="https://www.jianshu.com/p/e3adc9b5f75c/  ---  http://reacttraining.cn/web/api/Route" target="_blank" rel="noopener"><code>&lt;Route&gt;组件</code></a>]<br>render methods 分别是： component、render、children<br>props 分别是：match、location、history</li>
-</ul>
-<p><strong>4. browserHistory</strong></p>
-<ul>
-<li>browserHistory.goBack() 返回上一页</li>
-<li>browserHistory.push时如何优雅地传参<ul>
-<li>传参方式1：将参数直接写在路径中，前提是router定义时，需要指定参数的名字，这里假定为:value;<br><code>browserHistory.push(pathname: &#39;/routerName/123&#39;);</code><br>通过<code>this.props.params.value</code>即可获取</li>
-<li>传参方式2：通过state传参，可以在页面跳转时，url中不显示参数；<br><code>browserHistory.push(pathname: &#39;/routerName&#39;,state: { key: value });</code><br>通过<code>this.props.location.state.key</code>便可以获得state中的key的value;</li>
-</ul>
-</li>
-<li>路由跳转问题<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//老写法会产生更新警告warning</span></span><br><span class="line"><span class="keyword">this</span>.props.history.push(<span class="string">`<span class="subst">$&#123;MOTHER_PAGE_URL&#125;</span>`</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//用 browserHistory 代替 history</span></span><br><span class="line"><span class="keyword">import</span> &#123; browserHistory &#125; <span class="keyword">from</span> <span class="string">'react-router'</span>;</span><br><span class="line">browserHistory.push(<span class="string">`<span class="subst">$&#123;MOTHER_PAGE_URL&#125;</span>`</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//或者 必须验证router的类型，否则会报错</span></span><br><span class="line"><span class="keyword">static</span> contextTypes = &#123;    </span><br><span class="line">  router: React.PropTypes.object.isRequired</span><br><span class="line">&#125;;</span><br><span class="line">componentDidMount() &#123;</span><br><span class="line">  <span class="comment">//原来的写法    </span></span><br><span class="line">  <span class="keyword">this</span>.props.history.push(<span class="string">`/`</span>)    </span><br><span class="line">  <span class="comment">//现在的写法    </span></span><br><span class="line">  <span class="keyword">this</span>.context.router.push(<span class="string">`/`</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><strong>5. <a href="https://www.cnblogs.com/wgl1995/p/6489038.html" target="_blank" rel="noopener">react 中使用echarts</a></strong></p>
-<ul>
-<li><p>echarts X轴坐标文字显示不全 – 在 xAxis 中添加配置</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">xAxis: &#123;</span><br><span class="line">  axisLabel:&#123;</span><br><span class="line">    interval:<span class="number">0</span>,<span class="comment">//横轴信息全部显示</span></span><br><span class="line">    rotate:<span class="number">-30</span>,<span class="comment">//-30度角倾斜显示</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>echarts 柱状图 legend 数据改变后，他的页码不变，但是旧数据有三页，新数据就两页，数据改变后还留在第三页，但是第三页没数据，所以显示空白<br>解决方法：实例先clear，再setOption</p>
-</li>
-<li><p>echart 线图 柱图 溢出部分包含<br><code>grid: {containLabel: true}</code></p>
-</li>
-<li><p>react 中实现初始化时只绑定一次dom<br>在初始化图标，setOption 前<br><code>if (!this.myChart) this.myChart = echarts.init(this.chartRef);</code></p>
-</li>
-<li><p>在柱状图中，tooltip 上显示多个数据，配置 formatter 为一个函数，在 series 的 data 中添加 tooltip 中使用的参数对象</p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.myChart.setOption(&#123;</span><br><span class="line">  ...options,</span><br><span class="line">  tooltip: &#123;</span><br><span class="line">    trigger: <span class="string">'axis'</span>,</span><br><span class="line">    formatter: <span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</span><br><span class="line">      data = data[<span class="number">0</span>].data.tooltip;</span><br><span class="line">      <span class="keyword">return</span> <span class="string">`<span class="subst">$&#123;data.foodName&#125;</span>&lt;br/&gt;</span></span><br><span class="line"><span class="string">      - 提及次数: <span class="subst">$&#123;data.foodMentionCount&#125;</span>次&lt;br/&gt;</span></span><br><span class="line"><span class="string">      - 点赞次数: <span class="subst">$&#123;data.thumbsUpCount&#125;</span>次&lt;br/&gt;</span></span><br><span class="line"><span class="string">      - 点赞率: <span class="subst">$&#123;data.thumbsUpRate&#125;</span>`</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  series: [&#123;</span><br><span class="line">    ...options,</span><br><span class="line">    data: thumbsUpDataList.map(<span class="function"><span class="params">item</span> =&gt;</span> (&#123;</span><br><span class="line">      value: item.thumbsUpCount,</span><br><span class="line">      tooltip:&#123;</span><br><span class="line">        foodName: item.foodName,</span><br><span class="line">        foodMentionCount: item.foodMentionCount,</span><br><span class="line">        thumbsUpCount: item.thumbsUpCount,</span><br><span class="line">        thumbsUpRate: item.thumbsUpRate</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;))</span><br><span class="line">  &#125;],</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><strong>6. <a href="https://doc.react-china.org/docs/events.html" target="_blank" rel="noopener">react 的 event.persist()</a></strong><br>异步事件队列合并 就是让你在异步中能拿到事件对象</p>
-<p><strong>7. react-datetime</strong></p>
-<ul>
-<li>中将语言设置为中文<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//将语言设置为中文</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">'moment/locale/zh-cn'</span>;</span><br><span class="line">&lt;Datetime locale=<span class="string">"zh-cn"</span> /&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">//input 只读设置</span></span><br><span class="line">inputProps=&#123;&#123;<span class="attr">placeholder</span>: <span class="string">'请输入时间'</span>,<span class="attr">readOnly</span>: <span class="literal">true</span>&#125;&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><strong>8. h5自定义属性data-* 及react 的 innerHTML</strong></p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;li</span><br><span class="line">  key=&#123;item.code&#125;</span><br><span class="line">  data-value=&#123;item.code&#125;</span><br><span class="line">  data-name=&#123;item.name&#125;</span><br><span class="line">  dangerouslySetInnerHTML=&#123;&#123;<span class="attr">__html</span>: item._name_&#125;&#125;</span><br><span class="line">  onClick=&#123;e =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> $curTar = $(e.currentTarget);</span><br><span class="line">    <span class="keyword">const</span> value = $curTar.data(<span class="string">'value'</span>);</span><br><span class="line">    <span class="keyword">const</span> name = $curTar.data(<span class="string">'name'</span>);</span><br><span class="line">    <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">      accountBank: value,</span><br><span class="line">      accountBankName: name</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;&#125;</span><br><span class="line">&gt;&lt;/li&gt;</span><br></pre></td></tr></table></figure>
-<p><strong>9. react 绑定 this 的几种方式</strong></p>
-<ul>
-<li>在 render 中直接 bind <code>&lt;button onClick={ this.handleClick.bind(this) }&gt;Say Hello&lt;/button&gt;</code> 缺点：在每次渲染时都要重新绑定</li>
-<li>在 constructor 中 bind <code>this.handleClick = this.handleClick.bind(this)</code> 优点：仅需要绑定一次</li>
-<li>使用es6语法+箭头函数在 constructor 中赋值 <code>this.handleClick = (e) =&gt; {console.log(this.state.message)}</code></li>
-<li>使用es7语法+箭头函数在 class 中直接赋值 <code>handleClick = (e) =&gt; {console.log(this.state.message)}</code><ul>
-<li>在 react 中使用 es7 箭头函数的方法来绑定 this<br><code>npm i babel-preset-stage-0 -D</code><br>在 .babelrc 中 presets 添加 “stage-0” 即可</li>
-</ul>
-</li>
-</ul>
-<p><strong>10. <a href="https://www.zcfy.cc/@jiaxianhua/article" target="_blank" rel="noopener">react 30 天</a></strong></p>
-<p><strong>11. componentWillReceiveProps</strong><br>组件接收到新的props时调用，并将其作为参数nextProps使用，此时可以更改组件props及state。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">componentWillReceiveProps(nextProps) &#123;</span><br><span class="line">  <span class="keyword">if</span> (nextProps.bool) &#123;</span><br><span class="line">    <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">      bool: <span class="literal">true</span></span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><strong>12. 使用 create-react-app</strong></p>
-<ul>
-<li>npm install -g create-react-app<ul>
-<li>create-react-app my-app</li>
-<li>cd my-app</li>
-<li>npm start</li>
-</ul>
-</li>
-<li>修改端口：node_modules\react-scripts\scripts\start.js<br>在node_modules文件夹里面搜索react-scripts，之后可以在该文件夹下看到scripts文件夹。在start.js里面找到端口号并修改。</li>
-<li>显示隐藏 webpack 配置：npm run eject (不可逆)</li>
-</ul>
-<hr>
+<p><img src="/assets/blogImgs/5.jpeg" alt="小新"></p>
+<h1 id="标题一"><a href="#标题一" class="headerlink" title="标题一"></a>标题一</h1><h2 id="标题二"><a href="#标题二" class="headerlink" title="标题二"></a>标题二</h2><h3 id="标题三"><a href="#标题三" class="headerlink" title="标题三"></a>标题三</h3><h4 id="标题四"><a href="#标题四" class="headerlink" title="标题四"></a>标题四</h4><h5 id="标题五"><a href="#标题五" class="headerlink" title="标题五"></a>标题五</h5><h6 id="标题六"><a href="#标题六" class="headerlink" title="标题六"></a>标题六</h6><blockquote>
+<p><em>2018年08月04日</em><br>最近一直在忙统一后台的项目，前阵子忙着搬家，着实有点小累。<br>最近也是走背字，先是一屁股坐坏了才戴了一个月的眼睛，然后macPro教育优惠被拒，接着beats耳机还坏了。<br>最近每天晚上不是骑车回家就是跑步回家，还真瘦了几斤，希望夏天结束的时候能到达目标的150斤吧，早上称的时候154😝。<br>近期想实现的就是MacPor教育优惠能搞定，目前等待之前的取消订单的退款中。<br>不会，不学，不听，不练<br>vue, miniProgram, react, and…<br>想养个陆龟来着<br>也不知道她现在咋样了<br><span style="color: #e95731;">第一次写，就这样吧<span></span></span></p>
+</blockquote>
 
       
 
@@ -267,15 +235,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">tips</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">react</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">心情</a>
         		</li>
       		
 		</ul>
@@ -331,7 +291,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://github.com/steakxiaoxin/steakxiaoxin.github.io/2018/07/02/20180702-react-tips/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://github.com/steakxiaoxin/steakxiaoxin.github.io/2018/08/04/20180605-hello-world/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -345,18 +305,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/07/02/20180702-js-tips/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/08/08/20180808-react-router-history/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          JavaScrip-tips Summary
+          react-router history.push()
         
       </div>
     </a>
   
   
-    <a href="/2018/06/11/20180609-hexo-setup/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">hexo博客框架搭建</div>
+    <a href="/2018/07/13/20180711-webpack-process/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Webpack篇3-流程 0到1</div>
       <i class="icon-circle-right"></i>
     </a>
   
