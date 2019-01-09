@@ -6,20 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/steakxiaoxin/steakxiaoxin.github.io">
-  <title>React-tips Summary | 小新的演唱会</title>
+  <title>ES6 知识点及常考面试题 | 小新的演唱会</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1. react 中引入图片12本地：&amp;lt;img src=&amp;#123;require(&apos;xxx.jpg&apos;)&amp;#125; /&amp;gt;外链：&amp;lt;img src=&amp;#123;&apos;imgurl&apos;&amp;#125; /&amp;gt; 2. 关于_.throttle 与 setState 冲突失效问题原因：因为每当 setState 时会重新 render 一次，每次都会重新执行 throttle 函数解决：将节流">
-<meta name="keywords" content="react,javascript,tips">
+  <meta name="description" content="var、let 及 const 区别 涉及面试题：什么是提升？什么是暂时性死区？var、let 及 const 区别？  对于这个问题，我们应该先了解提升(hoisting)这个概念。 12console.log(a) // undefinedvar a = 1 从上述代码中我们可以发现，虽然变量还没有被声明，但是我们却可以使用这个未被声明的变量，这种情况就叫做提升，并且提升的是声明。">
+<meta name="keywords" content="interview">
 <meta property="og:type" content="article">
-<meta property="og:title" content="React-tips Summary">
-<meta property="og:url" content="https://github.com/steakxiaoxin/steakxiaoxin.github.io/2018/07/02/20180702-react-tips/index.html">
+<meta property="og:title" content="ES6 知识点及常考面试题">
+<meta property="og:url" content="https://github.com/steakxiaoxin/steakxiaoxin.github.io/2019/01/07/20190107-interview-03/index.html">
 <meta property="og:site_name" content="小新的演唱会">
-<meta property="og:description" content="1. react 中引入图片12本地：&amp;lt;img src=&amp;#123;require(&apos;xxx.jpg&apos;)&amp;#125; /&amp;gt;外链：&amp;lt;img src=&amp;#123;&apos;imgurl&apos;&amp;#125; /&amp;gt; 2. 关于_.throttle 与 setState 冲突失效问题原因：因为每当 setState 时会重新 render 一次，每次都会重新执行 throttle 函数解决：将节流">
+<meta property="og:description" content="var、let 及 const 区别 涉及面试题：什么是提升？什么是暂时性死区？var、let 及 const 区别？  对于这个问题，我们应该先了解提升(hoisting)这个概念。 12console.log(a) // undefinedvar a = 1 从上述代码中我们可以发现，虽然变量还没有被声明，但是我们却可以使用这个未被声明的变量，这种情况就叫做提升，并且提升的是声明。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-02T12:06:36.000Z">
+<meta property="og:image" content="https://i.loli.net/2019/01/07/5c335ff4f1cbb.png">
+<meta property="og:image" content="https://i.loli.net/2019/01/07/5c3366799fba3.png">
+<meta property="og:image" content="https://i.loli.net/2019/01/07/5c336805bfc92.png">
+<meta property="og:updated_time" content="2019-01-09T14:27:53.138Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="React-tips Summary">
-<meta name="twitter:description" content="1. react 中引入图片12本地：&amp;lt;img src=&amp;#123;require(&apos;xxx.jpg&apos;)&amp;#125; /&amp;gt;外链：&amp;lt;img src=&amp;#123;&apos;imgurl&apos;&amp;#125; /&amp;gt; 2. 关于_.throttle 与 setState 冲突失效问题原因：因为每当 setState 时会重新 render 一次，每次都会重新执行 throttle 函数解决：将节流">
+<meta name="twitter:title" content="ES6 知识点及常考面试题">
+<meta name="twitter:description" content="var、let 及 const 区别 涉及面试题：什么是提升？什么是暂时性死区？var、let 及 const 区别？  对于这个问题，我们应该先了解提升(hoisting)这个概念。 12console.log(a) // undefinedvar a = 1 从上述代码中我们可以发现，虽然变量还没有被声明，但是我们却可以使用这个未被声明的变量，这种情况就叫做提升，并且提升的是声明。">
+<meta name="twitter:image" content="https://i.loli.net/2019/01/07/5c335ff4f1cbb.png">
   
   
     <link rel="icon" href="/assets/imgs/favicon.ico">
@@ -139,20 +143,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-20180702-react-tips" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-20190107-interview-03" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      React-tips Summary
+      ES6 知识点及常考面试题
     </h1>
   
 
         
-        <a href="/2018/07/02/20180702-react-tips/" class="archive-article-date">
-  	<time datetime="2018-07-02T12:06:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-02</time>
+        <a href="/2019/01/07/20190107-interview-03/" class="archive-article-date">
+  	<time datetime="2019-01-07T12:06:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-07</time>
 </a>
         
       </header>
@@ -167,72 +171,124 @@
     <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>1. react 中引入图片</strong><br><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">本地：&lt;img src=&#123;<span class="built_in">require</span>(<span class="string">'xxx.jpg'</span>)&#125; /&gt;</span><br><span class="line">外链：&lt;img src=&#123;<span class="string">'imgurl'</span>&#125; /&gt;</span><br></pre></td></tr></table></figure></p>
-<p><strong>2. 关于_.throttle 与 setState 冲突失效问题</strong><br>原因：因为每当 setState 时会重新 render 一次，每次都会重新执行 throttle 函数<br>解决：将节流放到 constructor 里，因为在 constructor 中只会执行一次<br><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.throttleSearch = _.throttle( <span class="keyword">this</span>.Search, <span class="number">800</span> );</span><br></pre></td></tr></table></figure></p>
+        <h2 id="var、let-及-const-区别"><a href="#var、let-及-const-区别" class="headerlink" title="var、let 及 const 区别"></a>var、let 及 const 区别</h2><blockquote>
+<p>涉及面试题：什么是提升？什么是暂时性死区？var、let 及 const 区别？</p>
+</blockquote>
+<p>对于这个问题，我们应该先了解提升(hoisting)这个概念。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(a) <span class="comment">// undefined</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p>从上述代码中我们可以发现，虽然变量还没有被声明，但是我们却可以使用这个未被声明的变量，这种情况就叫做提升，并且提升的是声明。</p>
 <a id="more"></a>
-<p><strong>3. <a href="http://www.ruanyifeng.com/blog/2016/05/react_router.html?utm_source=tool.lu" target="_blank" rel="noopener">react-router</a></strong></p>
+<p>对于这种情况，我们可以把代码这样来看</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a</span><br><span class="line"><span class="built_in">console</span>.log(a) <span class="comment">// undefined</span></span><br><span class="line">a = <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p>接下来我们再看一个例子</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">10</span></span><br><span class="line"><span class="keyword">var</span> a</span><br><span class="line"><span class="built_in">console</span>.log(a)</span><br></pre></td></tr></table></figure>
+<p>对于这个例子，如果你认为打印的值为<code>undefined</code>那么就错了，答案应该是<code>10</code>，对于这种情况，我们这样来看代码</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a</span><br><span class="line"><span class="keyword">var</span> a</span><br><span class="line">a = <span class="number">10</span></span><br><span class="line"><span class="built_in">console</span>.log(a)</span><br></pre></td></tr></table></figure>
+<p>到这里为止，我们已经了解了<code>var</code>声明的变量会发生提升的情况，其实不仅变量会提升函数也会被提升。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(a) <span class="comment">// f a() &#123;&#125;</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line"><span class="keyword">var</span> a = <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p>对于上述代码，打印结果会是<code>f a() {}</code>，即使变量声明在函数之后，这也说明了函数会被提升，并且优先于变量提升。</p>
+<p>说完了这些，想必大家也知道<code>var</code>存在的问题了，使用<code>var</code>声明的变量会被提升到作用域的顶部，接下来我们再来看<code>let</code>和<code>const</code>。</p>
+<p>我们先来看一个例子：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span></span><br><span class="line"><span class="keyword">let</span> b = <span class="number">1</span></span><br><span class="line"><span class="keyword">const</span> c = <span class="number">1</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.b) <span class="comment">//undefined</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.c) <span class="comment">//undefined</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a)</span><br><span class="line">    <span class="keyword">let</span> a</span><br><span class="line">&#125;</span><br><span class="line">test()</span><br></pre></td></tr></table></figure>
+<p><strong>首先在全局作用域下使用 <code>let</code> 和 <code>const</code>声明变量，变量并不会被挂载到<code>window</code>上，这一点就和<code>var</code>声明有了区别。</strong></p>
+<p>在这当我们在声明<code>a</code>之前如果使用了<code>a</code>，就会出现报错的情况</p>
+<p><img src="https://i.loli.net/2019/01/07/5c335ff4f1cbb.png" alt="01.png"></p>
+<p>你可能会认为这里也出现了提升的情况，但是因为某些原因导致不能访问。</p>
+<p>首先报错的原因是因为存在暂时性死区，我们不能在声明前就使用变量，这也是<code>let</code>和<code>const</code>由于<code>var</code>的一点。然后这里你认为的提升和<code>var</code>的提升是有区别的，虽然变量在编译的环节中被告知在这块作用域中可以访问，但是访问是受限制的。</p>
+<p>那么到这里，想必大家也都明白<code>var</code>、<code>let</code>及<code>const</code>区别了，不知道你是否会有这么一个疑问，为什么要存在提升这个事情呢，其实提升存在的根本原因就是为了解决函数间相互调用的情况</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    test2()</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test2</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    test1()</span><br><span class="line">&#125;</span><br><span class="line">test1()</span><br></pre></td></tr></table></figure>
+<p>假如不存在提升这个情况，那么就实现不了上述的代码，因为不可能存在<code>test1</code>在<code>test2</code>前面然后<code>test2</code>又在<code>test1</code>前面</p>
+<p>那么最后我们总结这小节的内容：</p>
 <ul>
-<li>react 获取路由参数<br>通过 this.props.params.id 获取路由中 /:id<br>新版 this.props.match.params.id 获取路由中 /:id</li>
-<li><a href="https://www.jianshu.com/p/e3adc9b5f75c/  ---  http://reacttraining.cn/web/api/Route" target="_blank" rel="noopener"><code>&lt;Route&gt;组件</code></a>]<br>render methods 分别是： component、render、children<br>props 分别是：match、location、history</li>
+<li>函数提升优先于变量提升，函数提升会把生个函数挪到作用域顶部，变量提升只会把声明挪到作用域顶部</li>
+<li><code>var</code>存在提升，我们能在声明之前使用。<code>let</code>、<code>const</code>因为暂时性死区的原因，不能再声明前使用</li>
+<li><code>var</code>在全局作用域下声明变量会导致变量挂载到<code>window</code>上，其他两者不会</li>
+<li><code>let</code>和<code>const</code>作用基本一致，但是后者声明的变量不能再次赋值</li>
 </ul>
-<p><strong>4. browserHistory</strong></p>
+<h2 id="原型继承和-Class-继承"><a href="#原型继承和-Class-继承" class="headerlink" title="原型继承和 Class 继承"></a>原型继承和 Class 继承</h2><blockquote>
+<p>涉及面试题：原型如何实现继承？Class 如何实现继承？Class本质是什么？</p>
+</blockquote>
+<p>首先先来讲下<code>class</code>，其实在 JS 中并不存在类，<code>class</code>只是语法糖，本质还是函数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;&#125;</span><br><span class="line">Person <span class="keyword">instanceof</span> <span class="built_in">Function</span> <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<h3 id="组合继承"><a href="#组合继承" class="headerlink" title="组合继承"></a>组合继承</h3><p>组合继承是最常用的继承方式，</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Parent</span>(<span class="params">value</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.val = value</span><br><span class="line">&#125;</span><br><span class="line">Parent.prototype.getValue = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.val)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Child</span>(<span class="params">value</span>) </span>&#123;</span><br><span class="line">    Parent.call(<span class="keyword">this</span>, value)</span><br><span class="line">&#125;</span><br><span class="line">Child.prototype = <span class="keyword">new</span> Parent()</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> child = <span class="keyword">new</span> Child(<span class="number">1</span>)</span><br><span class="line">child.getValue() <span class="comment">// 1</span></span><br><span class="line">child <span class="keyword">instanceof</span> Parent <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>以上继承的方式核心是在子类的构造函数中通过<code>Parent.call(this)</code>继承父类的属性，然后改变子类的原型为<code>new Parent()</code>来继承父类的函数。</p>
+<p>这种继承方式有点在于构造函数可以传参，不会与父类引用属性共享，可以复用父类的函数，但是也存在一个缺点就是在继承父类函数的时候调用了父类构造函数，导致子类的原型上多了不需要的父类属性，存在内存上的浪费。</p>
+<p><img src="https://i.loli.net/2019/01/07/5c3366799fba3.png" alt="02.png"></p>
+<h3 id="寄生组合继承"><a href="#寄生组合继承" class="headerlink" title="寄生组合继承"></a>寄生组合继承</h3><p>这种继承方式对组合继承进行了优化，组合继承缺点在于继承父类函数时调用了构造函数，我们只需要优化掉这点就行了。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Parent</span>(<span class="params">value</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.val = value</span><br><span class="line">&#125;</span><br><span class="line">Parent.prototype.getValue = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.val)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Child</span>(<span class="params">value</span>) </span>&#123;</span><br><span class="line">    Parent.call(<span class="keyword">this</span>, value)</span><br><span class="line">&#125;</span><br><span class="line">Child.prototype = <span class="built_in">Object</span>.create(Parent.prototype, &#123;</span><br><span class="line">    <span class="keyword">constructor</span>: &#123;</span><br><span class="line">        value: Child,</span><br><span class="line">        enumerable: <span class="literal">false</span>,</span><br><span class="line">        writable: <span class="literal">true</span>,</span><br><span class="line">        configurable: <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> child = <span class="keyword">new</span> Child(<span class="number">1</span>)</span><br><span class="line">child.getValue() <span class="comment">// 1</span></span><br><span class="line">child <span class="keyword">instanceof</span> Parent <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>以上继承实现的核心就是将父类的原型赋值给了子类，并且将构造函数设置为子类，这样既解决了无用的父类属性问题，还能正确的找到子类的构造函数。</p>
+<p><img src="https://i.loli.net/2019/01/07/5c336805bfc92.png" alt="03.png"></p>
+<h3 id="Class-继承"><a href="#Class-继承" class="headerlink" title="Class 继承"></a>Class 继承</h3><p>以上两种继承方式都是通过原型去解决的，在 ES6 中，我们可以使用 <code>class</code>去实现继承，并且实现起来很简单</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Parent</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(value) &#123;</span><br><span class="line">        <span class="keyword">this</span>.val = value</span><br><span class="line">    &#125;</span><br><span class="line">    getValue() &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.val)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Child</span> <span class="keyword">extends</span> <span class="title">Parent</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(value) &#123;</span><br><span class="line">        <span class="keyword">super</span>(value)</span><br><span class="line">        <span class="keyword">this</span>.val = value</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> child = <span class="keyword">new</span> Child(<span class="number">1</span>)</span><br><span class="line">child.getValue() <span class="comment">// 1</span></span><br><span class="line">child <span class="keyword">instanceof</span> Parent <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p><code>class</code>实现继承的核心在于使用<code>extends</code>表明继承自哪个父类，并且在自雷构造函数中必须调用<code>super</code>因为这段代码可以看成<code>Parent.call(this, value)</code></p>
+<p>当然了，之前也说了在 JS 中并不存在类，<code>class</code>的本质就是函数。</p>
+<h2 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h2><blockquote>
+<p>涉及面试题：为什么要使用模块化？都有哪几种方式可以实现模块化，各有什么特点？</p>
+</blockquote>
+<p>使用一个技术肯定是有原因的，那么使用模块化可以给我们带来以下好处</p>
 <ul>
-<li>browserHistory.goBack() 返回上一页</li>
-<li>browserHistory.push时如何优雅地传参<ul>
-<li>传参方式1：将参数直接写在路径中，前提是router定义时，需要指定参数的名字，这里假定为:value;<br><code>browserHistory.push(pathname: &#39;/routerName/123&#39;);</code><br>通过<code>this.props.params.value</code>即可获取</li>
-<li>传参方式2：通过state传参，可以在页面跳转时，url中不显示参数；<br><code>browserHistory.push(pathname: &#39;/routerName&#39;,state: { key: value });</code><br>通过<code>this.props.location.state.key</code>便可以获得state中的key的value;</li>
+<li>解决明明冲突</li>
+<li>提供复用性</li>
+<li>提高代码可维护性</li>
 </ul>
-</li>
-<li>路由跳转问题<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//老写法会产生更新警告warning</span></span><br><span class="line"><span class="keyword">this</span>.props.history.push(<span class="string">`<span class="subst">$&#123;MOTHER_PAGE_URL&#125;</span>`</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//用 browserHistory 代替 history</span></span><br><span class="line"><span class="keyword">import</span> &#123; browserHistory &#125; <span class="keyword">from</span> <span class="string">'react-router'</span>;</span><br><span class="line">browserHistory.push(<span class="string">`<span class="subst">$&#123;MOTHER_PAGE_URL&#125;</span>`</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//或者 必须验证router的类型，否则会报错</span></span><br><span class="line"><span class="keyword">static</span> contextTypes = &#123;    </span><br><span class="line">  router: React.PropTypes.object.isRequired</span><br><span class="line">&#125;;</span><br><span class="line">componentDidMount() &#123;</span><br><span class="line">  <span class="comment">//原来的写法    </span></span><br><span class="line">  <span class="keyword">this</span>.props.history.push(<span class="string">`/`</span>)    </span><br><span class="line">  <span class="comment">//现在的写法    </span></span><br><span class="line">  <span class="keyword">this</span>.context.router.push(<span class="string">`/`</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><strong>5. <a href="https://www.cnblogs.com/wgl1995/p/6489038.html" target="_blank" rel="noopener">react 中使用echarts</a></strong></p>
+<h3 id="立即执行函数"><a href="#立即执行函数" class="headerlink" title="立即执行函数"></a>立即执行函数</h3><p>在早期，使用立即执行函数实现模块化是最常见的手段，通过函数作用域解决了命名冲突、污染全局作用域的问题</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">globalVariable</span>)</span>&#123;</span><br><span class="line">    globalVariable.test = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="comment">// ...声明各种变量、函数都不会污染全局作用域</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;)(globalVariable)</span><br></pre></td></tr></table></figure>
+<h3 id="AMD-和-CMD"><a href="#AMD-和-CMD" class="headerlink" title="AMD 和 CMD"></a>AMD 和 CMD</h3><p>鉴于目前这两种实现方式已经很少见到，所以不再对具体特性细聊，只需要了解这两者是如何使用的。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// AMD</span></span><br><span class="line">define([<span class="string">'./a'</span>, <span class="string">'./b'</span>], <span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 加载模块完毕可以使用</span></span><br><span class="line">  a.do()</span><br><span class="line">  b.do()</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// CMD</span></span><br><span class="line">define(<span class="function"><span class="keyword">function</span>(<span class="params">require, exports, module</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 加载模块</span></span><br><span class="line">  <span class="comment">// 可以把 require 写在函数体的任意地方实现延迟加载</span></span><br><span class="line">  <span class="keyword">var</span> a = <span class="built_in">require</span>(<span class="string">'./a'</span>)</span><br><span class="line">  a.doSomething()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="CommonJS"><a href="#CommonJS" class="headerlink" title="CommonJS"></a>CommonJS</h3><p>CommonJS 最早是 Node 在使用，目前也仍然广泛使用，比如在 webpack 中你就能见到它，当然目前在 Node 中的模块管理已经和 CommonJS 有一些区别了。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// a.js</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    a: <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// or</span></span><br><span class="line">exports.a = <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// b.js</span></span><br><span class="line"><span class="keyword">var</span> <span class="built_in">module</span> = <span class="built_in">require</span>(<span class="string">'./a.js'</span>)</span><br><span class="line"><span class="built_in">module</span>.a <span class="comment">// -&gt; log 1</span></span><br></pre></td></tr></table></figure>
+<p>因为 CommonJS 还是会使用到的，所以这里会对一些疑难点进行解析</p>
+<p>先说 <code>require</code> 吧</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="built_in">module</span> = <span class="built_in">require</span>(<span class="string">'./a.js'</span>)</span><br><span class="line"><span class="built_in">module</span>.a</span><br><span class="line"><span class="comment">// 这里其实就是包装了一层立即执行函数，这样就不会污染全局变量了</span></span><br><span class="line"><span class="comment">// 重要的是 module 这里，module 是 Node 独有的一个变量</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    a: <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// module 基本实现</span></span><br><span class="line"><span class="keyword">var</span> <span class="built_in">module</span> = &#123;</span><br><span class="line">    id: <span class="string">'xxx'</span>, <span class="comment">// 我总得知道怎么去找他吧</span></span><br><span class="line">    exports: &#123;&#125; <span class="comment">// exports 就是个空对象</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 这个是为什么 exports 和 module.exports 用法相似的原因</span></span><br><span class="line"><span class="keyword">var</span> exports = <span class="built_in">module</span>.exports</span><br><span class="line"><span class="keyword">var</span> load = <span class="function"><span class="keyword">function</span> (<span class="params">module</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 导出的东西</span></span><br><span class="line">    <span class="keyword">var</span> a = <span class="number">1</span></span><br><span class="line">    <span class="built_in">module</span>.exports = a</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">module</span>.exports</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 然后当我 require 的时候去找到独特的id</span></span><br><span class="line"><span class="comment">// 然后将要使用的东西用立即执行函数包装下，over</span></span><br></pre></td></tr></table></figure>
+<p>另外虽然 <code>exports</code> 和 <code>module.exports</code>用法相似，但是不能对<code>exports</code>直接赋值。因为<code>var exports = module.exports</code>这句代码表明了 <code>exports</code>和 <code>module.exports</code>享有相同地址，通过改变对象的属性值会对两者都起效，但是如果直接对<code>exports</code>赋值就会导致两者不再指向同一个内存地址，修改并不会对<code>module.exoprts</code>起效。</p>
+<h3 id="ES-Module"><a href="#ES-Module" class="headerlink" title="ES Module"></a>ES Module</h3><p>ES Module 是原生实现的模块化方案，与CommonJS 有以下几个区别</p>
 <ul>
-<li><p>echarts X轴坐标文字显示不全 – 在 xAxis 中添加配置</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">xAxis: &#123;</span><br><span class="line">  axisLabel:&#123;</span><br><span class="line">    interval:<span class="number">0</span>,<span class="comment">//横轴信息全部显示</span></span><br><span class="line">    rotate:<span class="number">-30</span>,<span class="comment">//-30度角倾斜显示</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>echarts 柱状图 legend 数据改变后，他的页码不变，但是旧数据有三页，新数据就两页，数据改变后还留在第三页，但是第三页没数据，所以显示空白<br>解决方法：实例先clear，再setOption</p>
-</li>
-<li><p>echart 线图 柱图 溢出部分包含<br><code>grid: {containLabel: true}</code></p>
-</li>
-<li><p>react 中实现初始化时只绑定一次dom<br>在初始化图标，setOption 前<br><code>if (!this.myChart) this.myChart = echarts.init(this.chartRef);</code></p>
-</li>
-<li><p>在柱状图中，tooltip 上显示多个数据，配置 formatter 为一个函数，在 series 的 data 中添加 tooltip 中使用的参数对象</p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.myChart.setOption(&#123;</span><br><span class="line">  ...options,</span><br><span class="line">  tooltip: &#123;</span><br><span class="line">    trigger: <span class="string">'axis'</span>,</span><br><span class="line">    formatter: <span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</span><br><span class="line">      data = data[<span class="number">0</span>].data.tooltip;</span><br><span class="line">      <span class="keyword">return</span> <span class="string">`<span class="subst">$&#123;data.foodName&#125;</span>&lt;br/&gt;</span></span><br><span class="line"><span class="string">      - 提及次数: <span class="subst">$&#123;data.foodMentionCount&#125;</span>次&lt;br/&gt;</span></span><br><span class="line"><span class="string">      - 点赞次数: <span class="subst">$&#123;data.thumbsUpCount&#125;</span>次&lt;br/&gt;</span></span><br><span class="line"><span class="string">      - 点赞率: <span class="subst">$&#123;data.thumbsUpRate&#125;</span>`</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  series: [&#123;</span><br><span class="line">    ...options,</span><br><span class="line">    data: thumbsUpDataList.map(<span class="function"><span class="params">item</span> =&gt;</span> (&#123;</span><br><span class="line">      value: item.thumbsUpCount,</span><br><span class="line">      tooltip:&#123;</span><br><span class="line">        foodName: item.foodName,</span><br><span class="line">        foodMentionCount: item.foodMentionCount,</span><br><span class="line">        thumbsUpCount: item.thumbsUpCount,</span><br><span class="line">        thumbsUpRate: item.thumbsUpRate</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;))</span><br><span class="line">  &#125;],</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-</li>
+<li>CommonJS 支持动态导入，也就是<code>require(${path}/xx.js)</code>，后者目前不支持，但是已有提案</li>
+<li>CommonJS 是同步导入，因为用于服务端，文件都在本地，同步导入即使卡住主线程影响也不大。而后者是异步导入，因为用于浏览器，需要下载文件，如果也采用同步导入会对渲染有很大影响</li>
+<li>CommonJS 在导出时都是值拷贝，就算导出的值变了，导入的值也不会改变，所以如果想更新值，必须重新导入一次。但后者采用实时绑定的方式，导入导出的值都指向同一个内存地址，所以导入值会随导出值变化</li>
+<li>ES Module 会编译成<code>require/exports</code>来执行的</li>
 </ul>
-<p><strong>6. <a href="https://doc.react-china.org/docs/events.html" target="_blank" rel="noopener">react 的 event.persist()</a></strong><br>异步事件队列合并 就是让你在异步中能拿到事件对象</p>
-<p><strong>7. react-datetime</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 引入模块 api</span></span><br><span class="line"><span class="keyword">import</span> xxx <span class="keyword">from</span> <span class="string">'./a.js'</span></span><br><span class="line"><span class="keyword">import</span> &#123; xxx &#125; <span class="keyword">from</span> <span class="string">'./a.js'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 导出模块 api</span></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Proxy"><a href="#Proxy" class="headerlink" title="Proxy"></a>Proxy</h2><blockquote>
+<p>涉及面试题：Proxy 可以实现什么功能？</p>
+</blockquote>
+<p>如果你平时有关注 vue 进展的话，可能已经知道了在 Vue3.0 中将会通过 <code>Proxy</code> 来替换原本的 <code>Object.defineProperty</code> 来实现数据响应式。 <code>Proxy</code>是 ES6 中新增的功能，它可以用来自定义对象中的操作。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> p = <span class="keyword">new</span> <span class="built_in">Proxy</span>(target, handler)</span><br></pre></td></tr></table></figure>
+<p><code>target</code> 代表需要添加代理的对象，<code>handler</code>用来自定义对象中的操作，比如可以用来自定义<code>set</code>或者 <code>get</code>函数。</p>
+<p>接下来我们通过<code>Proxy</code>来实现一个数据响应式</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> onWatch = <span class="function">(<span class="params">obj, setBind, getLogger</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> handler = &#123;</span><br><span class="line">        get(target, property, receiver) &#123;</span><br><span class="line">            getLogger(target, property)</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">Reflect</span>.get(target, property, receiver)</span><br><span class="line">        &#125;,</span><br><span class="line">        set(target, property, value, receiver) &#123;</span><br><span class="line">            setBind(value, property)</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">Reflect</span>.set(target, property, value)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Proxy</span>(obj, handler)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> obj = &#123; <span class="attr">a</span>: <span class="number">1</span> &#125;</span><br><span class="line"><span class="keyword">let</span> p = onWatch(</span><br><span class="line">	obj,</span><br><span class="line">    (v, property) =&gt; &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">`监听到属性<span class="subst">$&#123;property&#125;</span>改变为<span class="subst">$&#123;v&#125;</span>`</span>)</span><br><span class="line">    &#125;,</span><br><span class="line">    (target, property) =&gt; &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">`'<span class="subst">$&#123;property&#125;</span>' = <span class="subst">$&#123;target[property]&#125;</span>`</span>)</span><br><span class="line">    &#125;</span><br><span class="line">)</span><br><span class="line">p.a = <span class="number">2</span> <span class="comment">// 监听到属性 a 改变为 2</span></span><br><span class="line">p.a <span class="comment">// 'a' = 2</span></span><br></pre></td></tr></table></figure>
+<p>在上述代码中，我们通过自定义 <code>set</code> 和 <code>get</code> 函数的方式，在原本的逻辑中插入了我们的函数逻辑，实现了在对对象任何属性进行读写时发出通知。</p>
+<p>当然这是简单版的响应式实现，如果需要实现一个 Vue 中的响应式，需要我们在 <code>get</code> 中收集依赖，在<code>set</code>派发更新，之所以 Vue3.0 要使用 <code>Proxy</code>替换原本的 API 原因就在于 <code>Proxy</code> 无需一层层递归为每个属性添加代理，一次即可完成以上操作，性能上更好，并且原本的实现有一些数据更新不能监听到，但是<code>Proxy</code>可以完美监听到任何方式的数据改变，唯一的缺陷可能就是浏览器的兼容性不好了</p>
+<h2 id="map-filter-reduce"><a href="#map-filter-reduce" class="headerlink" title="map, filter, reduce"></a>map, filter, reduce</h2><blockquote>
+<p>涉及面试题：map, filter, reduce 各自有什么作用？</p>
+</blockquote>
+<p>map 作用是生成一个新数组，遍历原数组，将每个元素拿出来做一些变换后放入到新的数组中。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>].map(<span class="function"><span class="params">v</span> =&gt;</span> v + <span class="number">1</span>) <span class="comment">// -&gt; [2, 3, 4]</span></span><br></pre></td></tr></table></figure>
+<p>另外 <code>map</code> 的回调函数接受三个参数，分别是当前索引元素，索引，原数组</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>].map(<span class="built_in">parseInt</span>) <span class="comment">//parseInt(string, radix);</span></span><br></pre></td></tr></table></figure>
 <ul>
-<li>中将语言设置为中文<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//将语言设置为中文</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">'moment/locale/zh-cn'</span>;</span><br><span class="line">&lt;Datetime locale=<span class="string">"zh-cn"</span> /&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">//input 只读设置</span></span><br><span class="line">inputProps=&#123;&#123;<span class="attr">placeholder</span>: <span class="string">'请输入时间'</span>,<span class="attr">readOnly</span>: <span class="literal">true</span>&#125;&#125;</span><br></pre></td></tr></table></figure>
-</li>
+<li>第一轮遍历 <code>parseInt(&#39;1&#39;, 0) -&gt; 1</code></li>
+<li>第二轮遍历 <code>parseInt(&#39;2&#39;, 1) -&gt; NaN</code></li>
+<li>第一轮遍历 <code>parseInt(&#39;3&#39;, 2) -&gt; NaN</code></li>
 </ul>
-<p><strong>8. h5自定义属性data-* 及react 的 innerHTML</strong></p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;li</span><br><span class="line">  key=&#123;item.code&#125;</span><br><span class="line">  data-value=&#123;item.code&#125;</span><br><span class="line">  data-name=&#123;item.name&#125;</span><br><span class="line">  dangerouslySetInnerHTML=&#123;&#123;<span class="attr">__html</span>: item._name_&#125;&#125;</span><br><span class="line">  onClick=&#123;e =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> $curTar = $(e.currentTarget);</span><br><span class="line">    <span class="keyword">const</span> value = $curTar.data(<span class="string">'value'</span>);</span><br><span class="line">    <span class="keyword">const</span> name = $curTar.data(<span class="string">'name'</span>);</span><br><span class="line">    <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">      accountBank: value,</span><br><span class="line">      accountBankName: name</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;&#125;</span><br><span class="line">&gt;&lt;/li&gt;</span><br></pre></td></tr></table></figure>
-<p><strong>9. react 绑定 this 的几种方式</strong></p>
+<p><code>filter</code> 的作用也是生成一个新数组，在遍历数组的时候将返回值为<code>true</code>的元素放入新数组，我们可以利用这个函数删除一些不需要的元素</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>]</span><br><span class="line"><span class="keyword">let</span> newArray = array.filter(<span class="function"><span class="params">item</span> =&gt;</span> item !== <span class="number">6</span>)</span><br><span class="line"><span class="built_in">console</span>.log(newArray) <span class="comment">// [1, 2, 4]</span></span><br></pre></td></tr></table></figure>
+<p>和 <code>map</code>一样，<code>filter</code>的回调函数也接受三个参数，用处也相同。</p>
+<p>最后我们来讲解 <code>reduce</code>这块的内容，同时也是最难理解的一块内容。<code>reduce</code>可以将数组中的元素通过回调函数最终转换为一个值。</p>
+<p>如果我们想实现一个功能将函数里的元素全部相加得到一个值，可能会这样写代码</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"><span class="keyword">let</span> total = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">    total += arr[i]</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(total) <span class="comment">// 6</span></span><br></pre></td></tr></table></figure>
+<p>但是如果我们使用 <code>reduce</code>的话就可以将遍历部分的代码优化为一行代码</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"><span class="keyword">const</span> sum = arr.reduce(<span class="function">(<span class="params">acc, cur</span>) =&gt;</span> arr + cur, <span class="number">0</span>)</span><br><span class="line"><span class="built_in">console</span>.log(sum)</span><br></pre></td></tr></table></figure>
+<p>对于<code>reduce</code>来说，它接手两个参数，分别是回调函数和初始值，接下来我们来分析上述代码中<code>reduce</code>的过程</p>
 <ul>
-<li>在 render 中直接 bind <code>&lt;button onClick={ this.handleClick.bind(this) }&gt;Say Hello&lt;/button&gt;</code> 缺点：在每次渲染时都要重新绑定</li>
-<li>在 constructor 中 bind <code>this.handleClick = this.handleClick.bind(this)</code> 优点：仅需要绑定一次</li>
-<li>使用es6语法+箭头函数在 constructor 中赋值 <code>this.handleClick = (e) =&gt; {console.log(this.state.message)}</code></li>
-<li>使用es7语法+箭头函数在 class 中直接赋值 <code>handleClick = (e) =&gt; {console.log(this.state.message)}</code><ul>
-<li>在 react 中使用 es7 箭头函数的方法来绑定 this<br><code>npm i babel-preset-stage-0 -D</code><br>在 .babelrc 中 presets 添加 “stage-0” 即可</li>
+<li>首先初始值为 <code>0</code>，该值会在执行第一次回调函数时作为第一个参数传入</li>
+<li>回调韩素红接手四个参数，分别是累计值，当前元素，当前索引，原数组，后三者想必大家都可以明白作用，这里着重分析第一个参数</li>
+<li>在一次执行回调函数时，当前值和初始值相加得出结果 <code>1</code>，该结果会在第二次执行回调函数时当做第一个参数传入</li>
+<li>所以在第二次执行回调函数时，相加的值就分别是<code>1</code>和<code>2</code>，以此类推，循环结束后得到结果<code>6</code></li>
 </ul>
-</li>
-</ul>
-<p><strong>10. <a href="https://www.zcfy.cc/@jiaxianhua/article" target="_blank" rel="noopener">react 30 天</a></strong></p>
-<p><strong>11. componentWillReceiveProps</strong><br>组件接收到新的props时调用，并将其作为参数nextProps使用，此时可以更改组件props及state。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">componentWillReceiveProps(nextProps) &#123;</span><br><span class="line">  <span class="keyword">if</span> (nextProps.bool) &#123;</span><br><span class="line">    <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">      bool: <span class="literal">true</span></span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><strong>12. 使用 create-react-app</strong></p>
-<ul>
-<li>npm install -g create-react-app<ul>
-<li>create-react-app my-app</li>
-<li>cd my-app</li>
-<li>npm start</li>
-</ul>
-</li>
-<li>修改端口：node_modules\react-scripts\scripts\start.js<br>在node_modules文件夹里面搜索react-scripts，之后可以在该文件夹下看到scripts文件夹。在start.js里面找到端口号并修改。</li>
-<li>显示隐藏 webpack 配置：npm run eject (不可逆)</li>
-</ul>
-<hr>
+<p>想必通过以上的解析大家应该明白<code>reduce</code>是如何通过回调函数将所有元素最终转换为一个值的，当然<code>reduce</code>还可以实现很多功能，接下来我们就通过<code>reduce</code>来实现<code>map</code>函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"><span class="keyword">const</span> mapArray = arr.map(<span class="function"><span class="params">value</span> =&gt;</span> value * <span class="number">2</span>)</span><br><span class="line"><span class="keyword">const</span> reduceArray = arr.reduce(<span class="function">(<span class="params">acc, cur</span>) =&gt;</span> &#123;</span><br><span class="line">    acc.push(cur * <span class="number">2</span>)</span><br><span class="line">    <span class="keyword">return</span> acc</span><br><span class="line">&#125;, [])</span><br><span class="line"><span class="built_in">console</span>.log(mapArray, reduceArray) <span class="comment">// [2, 4, 6]</span></span><br></pre></td></tr></table></figure>
 
       
 
@@ -267,15 +323,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">react</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">tips</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">interview</a>
         		</li>
       		
 		</ul>
@@ -331,7 +379,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://github.com/steakxiaoxin/steakxiaoxin.github.io/2018/07/02/20180702-react-tips/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://github.com/steakxiaoxin/steakxiaoxin.github.io/2019/01/07/20190107-interview-03/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -345,18 +393,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/07/02/20180702-js-tips/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          JavaScrip-tips Summary
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/06/11/20180609-hexo-setup/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">hexo博客框架搭建</div>
+    <a href="/2019/01/06/20190106-interview-02/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JS 基础知识点及常考面试题（二）</div>
       <i class="icon-circle-right"></i>
     </a>
   
