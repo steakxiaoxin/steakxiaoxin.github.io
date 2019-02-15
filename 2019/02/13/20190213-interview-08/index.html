@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/steakxiaoxin/steakxiaoxin.github.io">
-  <title>Archives | 小新的演唱会</title>
+  <title>浏览器基础知识点 | 小新的演唱会</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="小新的演唱会">
-<meta property="og:url" content="https://github.com/steakxiaoxin/steakxiaoxin.github.io/archives/page/3/index.html">
+  <meta name="description" content="事件机制 涉及面试题：事件的触发过程是怎样的？知道什么是事件代理吗？  事件触发的三阶段事件触发有三个阶段：  window 往事件触发处传播，遇到注册的捕获事件会触发 传播到事件触发处时触发注册的事件 从事件触发处往 window 传播，遇到注册的冒泡事件会触发  事件触发一般来说会按照上面的顺序进行，但是也有特例，如果给一个 body 中的子节点同时注册冒泡和捕获事件，事件触发会按照注册的顺序">
+<meta name="keywords" content="interview">
+<meta property="og:type" content="article">
+<meta property="og:title" content="浏览器基础知识点">
+<meta property="og:url" content="https://github.com/steakxiaoxin/steakxiaoxin.github.io/2019/02/13/20190213-interview-08/index.html">
 <meta property="og:site_name" content="小新的演唱会">
+<meta property="og:description" content="事件机制 涉及面试题：事件的触发过程是怎样的？知道什么是事件代理吗？  事件触发的三阶段事件触发有三个阶段：  window 往事件触发处传播，遇到注册的捕获事件会触发 传播到事件触发处时触发注册的事件 从事件触发处往 window 传播，遇到注册的冒泡事件会触发  事件触发一般来说会按照上面的顺序进行，但是也有特例，如果给一个 body 中的子节点同时注册冒泡和捕获事件，事件触发会按照注册的顺序">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-02-15T09:19:32.444Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小新的演唱会">
+<meta name="twitter:title" content="浏览器基础知识点">
+<meta name="twitter:description" content="事件机制 涉及面试题：事件的触发过程是怎样的？知道什么是事件代理吗？  事件触发的三阶段事件触发有三个阶段：  window 往事件触发处传播，遇到注册的捕获事件会触发 传播到事件触发处时触发注册的事件 从事件触发处往 window 传播，遇到注册的冒泡事件会触发  事件触发一般来说会按照上面的顺序进行，但是也有特例，如果给一个 body 中的子节点同时注册冒泡和捕获事件，事件触发会按照注册的顺序">
   
   
     <link rel="icon" href="/assets/imgs/favicon.ico">
@@ -134,151 +139,341 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-20190213-interview-08" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      浏览器基础知识点
+    </h1>
+  
+
+        
+        <a href="/2019/02/13/20190213-interview-08/" class="archive-article-date">
+  	<time datetime="2019-02-13T15:21:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-13</time>
+</a>
+        
+      </header>
+      
+		<span class="archive-article-date">
+			阅读量 <span id="busuanzi_value_page_pv"></span>
+		</span>
+      
     
+    <!-- 目录内容 -->
+    
+    <!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="事件机制"><a href="#事件机制" class="headerlink" title="事件机制"></a>事件机制</h2><blockquote>
+<p>涉及面试题：事件的触发过程是怎样的？知道什么是事件代理吗？</p>
+</blockquote>
+<h3 id="事件触发的三阶段"><a href="#事件触发的三阶段" class="headerlink" title="事件触发的三阶段"></a>事件触发的三阶段</h3><p>事件触发有三个阶段：</p>
+<ul>
+<li><code>window</code> 往事件触发处传播，遇到注册的捕获事件会触发</li>
+<li>传播到事件触发处时触发注册的事件</li>
+<li>从事件触发处往 <code>window</code> 传播，遇到注册的冒泡事件会触发</li>
+</ul>
+<p>事件触发一般来说会按照上面的顺序进行，但是也有特例，如果给一个 <code>body</code> 中的子节点同时注册冒泡和捕获事件，事件触发会按照注册的顺序执行。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 以下会先打印冒泡然后是捕获</span></span><br><span class="line">node.addEventListener(</span><br><span class="line">  <span class="string">'click'</span>,</span><br><span class="line">  event =&gt; &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'冒泡'</span>)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="literal">false</span></span><br><span class="line">)</span><br><span class="line">node.addEventListener(</span><br><span class="line">  <span class="string">'click'</span>,</span><br><span class="line">  event =&gt; &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'捕获 '</span>)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="literal">true</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="注册事件"><a href="#注册事件" class="headerlink" title="注册事件"></a>注册事件</h3><p>通常我们使用 <code>addEventListener</code> 注册事件，该函数的第三个参数可以是布尔值，也可以是对象。对于布尔值 <code>useCapture</code> 参数来说，该参数默认值为 <code>false</code>，<code>useCapture</code> 决定了注册的事件是捕获事件还是冒泡事件。对于对象参数来说，可以使用以下几个属性</p>
+<ul>
+<li><code>capture</code> ：布尔值，和 <code>useCapture</code> 作用一样</li>
+<li><code>once</code> ：布尔值，值为 <code>true</code> 表示该回调只会调用一次，调用后会移除监听</li>
+<li><code>passive</code> ：布尔值，表示永远不会调用 <code>preventDefault</code></li>
+</ul>
+<p>一般来说，如果我们只希望事件只触发在目标上，这时候可以使用 <code>stopPropagation</code> 来阻止时间的进一步传播。通常我们认为 <code>stopPropagation</code> 是用来阻止时间冒泡的，其实该函数也可以阻止捕获事件。<code>stopImmediatePropagation</code> 同样也能实现阻止事件，但是还能阻止该事件目标执行别的注册事件。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">node.addEventListener(</span><br><span class="line">  <span class="string">'click'</span>,</span><br><span class="line">  event =&gt; &#123;</span><br><span class="line">    event.stopImmediatePropagation()</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'冒泡'</span>)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="literal">false</span></span><br><span class="line">)</span><br><span class="line"><span class="comment">// 点击 node 只会执行上面的函数，该函数不会执行</span></span><br><span class="line">node.addEventListener(</span><br><span class="line">  <span class="string">'click'</span>,</span><br><span class="line">  event =&gt; &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'捕获 '</span>)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="literal">true</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h3 id="事件代理"><a href="#事件代理" class="headerlink" title="事件代理"></a>事件代理</h3><p>如果一个节点中的子节点是动态生成的，那么子节点需要注册事件的话应该注册在父节点上</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"ul"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">li</span>&gt;</span>1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">li</span>&gt;</span>3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">li</span>&gt;</span>4<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">li</span>&gt;</span>5<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">	<span class="keyword">let</span> ul = <span class="built_in">document</span>.querySelector(<span class="string">'#ul'</span>)</span></span><br><span class="line"><span class="javascript">	ul.addEventListener(<span class="string">'click'</span>, (event) =&gt; &#123;</span></span><br><span class="line"><span class="javascript">		<span class="built_in">console</span>.log(event.target);</span></span><br><span class="line"><span class="undefined">	&#125;)</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>事件代理的方式相较于直接给目标注册事件来说，有以下优点：</p>
+<ul>
+<li>节省内存</li>
+<li>不需要给子节点注销事件</li>
+</ul>
+<h2 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h2><blockquote>
+<p>涉及面试题：什么是跨域？为什么浏览器要使用同源策略？你有几种方式可以解决跨域问题？了解预检请求吗？</p>
+</blockquote>
+<p>因为浏览器处于安全考虑，有同源策略。也就是说，如果协议、域名或者端口有一个不同就是跨域，Ajax 请求会失败。</p>
+<blockquote>
+<p>URL组成格式</p>
+<p>protocol : // hostname (:port) / path / (;parameters) (?query) #fragment</p>
+<ul>
+<li><p>protocol 协议，常用的协议是http</p>
+</li>
+<li><p>hostname 主机地址，可以是域名，也可以是IP地址</p>
+</li>
+<li><p>port 端口 http协议默认端口是：80端口，如果不写默认就是:80端口</p>
+</li>
+<li><p>path 路径 网络资源在服务器中的指定路径</p>
+</li>
+<li><p>parameter 参数 如果要向服务器传入参数，在这部分输入</p>
+</li>
+<li><p>query 查询字符串 如果需要从服务器那里查询内容，在这里编辑</p>
+</li>
+<li><p>fragment 片段 网页中可能会分为不同的片段，如果想访问网页后直接到达指定位置，可以在这部分设置</p>
+</li>
+</ul>
+</blockquote>
+<p>那么是出于什么安全考虑才会引入这种机制呢？其实主要是用来防止 CSRF 攻击的。简单点说，CSRF 攻击是利用用户的登录态发起恶意请求。</p>
+<p>也就是说，没有同源策略的情况下，A 网站可以被任意其他来源的 Ajax 访问到内容。如果你当前 A 网站还存在登录态，呢么对方就可以通过 Ajax 获取到你的任何信息。当然跨域并不能完全阻止 CSRF。</p>
+<p>然后我们来考虑一个问题，请求跨域了，那么请求到底发出去没有？请求必然是发出去了，但是浏览器拦截了响应。你可能会疑问明明通过表单的方式可以发起跨域请求，为什么 Ajax 就不会。因为归根结底，跨域是为了阻止用户读取到另一个域名下的内容，Ajax 可以获取响应，浏览器认为这不安全，所以拦截了响应。但是表单并不会获取新的内容，所以可以发起跨域请求。同时也说明了跨域并不能完全阻止 CSRF，因为请求毕竟是发出去了。</p>
+<p>接下来我们将来学习几种常见的方式来解决跨域的问题。</p>
+<h3 id="JSONP"><a href="#JSONP" class="headerlink" title="JSONP"></a>JSONP</h3><p>JSONP 的原理很简单，就是利用 <code>&lt;script&gt;</code> 标签没有跨域限制的漏洞。通过 <code>&lt;script&gt;</code> 标签指向一个需要访问的地址并提供一个回调函数来接收数据当需要通讯时。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"http://domain/api?param1=a&amp;param2=b&amp;callback=jsonp"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jsonp</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">    	<span class="built_in">console</span>.log(data)</span><br><span class="line">	&#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<p>JSONP 使用简单且兼容性不错，但是只限于 <code>get</code> 请求。</p>
+<p>在开发中可能会遇到多个 JSONP 请求的回调函数名是相同的，这时候就需要自己封装一个 JSONP，以下是简单实现</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">jsonp</span>(<span class="params">url, jsonpCallback, success</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> script = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>)</span><br><span class="line">  script.src = url</span><br><span class="line">  script.async = <span class="literal">true</span></span><br><span class="line">  script.type = <span class="string">'text/javascript'</span></span><br><span class="line">  <span class="built_in">window</span>[jsonpCallback] = <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">    success &amp;&amp; success(data)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">document</span>.body.appendChild(script)</span><br><span class="line">&#125;</span><br><span class="line">jsonp(<span class="string">'http://xxx'</span>, <span class="string">'callback'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(value)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="CORS"><a href="#CORS" class="headerlink" title="CORS"></a>CORS</h3><p>CORS 需要浏览器和后端同时支持。IE 8 和 9 需要通过 <code>XDomainRequest</code> 来实现。</p>
+<p>浏览器会自动进行 CORS 通信，实现 CORS 通信的关键是后端。只要后端实现了 CORS，就实现了跨域。</p>
+<p>服务端设置 <code>Access-Control-Allow-Origin</code> 就可以开启 CORS。 该属性表示哪些域名可以访问资源，如果设置通配符则表示所有网站都可以访问资源。</p>
+<p>虽然设置 CORS 和前端没什么关系，但是通过这种方式解决跨域问题的话，会在发送请求时出现两种情况，分别为<strong>简单请求和复杂请求</strong>。</p>
+<h4 id="简单请求"><a href="#简单请求" class="headerlink" title="简单请求"></a>简单请求</h4><p>以 Ajax 为例，当满足以下条件时，会触发简单请求</p>
+<ol>
+<li>使用下列方法之一：<ul>
+<li><code>GET</code></li>
+<li><code>HEAD</code></li>
+<li><code>POST</code></li>
+</ul>
+</li>
+<li><code>Content-Type</code> 的值仅限于下列三者之一：<ul>
+<li><code>text/plain</code></li>
+<li><code>multipart/form-data</code></li>
+<li><code>application/x-www-form-urlencoded</code></li>
+</ul>
+</li>
+</ol>
+<p>请求中的任意 <code>XMLHttpRequestUpload</code> 对象均没有注册任何事件监听器； <code>XMLHttpRequestUpload</code>对象可以使用 <code>XMLHttpRequest.upload</code> 属性访问。</p>
+<h4 id="复杂请求"><a href="#复杂请求" class="headerlink" title="复杂请求"></a>复杂请求</h4><p>那么很显然，不符合以上条件的请求就肯定是复杂请求了。</p>
+<p>对于复杂请求来说，首先会发起一个预检请求，该请求是 <code>option</code> 方法的，通过该请求来知道服务端是否允许跨域请求。</p>
+<p>对于预检请求来说，如果你使用过 Node 来设置 CORS 的话，可能会遇到过这么一个坑。</p>
+<p>以下以 express 框架举例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">app.use(<span class="function">(<span class="params">req, res, next</span>) =&gt;</span> &#123;</span><br><span class="line">  res.header(<span class="string">'Access-Control-Allow-Origin'</span>, <span class="string">'*'</span>)</span><br><span class="line">  res.header(<span class="string">'Access-Control-Allow-Methods'</span>, <span class="string">'PUT, GET, POST, DELETE, OPTIONS'</span>)</span><br><span class="line">  res.header(</span><br><span class="line">    <span class="string">'Access-Control-Allow-Headers'</span>,</span><br><span class="line">    <span class="string">'Origin, X-Requested-With, Content-Type, Accept, Authorization, Access-Control-Allow-Credentials'</span></span><br><span class="line">  )</span><br><span class="line">  next()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>该请求会验证你的 <code>Authorization</code> 字段，没有的话就会报错。</p>
+<p>当前端发起了复杂请求后，你会发现就算你代码是正确的，返回结果也永远是报错的。因为预检请求也会进入回调中，也会触发 <code>next</code> 方法，因为预检请求并不包含 <code>Authorization</code> 字段，所以服务端会报错。</p>
+<p>想解决这个问题很简单，只需要在回调中过滤 <code>option</code> 方法即可</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">res.statusCode = <span class="number">204</span></span><br><span class="line">res.setHeader(<span class="string">'Content-Length'</span>, <span class="string">'0'</span>)</span><br><span class="line">res.end()</span><br></pre></td></tr></table></figure>
+<h3 id="document-domain"><a href="#document-domain" class="headerlink" title="document.domain"></a>document.domain</h3><p>该方式只能用于<strong>二级域名相同</strong>的情况下，比如 <code>a.test.com</code> 和 <code>b.test.com</code> 适用于该方式。</p>
+<p>只需要给页面添加 <code>document.domain = &#39;test.com&#39;</code> 表示二级域名都相同就可以实现跨域</p>
+<h3 id="postMessage"><a href="#postMessage" class="headerlink" title="postMessage"></a>postMessage</h3><p>这种方式通常用于获取嵌入页面中的第三方页面数据。一个页面发送消息，另一个页面判断来源并接收消息</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 发送消息端</span></span><br><span class="line"><span class="built_in">window</span>.parent.postMessage(<span class="string">'message'</span>, <span class="string">'http://test.com'</span>)</span><br><span class="line"><span class="comment">// 接收消息端</span></span><br><span class="line"><span class="keyword">var</span> mc = <span class="keyword">new</span> MessageChannel()</span><br><span class="line">mc.addEventListener(<span class="string">'message'</span>, event =&gt; &#123;</span><br><span class="line">  <span class="keyword">var</span> origin = event.origin || event.originalEvent.origin</span><br><span class="line">  <span class="keyword">if</span> (origin === <span class="string">'http://test.com'</span>) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'验证通过'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="存储"><a href="#存储" class="headerlink" title="存储"></a>存储</h2><blockquote>
+<p>涉及面试题：有几种方式可以实现存储功能，分别有什么优缺点？什么是 Service Worker?</p>
+</blockquote>
+<h3 id="cookie，localStorage，sessionStorage，indexDB"><a href="#cookie，localStorage，sessionStorage，indexDB" class="headerlink" title="cookie，localStorage，sessionStorage，indexDB"></a>cookie，localStorage，sessionStorage，indexDB</h3><p>我们先来通过表格学习下这几种存储方式的区别</p>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>cookie</th>
+<th>localStorage</th>
+<th>sessionStorage</th>
+<th>indexDB</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数据生命周期</td>
+<td>一般由服务器生成，可以设置过期时间</td>
+<td>除非被清理，否则一直存在</td>
+<td>页面关闭就清理</td>
+<td>除非被清理，否则一直存在</td>
+</tr>
+<tr>
+<td>数据存储大小</td>
+<td>4K</td>
+<td>5M</td>
+<td>5M</td>
+<td>无限</td>
+</tr>
+<tr>
+<td>与服务端通信</td>
+<td>每次都会携带在 header 中，对于请求性能影响</td>
+<td>不参与</td>
+<td>不参与</td>
+<td>不参与</td>
+</tr>
+</tbody>
+</table>
+<p>从上表可以看到，<code>cookie</code> 已经不建议用于存储。如果没有大量数据存储需求的话，可以使用 <code>localStorage</code> 和 <code>sessionStorage</code> 。对于不怎么改变的数据尽量使用 <code>localStorage</code> 存储，否则可以用 <code>sessionStorage</code> 存储。</p>
+<p>对于 <code>cookie</code> 来说，我们还需要注意安全性。</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value</td>
+<td>如果用于保存用户登录态，应该将该值加密，不能使用明文的用户标识</td>
+</tr>
+<tr>
+<td>http-only</td>
+<td>不能通过 JS 访问 Cookie，减少 XSS 攻击</td>
+</tr>
+<tr>
+<td>secure</td>
+<td>只能在协议为 HTTPS 的请求中携带</td>
+</tr>
+<tr>
+<td>same-site</td>
+<td>规定浏览器不能在跨域请求中携带 Cookie，减少 CSRF 攻击</td>
+</tr>
+</tbody>
+</table>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/02/20180702-js-tips/" class="archive-article-date">
-  	<time datetime="2018-07-02T12:08:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/02/20180702-js-tips/">JavaScrip-tips Summary</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">tips</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">interview</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://github.com/steakxiaoxin/steakxiaoxin.github.io/2019/02/13/20190213-interview-08/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/02/20180702-react-tips/" class="archive-article-date">
-  	<time datetime="2018-07-02T12:06:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-02</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2019/02/14/20190213-interview-09/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          浏览器缓存机制
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/01/23/20190123-interview-07/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JS 进阶知识点及常考面试题</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/02/20180702-react-tips/">React-tips Summary</a>
-    </h1>
+        
+        
+    </div>
+</aside>
+
+
+
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">react</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">tips</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/11/20180609-hexo-setup/" class="archive-article-date">
-  	<time datetime="2018-06-11T03:19:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/11/20180609-hexo-setup/">hexo博客框架搭建</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/page/2/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><span class="page-number current">3</span>
-    </nav>
+  
+
   
 
 
@@ -310,8 +505,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
